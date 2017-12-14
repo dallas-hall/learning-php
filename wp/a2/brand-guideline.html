@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WP Brand Guideline</title>
+  <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Graduate|Oregano" rel="stylesheet">
+  <style>
+    /* This is an example of an embedded style sheet. You do not need to move these styles to an external stylesheet, only the styles you write for your  assignment. */
+    
+    body {
+      margin: 0px 30px;
+    }
+    section {
+      border-top: 4px ridge #CCC;
+      padding: 0px 0px 10px 10px;
+    }
+    /* This styles each color box in the palette */
+    #palette span {
+      display:inline-block;
+      height:50px;
+      width:50px;
+      box-shadow: 1px 1px 2px 1px #333;
+      margin: 5px;
+    }
+    
+    /* Each palette colors */
+    .black  { background-color: black;}
+    .white  { background-color: white;}
+    .hue1-1 { background-color: #066;}
+    .hue1-2 { background-color: #a1dede;}
+    .hue1-3 { background-color: #ecf8f8;}
+    .hue2-1 { background-color: #ff0;}
+    .hue2-2 { background-color: #ffc;}
+    .hue3   { background-color: red;}
+    
+    /* Background Images */
+    #imagery {
+    }
+    #imagery img {
+      box-shadow: 1px 1px 2px 1px #333;
+      margin: 5px;
+      height:100px;
+      vertical-align: top;
+    }
+    #imagery img:hover {
+      height:initial;
+    }
+    
+    #fontset h1,
+    #fontset h2,
+    #fontset h3
+    {
+      font-family: 'Fontdiner Swanky', arial, sans-serif;
+    }
+    #fontset h1 {
+      font-size: 4em;
+    }
+    #fontset h2 {
+      font-size: 3.3em;
+    }
+    #fontset h3 {
+      font-size: 2.5em;
+    }
+
+    #fontset .nav
+    {
+      font-family: Graduate, cursive;
+      font-size: 1.7em;
+    }
+    #fontset .main
+    {
+      font-family: Oregano, sans-serif;
+      font-size: 1.5em;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Brand Guideline Document</h1>
+    <p><strong>Authors:</strong> Dallas Hall s3461243</p>
+  </header>
+  <main>
+    <section>
+      <h2>Business / Organisation Name and Description</h2>
+      <p>Put your description of the business or organisation here. Images and logos will also be helpful to justify color and image choices.</p>
+      <p>Your chosen business or organisation must be selling at least 3 products or services, each must have at least two options each. An example of each is provided below.</p>
+      <ol>
+        <li>T-Shirts
+          <ol type='a'>
+            <li>Small</li>
+            <li>Large</li>
+          </ol>
+        </li>
+        <li>T-Shirt Iron Press
+          <ol type='a'>
+            <li>Basic</li>
+            <li>Delux</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Color Palette</h2>
+      <p>Put your color choices here. As a guide, colors should match with the existing brand of the business or organisation your have selected. Example   colors are below, styles can be found in the embedded style sheet.</p>
+      <div id='palette'>
+        <span class='black'></span>
+        <span class='white'></span><br>
+        <span class='hue1-1'></span>
+        <span class='hue1-2'></span>
+        <span class='hue1-3'></span><br>
+        <span class='hue2-1'></span>
+        <span class='hue2-2'></span><br>
+        <span class='hue3'></span>
+      </div>
+    </section>
+    <section>
+      <h2>Images and Background Images</h2>
+      <p>Website paragraph text should be mixed with images and the overall look of a website can be enhanced with background images, be they full size images or smaller "tiling" images. Update the links of these sample images once you have uploaded images to your img directory.</p>
+      <div id='imagery'>
+        <img src='../img/bg-1.png' alt='put your description here'>
+        <img src='../img/bg-2.png' alt='put your description here'>
+        <img src='../img/bg-3.png' alt='put your description here'>
+      </div>
+    </section>
+    <section>
+      <h2>Font Set</h2>
+      <p>Use webfonts (eg Google Fonts) or the font-face rule to import fonts into your pages rather than using generic fonts such as Arial and Times-New-Roman. Ideally the headings should be more "fancy" whereas blocks of paragraph text should be more "readable".</p>
+      <div id='fontset'>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <p class='nav'>Navigation links</p>
+        <p class='main'>Main text: ABCDE abcde 0-9</p>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
