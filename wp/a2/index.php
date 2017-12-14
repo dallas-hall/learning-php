@@ -7,7 +7,8 @@
 <body>
 	<h1>Assignment 2</h1>
 	<p>
-	This page is under constructions.
+	This page is under construction.
+	<a href="brand-guideline.html">Brand Guideline</a>
 	</p>
 </body>
 
