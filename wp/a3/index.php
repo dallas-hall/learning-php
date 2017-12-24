@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Assignment 2</title>
+	<title>Assignment 3</title>
 </head>
 <body>
 <!-- This structure was taken from https://www.w3schools.com/html/html5_semantic_elements.asp -->
