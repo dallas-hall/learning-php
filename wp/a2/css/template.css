@@ -1,5 +1,5 @@
 /* Make sure everything is at block by default */
-header, section, footer, aside, nav, article, figure, figcaption {
+header, nav, main, section, aside, article, figure, figcaption, footer {
 	display: block;
 }
 
@@ -64,42 +64,53 @@ header #members-area {
 
 header #buttonSignIn {
 	text-align: center;
-	background-color: #dc143c;
-	color: white;
+	background-color: #81a2f2;
+	color: black;
 	width: 72px;
 	margin-right: 11px; /* this is 11 because of the text in the middle */
 }
 
 header #buttonSignUp {
 	text-align: center;
-	background-color: #dc143c;
-	color: white;
+	background-color: #81a2f2;
+	color: black;
 	width: 72px;
 }
 
-/* Style main section */
-section {
-	clear: both;
-	margin: 0px auto;
-	/*float: left;*/
-	min-height: 570px;
-	min-width: 320px;
-	width: 65%;
+header .breadcrumb a {
+	display: inline;
+	float: left;
+	padding-right: 8px;
 }
 
-section article {
+/* Style main section */
+main {
+	padding: 2% 2%;
+}
+
+main section {
+	clear: both;
+	margin: 0px auto;
+	float: left;
+	min-height: 570px;
+	min-width: 320px;
+	width: 63%;
+}
+
+main section article {
 	overflow: auto;
 }
 
 /* Style aside */
-aside {
+main aside {
+	padding-left: 2%;
 	float: left;
 	min-height: 570px;
 	min-width: 320px;
-	width: 30%;
+	width: 33%;
 }
 
-aside article {
+main aside article {
 	clear: both;
 	overflow: auto;
 }
