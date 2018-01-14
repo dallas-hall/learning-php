@@ -8,11 +8,12 @@
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper">
+<div class="pageWrapper" id="productsPage">
 	<header>
-		<a id='indexPage' href="index.php"><h1>Golden Tree Productions</h1><img
-					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
-					height="50px"></a>
+		<a href="index.php"><h1>Golden Tree Productions</h1>
+			<img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+				 height="50px">
+		</a>
 		<nav id="topNavigation">
 			<ul>
 				<li><a href="index.php" class="">Home</a></li>
