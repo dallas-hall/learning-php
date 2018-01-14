@@ -1,23 +1,118 @@
-<!DOCTYPE=html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Assignment 2</title>
+	<title>Golden Tree Productions</title>
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
+		  rel="stylesheet">
+	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-<!-- This structure was taken from https://www.w3schools.com/html/html5_semantic_elements.asp -->
+<body id="home-page">
+<div class="wrapper">
 	<header>
-		<h1>Assignment 2</h1>
+		<h1>Golden Tree Productions</h1>
+		<a href="index.html"><img
+					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+					height="50px"></a>
+		<nav id="top-nav">
+			<ul>
+				<li><a href="index.html" class="">Home</a></li>
+				<li><a href="template.html" class="">Shop</a></li>
+				<li><a href="template.html" class="">Contact</a></li>
+				<li><a href="template.html" class="">Blog</a></li>
+				<li><a href="template.html" class="">About</a></li>
+				<li><a href="template.html" class="current">Template</a></li>
+			</ul>
+		</nav>
+		<fieldset id="members-area">
+			<legend>Members Area</legend>
+			<form action="">
+				<input id="buttonSignIn" type="button" name="sign-in"
+					   value="Sign In">
+				<input id="buttonSignUp" type="button" name="sign-up"
+					   value="Sign Up">
+			</form>
+		</fieldset>
+		<a class="main-content" href="index.html"
+		   id="bread-crumb">Home</a>
 	</header>
-	<nav>
-		<p>No navigation stuff yet.</p>
-	</nav>
-	<main>
-		<p>This page is under construction.
-		<a href="brand-guideline.html" target="_blank">Brand Guideline from assignment 1</a></p>
-	</main>
-	<footer>
-		<p>This page was built by Dallas Hall.</p>
-	</footer>
-</body>
+	<section class="above-the-fold">
+		<p>Welcome to...</p>
+		<img src="img/logos/gtp_new_logo_half_size.png">
+		<p>This is a place to learn about yourself and the
+			universe. And capture it too!</p>
+		<a href="" class="products-link">Video Services <img
+					src="img/people/jack_with_camera.jpg" width="115px"
+					height="100px"></a>
+		<a href="" class="products-link">Psychic Services
+			<img src="img/people/amanda_and_cards.jpg" width="130px"
+				 height="100px"></a>
 
+		<hr>
+	</section>
+	<section class="below-the-fold">
+		<div id="column1">
+			<h2>Video Services</h2>
+			<ul>
+				<li>Video Production</li>
+				<ul>
+					<li>Video Filming</li>
+					<li>Video Editing</li>
+					<li>Pre &amp; Post Media Production</li>
+					<li>Video Stills As Photos</li>
+					<li>Television Documentaries</li>
+					<li>Video Show Reels</li>
+					<li>Video Music Clips</li>
+					<li>Corporate Training Video &amp; DVD's</li>
+					<li>Resume on DVD</li>
+				</ul>
+				<li>Video Tape (VHS &amp; Super 8) Transfer To</li>
+				<ul>
+					<li>CD</li>
+					<li>DVD</li>
+					<li>USB</li>
+					<li>SD Cards</li>
+				</ul>
+			</ul>
+		</div>
+		<div id="column2">
+			<h2>Psychic Services</h2>
+			<ul>
+				<li>Accolades</li>
+				<ul>
+					<li>Psychic Hall Of Fame 2013</li>
+					<li>Australian Psychic of the Year 2014/15/16</li>
+				</ul>
+				<li>Psychic phone &amp; email readings</li>
+				<li>Astrology Charts</li>
+				<li>Simply Tarot Sets</li>
+				<li>Secrets of Tarot set</li>
+				<li>Tarot Courses</li>
+				<li>Astrology courses</li>
+				<li>Soy Candles</li>
+				<li>The Amanda Hall Psychic Show</li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		<h2>Site Index</h2>
+		<a href="index.html"><img
+					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+					height="50px"></a>
+		<nav>
+			<ul>
+				<li><a href="template.html" class="">Returns & Refunds</a></li>
+				<li><a href="template.html" class="">Terms & Conditions</a></li>
+				<li><a href="template.html" class="">Privacy Policy</a></li>
+				<li><a href="template.html" class="">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div id="final-message">&copy; Golden Tree Productions,
+			<span id="current-year"></span>. Built by
+			Dallas Hall.
+		</div>
+		<!-- Using JavaScript to add the current year into the page dynamically -->
+		<script type="text/javascript" src="js/getDate.js"></script>
+</div>
+</body>
+</html>

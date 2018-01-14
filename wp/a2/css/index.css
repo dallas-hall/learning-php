@@ -1,0 +1,33 @@
+section.above-the-fold {
+	clear: both;
+	float: none;
+	min-height: 570px;
+	min-width: 320px;
+	width: 95%;
+}
+
+.above-the-fold, .above-the-fold p, .above-the-fold img {
+	text-align: center;
+	font-size: 125%;
+	padding: 10px 10px;
+}
+
+.below-the-fold {
+	min-height: auto;
+	min-width: 320px;
+	width: 95%;
+}
+
+.below-the-fold #column1 {
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding: 10px 10px;
+}
+
+.below-the-fold #column2 {
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding: 10px 10px;
+}
