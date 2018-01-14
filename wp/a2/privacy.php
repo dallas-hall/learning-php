@@ -15,12 +15,11 @@
 					height="50px"></a>
 		<nav id="top-nav">
 			<ul>
-				<li><a href="index.html" class="">Home</a></li>
-				<li><a href="#template-page" class="">Shop</a></li>
-				<li><a href="#template-page" class="">Contact</a></li>
-				<li><a href="#template-page" class="">Blog</a></li>
-				<li><a href="#template-page" class="">About</a></li>
-				<li><a href="#template-page" class="current">Template</a></li>
+				<li><a href="index.php" class="">Home</a></li>
+				<li><a href="products.php" class="">Shop</a></li>
+				<li><a href="contact_us.php" class="">Contact</a></li>
+				<li><a href="blog.php" class="">Blog</a></li>
+				<li><a href="about_us.php" class="">About</a></li>
 			</ul>
 		</nav>
 		<fieldset id="members-area">
@@ -60,7 +59,7 @@
 					anyone. Information submitted to on our site or by
 					e-mail is only ever used for administration purposes.</p>
 				<p>If you would like further information about our policies,
-					please <a href="contact.php">contact us</a>.
+					please <a href="contact_us.php">contact us</a>.
 				</p>
 			</article>
 		</section>
@@ -72,13 +71,10 @@
 					height="50px"></a>
 		<nav>
 			<ul>
-				<li><a href="template-split_page.html" class="">Returns &
-						Refunds</a></li>
-				<li><a href="template-split_page.html" class="">Terms &
-						Conditions</a></li>
-				<li><a href="template-split_page.html" class="">Privacy
-						Policy</a></li>
-				<li><a href="template-split_page.html" class="">Contact Us</a>
+				<li><a href="returns_and_refunds.php" class="">Returns & Refunds</a></li>
+				<li><a href="terms_and_conditions.php" class="">Terms & Conditions</a></li>
+				<li><a href="privacy.php" class="">Privacy Policy</a></li>
+				<li><a href="contact_us.php" class="">Contact Us</a></li>
 				</li>
 			</ul>
 		</nav>
