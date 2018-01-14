@@ -1,8 +1,8 @@
-.wrapper {
+#indexPage {
 	background-image: none;
 }
 
-section.above-the-fold {
+#indexPage  section.aboveTheFold {
 	clear: both;
 	float: none;
 	min-height: 570px;
@@ -10,26 +10,26 @@ section.above-the-fold {
 	width: 95%;
 }
 
-.above-the-fold, .above-the-fold p, .above-the-fold img {
+#indexPage .aboveTheFold, .aboveTheFold p, .aboveTheFold img {
 	text-align: center;
 	font-size: 125%;
 	padding: 10px 10px;
 }
 
-.below-the-fold {
+#indexPage .belowTheFold {
 	min-height: auto;
 	min-width: 320px;
 	width: 95%;
 }
 
-.below-the-fold #column1 {
+#indexPage .belowTheFold #column1 {
 	width: 45%;
 	float: left;
 	text-align: left;
 	padding: 10px 10px;
 }
 
-.below-the-fold #column2 {
+#indexPage .belowTheFold #column2 {
 	width: 45%;
 	float: left;
 	text-align: left;

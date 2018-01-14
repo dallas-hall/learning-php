@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Cardo', serif;
 }
 
-.wrapper {
+.pageWrapper {
 	background-image: url("../img/logos/gtp_new_logo_tree_only.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -57,7 +57,7 @@ header nav ul, header nav li {
 	padding-right: 16px;
 }
 
-header #members-area {
+header #membersArea {
 	width: 160px;
 	padding: 16px 16px;
 }
@@ -77,7 +77,7 @@ header #buttonSignUp {
 	width: 72px;
 }
 
-header .breadcrumb a {
+header .breadcrumbs a {
 	display: inline;
 	float: left;
 	padding-right: 8px;
@@ -132,6 +132,6 @@ footer nav ul, footer nav li {
 	padding-right: 16px;
 }
 
-footer #final-message {
+footer #finalMessage {
 	clear: both;
 }
