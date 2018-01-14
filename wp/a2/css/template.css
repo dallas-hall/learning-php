@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Cardo', serif;
 }
 
+/* Default page settings for a 960 single page */
 .pageWrapper {
 	background-image: url("../img/logos/gtp_new_logo_tree_only.png");
 	background-repeat: no-repeat;
@@ -86,33 +87,6 @@ header .breadcrumbs a {
 /* Style main section */
 main {
 	padding: 2% 2%;
-}
-
-main section {
-	clear: both;
-	margin: 0px auto;
-	float: left;
-	min-height: 570px;
-	min-width: 320px;
-	width: 63%;
-}
-
-main section article {
-	overflow: auto;
-}
-
-/* Style aside */
-main aside {
-	padding-left: 2%;
-	float: left;
-	min-height: 570px;
-	min-width: 320px;
-	width: 33%;
-}
-
-main aside article {
-	clear: both;
-	overflow: auto;
 }
 
 /* Style footer */
