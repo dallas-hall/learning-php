@@ -1,3 +1,7 @@
+.wrapper {
+	background-image: none;
+}
+
 section.above-the-fold {
 	clear: both;
 	float: none;
