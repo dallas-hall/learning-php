@@ -1,6 +1,6 @@
 #aboutUsPage, #blogPage, #contactUsPage, #privacyPage, #productsPage, #returnsAndRefundsPage, #termsAndConditionsPage {
 	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
-	background-repeat: no-repeat;
+	background-repeat: space;
 	background-position: center center;
 	background-size: 700px 700px;
 }
