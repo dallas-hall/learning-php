@@ -1,0 +1,27 @@
+/* Style the main content (left) */
+#dualPage section {
+	clear: both;
+	margin: 0px auto;
+	float: left;
+	min-height: 570px;
+	min-width: 320px;
+	width: 63%;
+}
+
+#dualPage section article {
+	overflow: auto;
+}
+
+/* Style the aside content (right) */
+#dualPage aside {
+	padding-left: 2%;
+	float: left;
+	min-height: 570px;
+	min-width: 320px;
+	width: 33%;
+}
+
+#dualPage aside article {
+	clear: both;
+	overflow: auto;
+}

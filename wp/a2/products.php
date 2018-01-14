@@ -33,7 +33,7 @@
 		</fieldset>
 		<span class="breadcrumbs">
 			<a href="index.php">Home</a>
-			<a href="template-single_page.html">Template</a>
+			<a href="products.php">Shop</a>
 		</span>
 	</header>
 	<main id="singlePage">
