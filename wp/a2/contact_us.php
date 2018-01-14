@@ -41,23 +41,33 @@
 			<h2>Send Us A Message</h2>
 			<article>
 				<form action="" method="post">
-					<fieldset>
+					<fieldset class="messageFieldSet">
 						<legend>Send Us A Message</legend>
-						<label>Name <input type="text" name="customerName"
-										   required></label>
-						<label>Email <input type="email"
-											name="customerEmail"></label>
-						<label>Phone <input type="text"
-											name="customerPhone"></label>
-						<label>Message Type</label>
-						<select name="messageType">
-							<option value="general">General Inquiry</option>
-							<option value="sale">Sales Inquiry</option>
-						</select>
-						<label>Message Title<input type="text"
-												   name="messageTitle"></label>
-						<label>Message</label> <textarea
-								id="customerMessage" required></textarea>
+						<p><label>Name:<input type="text"
+											  name="customerName"
+											  required
+											  placeholder="Enter your name"></label><br>
+							<label>Email:<input type="email"
+												name="customerEmail"
+												placeholder="Enter your email"></label><br>
+							<label>Phone:<input type="text"
+												name="customerPhone"
+												placeholder="Enter your phone
+												 number"></label><br>
+							<label>Message Type:
+								<select name="messageType">
+									<option value="general">General Inquiry
+									</option>
+									<option value="sale">Sales Inquiry</option>
+								</select></label><br>
+							<label>Message Title:<input type="text"
+														name="messageTitle"
+														placeholder="Enter your message's
+														title"></label><br>
+							<label>Message:<textarea
+										id="customerMessage"
+										placeholder="Enter your message"
+										required></textarea></label></p>
 					</fieldset>
 				</form>
 			</article>
