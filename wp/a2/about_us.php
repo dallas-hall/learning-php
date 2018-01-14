@@ -212,8 +212,7 @@
 			<p> Now I have my very own weekly show The Amanda Hall Psychic
 				Show on A1R
 				Psychic Radio 0n Moonstruck TV – YouTube – Facebook and many
-				various other
-				platforms.</p>                                           
+				various other platforms.</p>
 			</article>
 		</section>
 	</main>
