@@ -54,7 +54,7 @@
 												name="customerPhone"
 												placeholder="Enter your phone
 												 number"></label><br>
-							<label>Message Type:
+							<label id="messageType">Message Type:
 								<select name="messageType">
 									<option value="general">General Inquiry
 									</option>
@@ -64,7 +64,7 @@
 														name="messageTitle"
 														placeholder="Enter your message's
 														title"></label><br>
-							<label>Message:<textarea
+							<label><span id="textAreaLabel">Message:</span><textarea
 										id="customerMessage"
 										placeholder="Enter your message"
 										required></textarea></label></p>

@@ -5,16 +5,37 @@
 	width: 90%;
 }
 
+#messageType {
+	float: left;
+}
+
 #contactUsPage .messageFieldSet {
 	margin-top: 20px;
 	padding: 2%;
 	line-height: 1.6em;
 }
 
-input[type="text"], input[type="email"], #contactUsPage textarea  {
+#contactUsPage textarea {
+	height: 200px;
 	width: 70%;
+	margin-left: 2%;
+}
+
+input[type="text"], input[type="email"]{
+	width: 70%;
+	margin-left: 2%;
+}
+
+#messageType label {
+	float: left;
+}
+
+/* Align the textarea label to the top of the element - https://www.w3schools.com/csS/css_align.asp */
+#textAreaLabel {
+	vertical-align: top;
 }
 
 #contactUsPage select {
 	width: 160px;
+	margin-left: 2%;
 }
