@@ -1,8 +1,14 @@
+#aboutUsPage, #blogPage, #contactUsPage, #privacyPage, #productsPage, #returnsAndRefundsPage, #termsAndConditionsPage {
+	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 700px 700px;
+}
 #singlePage section {
 	clear: both;
 	margin: 0px auto;
 	float: left;
 	min-height: 570px;
 	min-width: 320px;
-	width: 95%;
+	width: 100%;
 }

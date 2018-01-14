@@ -10,9 +10,9 @@
 <body>
 <div class="pageWrapper" id="indexPage">
 	<header>
-		<a href="index.php"><h1>Golden Tree Productions</h1><img
+		<a href="index.php"><img
 					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
-					height="50px"></a>
+					height="50px"><h1>Golden Tree Productions</h1></a>
 		<nav id="topNavigation">
 			<ul>
 				<li><a href="index.php" class="current">Home</a></li>

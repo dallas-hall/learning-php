@@ -15,10 +15,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Default page settings for a 960 single page */
 .pageWrapper {
-	background-image: url("../img/logos/gtp_new_logo_tree_only.png");
+	/*background-image: url("../img/logos/gtp_new_logo_tree_only.png");
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 700px 700px;
+	background-size: 700px 700px;*/
 	font-family: 'Josefin Sans', sans-serif;
 	line-height: 1.4em;
 	max-width: 960px;
@@ -41,14 +41,14 @@ Add some padding after it to put space between it at the logo
 
 */
 header h1 {
-	display: inline;
+	display: inline-block;
 	font-size: 110%;
-	float: left;
-	padding-right: 20px;
+	float: right;
+	padding-left: 16px;
 }
 
 header a {
-	display: inline;
+	display: inline-block;
 	float: left;
 }
 
