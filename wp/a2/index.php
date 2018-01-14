@@ -17,10 +17,9 @@
 			<ul>
 				<li><a href="index.php" class="">Home</a></li>
 				<li><a href="products.php" class="">Shop</a></li>
-				<li><a href="template-split_page.html" class="">Contact</a></li>
-				<li><a href="template-split_page.html" class="">Blog</a></li>
-				<li><a href="template-split_page.html" class="">About</a></li>
-				<li><a href="template-split_page.html" class="current">Template</a></li>
+				<li><a href="contact_us.php" class="">Contact</a></li>
+				<li><a href="blog.php" class="">Blog</a></li>
+				<li><a href="about_us.php" class="">About</a></li>
 			</ul>
 		</nav>
 		<fieldset id="members-area">
@@ -103,10 +102,10 @@
 					height="50px"></a>
 		<nav>
 			<ul>
-				<li><a href="template-split_page.html" class="">Returns & Refunds</a></li>
-				<li><a href="template-split_page.html" class="">Terms & Conditions</a></li>
+				<li><a href="returns_and_refunds.php" class="">Returns & Refunds</a></li>
+				<li><a href="terms_and_conditions.php" class="">Terms & Conditions</a></li>
 				<li><a href="privacy.php" class="">Privacy Policy</a></li>
-				<li><a href="template-split_page.html" class="">Contact Us</a></li>
+				<li><a href="contact_us.php" class="">Contact Us</a></li>
 			</ul>
 		</nav>
 		<div id="final-message">&copy; Golden Tree Productions,
