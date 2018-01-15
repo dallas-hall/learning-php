@@ -21,7 +21,7 @@
 	width: 33%;
 }
 
-#dualPage aside article {
+#dualPage section aside article {
 	clear: both;
 	overflow: auto;
 }

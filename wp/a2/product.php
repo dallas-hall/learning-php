@@ -37,6 +37,9 @@
 		<section class="mainContent">
 			<h2>Video Transfer</h2>
 			<article id="videoTransfer">
+				<!--
+				This free image was sourced at https://www.pexels.com/photo/classic-phonograph-record-retro-tech-157540/
+				-->
 				<img src="img/products/video/vcr.jpg" width="640" height="360">
 				<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
 					some old tapes locked in a cupboard that we are going to do something with. Well today is the day
@@ -63,8 +66,8 @@
 						<option value="usb">USB</option>
 						<option value="sd">SD Card</option>
 					</select></label><br>
-				<input type="submit" name="buyNow" value="Buy Now"><br>
-				<input type="button" name="contactProduction" value="Contact Us">
+				<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
+				<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
 				<script src="js/quantity.js"></script>
 			</article>
 		</section>
