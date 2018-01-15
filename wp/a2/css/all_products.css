@@ -4,3 +4,23 @@
 	float: left;
 	padding: 0 0.25%;
 }
+
+.allProducts h2, .allProducts h2, .allProducts h3, .allProducts h4, .allProducts h5{
+	margin: 1.25% 0;
+}
+
+#videoServices {
+	border: black dotted 1px;
+}
+
+#simplyTarot {
+	border: black;
+	border-style: dotted;
+	border-width: 1px;
+}
+
+#secretsOfTarot {
+	border: black;
+	border-style: dotted;
+	border-width: 1px;
+}
