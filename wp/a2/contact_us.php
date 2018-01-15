@@ -63,8 +63,9 @@
 							<label>Message Title:<input type="text"
 														name="messageTitle"
 														placeholder="Enter your message's title"
-														></label><br>
-							<label><span id="textAreaLabel">Message:</span><textarea
+								></label><br>
+							<label><span
+										id="textAreaLabel">Message:</span><textarea
 										id="customerMessage"
 										placeholder="Enter your message"
 										required></textarea></label></p>
@@ -88,7 +89,9 @@
 					<tr>
 						<th scope="row">Phone</th>
 						<td>
-							<address>jack@goldentree.com.au</address>
+							<a href="mailto:jack@goldentree.com.au?Subject=Golden%20Tree%20Question">
+								<address>jack@goldentree.com.au</address>
+							</a>
 						</td>
 					</tr>
 					</tbody>
@@ -107,7 +110,9 @@
 					<tr>
 						<th scope="row">Phone</th>
 						<td>
-							<address>amanda@goldentree.com.au</address>
+							<a href="mailto:amanda@goldentree.com.au?Subject=Golden%20Tree%20Question">
+								<address>amanda@goldentree.com.au</address>
+							</a>
 						</td>
 					</tr>
 					</tbody>

@@ -66,14 +66,13 @@
 				<li>Filming &amp; editing</li>
 				<li>Pre &amp; post production</li>
 				<li>Photography (using film stills)</li>
-				<li>Transfer VHS or Super 8 to SD Card.</li>
 			</ul>
 			<p>Please contact us with your job's details so we can
 				arrange a free and obligation free quote. Sorry, but we
 				do not do weddings due to high insurance costs.</p>
 			<input type="button" name="productionMoreDetails"
 				   value="More Details">
-			<input type="button" name="buyProduction" value="Buy Now">
+			<input type="button" name="contactProduction" value="Contact Us">
 		</article>
 		<section id="psychicServices">
 			<h3>Psychic Services</h3>
