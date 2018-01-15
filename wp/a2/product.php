@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="dualTemplate">
+<div class="pageWrapper" id="singleTemplate">
 	<header>
 		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
 			<h1>Golden Tree Productions</h1></a>
@@ -34,27 +33,41 @@
 			<a href="index.php">Home</a>
 		</span>
 	</header>
-	<main id="dualPage">
+	<main id="singlePage">
 		<section class="mainContent">
-			<h2>Single Product</h2>
-			<article>
-				<img src="" width="" height="">
-				<p>Product description goes here...</p>
+			<h2>Video Transfer</h2>
+			<article id="videoTransfer">
+				<img src="img/products/video/vcr.jpg" width="640" height="360">
+				<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
+					some old tapes locked in a cupboard that we are going to do something with. Well today is the day
+					. Get them out sort through them. What is special and you want to keep for future generations.
+					They make a lovely gift to give. Being able to share memories from family history, special
+					occasions, weddings, christenings even the family just having fun. We can transfer old VHS and
+					Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
+				<p>The price is $30.00 AUD per video copy.</p>
 				<span id="quantityButton">
-					<input type="button" name="quantityMinus" value="-" id="quantityMinus">
-					<input type="text" value="0" id="quantityText">
-					<input type="button" name="quantityAdd" value="+" id="quantityAdd">
-				</span>
+					<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
+					<label>Videos To Transfer:</label><input type="button" name="quantityMinus" value="-"
+															 id="quantityMinus"
+					><input type="text" value="0" id="quantityText"
+					><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
+				><label id="sourceType">Copy From:
+					<select name="sourceType">
+						<option value="vhs">VHS</option>
+						<option value="super8">Super8</option>
+					</select></label
+				><label id="copyType">Copy To:
+					<select name="copyType">
+						<option value="cd">CD</option>
+						<option value="dvd">DVD</option>
+						<option value="usb">USB</option>
+						<option value="sd">SD Card</option>
+					</select></label><br>
+				<input type="submit" name="buyNow" value="Buy Now"><br>
+				<input type="button" name="contactProduction" value="Contact Us">
 				<script src="js/quantity.js"></script>
-				<input type="button" name="buyNow" value="Buy Now">
 			</article>
 		</section>
-		<aside id="sideContent">
-			<h2>Testimonials</h2>
-			<article>
-
-			</article>
-		</aside>
 	</main>
 	<footer>
 		<h2>Additional Links</h2>

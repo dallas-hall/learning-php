@@ -1,0 +1,33 @@
+/* Add spacing to labels*/
+#videoTransfer label {
+	text-align: left;
+	padding: 0 1%;
+}
+
+#quantityButton label {
+	text-align: left;
+	padding-left: 0;
+	padding-right: 2%;
+}
+
+/* Remove all spacing around the input elements */
+#quantityButton input {
+	margin: 0;
+	padding: 0;
+}
+
+/* Centre the image */
+#videoTransfer img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Centre the button text */
+#quantityMinus, #quantityAdd{
+	text-align: center;
+}
+
+/* Set the input textfield width */
+#quantityText {
+	width: 32px;
+}
