@@ -10,13 +10,11 @@
 <body>
 <div class="pageWrapper" id="productsPage">
 	<header>
-		<a href="index.php"><h1>Golden Tree Productions</h1>
-			<img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
-				 height="50px">
-		</a>
+		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
+			<h1>Golden Tree Productions</h1></a>
 		<nav id="topNavigation">
 			<ul>
-				<li><a href="index.php" class="">Home</a></li>
+				<li><a href="index.php" class="current">Home</a></li>
 				<li><a href="products.php" class="">Shop</a></li>
 				<li><a href="contact_us.php" class="">Contact</a></li>
 				<li><a href="blog.php" class="">Blog</a></li>
@@ -25,16 +23,15 @@
 		</nav>
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
-			<form action="">
-				<input id="buttonSignIn" type="button" name="signIn"
-					   value="Sign In">
-				<input id="buttonSignUp" type="button" name="signUp"
-					   value="Sign Up">
+			<form action="login.php" class="memberButtons">
+				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
+			</form>
+			<form action="signup.php" class="memberButtons">
+				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
 			</form>
 		</fieldset>
 		<span class="breadcrumbs">
 			<a href="index.php">Home</a>
-			<a href="products.php">Shop</a>
 		</span>
 	</header>
 	<main id="singlePage">
@@ -84,38 +81,37 @@
 			<section id="simplyTarot" class="allProducts">
 				<h4>Simply Tarot</h4>
 				<article id="simplyTarotSets" class="allProducts">
-					<h5>Simply Tarot Sets</h5>
+					<h5>Simply Tarot Set With DVD</h5>
 					<img src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
 						 width="256px"
 						 height="170px">
-					<p>There are 2 Simply Tarot Sets.</p>
-					<ol>
-						<li>Simply Tarot Set with the book, cards, and
-							the DVD</li>
-						<li>Simply Tarot Set the book and cards.</li>
-					</ol>
-					<p>The Simply Tarot set with the DVD is $103.00 AUD and
-						the Simply Tarot set without the DVD is $83.00 AUD.</p>
+					<p>This Simply Tarot Set includes:</p>
+					<ul>
+						<li>Simply Tarot Training DVD.</li>
+						<li>Simply Tarot Training Book.</li>
+						<li>Simply Tarot Card Set.</li>
+					</ul>
+					<p>The Simply Tarot set with the DVD is $103.00 AUD.</p>
 					<input type="button" name="simplyTarotDVDMoreDetails"
 						   value="More Details">
 					<input type="button" name="buySimplyTarotDVD"
 						   value="Buy Now">
 				</article>
-<!--				<article id="simplyTarotKitsNoVD" class="allProducts">
-					<h5>Simply Tarot Kit Without DVD</h5>
+				<article id="simplyTarotKitsNoVD" class="allProducts">
+					<h5>Simply Tarot Set Without DVD</h5>
 					<img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
 						 width="256px"
 						 height="170px">
-					<p>This Simply Tarot Kit includes:</p>
+					<p>This Simply Tarot Set includes:</p>
 					<ul>
 						<li>Simply Tarot Training Book.</li>
 						<li>Simply Tarot Card Set.</li>
 					</ul>
-					<p>This set is limited edition and will cost $83.00 AUD.</p>
+					<p>The Simply Tarot set with the DVD is $83.00 AUD.</p>
 					<input type="button" name="simplyTarotMoreDetails"
 						   value="More Details">
 					<input type="button" name="buySimplyTarot" value="Buy Now">
-				</article>-->
+				</article>
 				<article id="simplyTarotCandles" class="allProducts">
 					<h5>Simply Tarot Candles</h5>
 					<img src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
@@ -174,22 +170,17 @@
 	</main>
 	<footer>
 		<h2>Additional Links</h2>
-		<a href="index.php"><img
-					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
-					height="50px"></a>
+		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px"></a>
 		<nav id="bottomNavigation">
 			<ul>
-				<li><a href="returns_and_refunds.php" class="">Returns &
-						Refunds</a></li>
-				<li><a href="terms_and_conditions.php" class="">Terms &
-						Conditions</a></li>
+				<li><a href="returns_and_refunds.php" class="">Returns & Refunds</a></li>
+				<li><a href="terms_and_conditions.php" class="">Terms & Conditions</a></li>
 				<li><a href="privacy.php" class="">Privacy Policy</a></li>
 				<li><a href="contact_us.php" class="">Contact Us</a></li>
 			</ul>
 		</nav>
 		<div id="finalMessage">&copy; Golden Tree Productions,
-			<span id="currentYear"></span>. Built by
-			Dallas Hall - s3461243.
+			<span id="currentYear"></span>. Built by Dallas Hall - s3461243.
 		</div>
 		<!-- Using JavaScript to add the current year into the page dynamically -->
 		<script type="text/javascript" src="js/getDate.js"></script>
