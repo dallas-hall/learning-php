@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>

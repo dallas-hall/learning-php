@@ -42,7 +42,7 @@
 					some old tapes locked in a cupboard that we are going to do something with. Well today is the day
 					. Get them out sort through them. What is special and you want to keep for future generations.
 					They make a lovely gift to give. Being able to share memories from family history, special
-					occasions, weddings, christenings even the family just having fun. We can transfer old VHS and
+					occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and
 					Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
 				<p>The price is $30.00 AUD per video copy.</p>
 				<span id="quantityButton">

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -40,26 +40,24 @@
 				<form action="" method="post">
 					<fieldset class="messageFieldSet">
 						<legend>Message Details</legend>
-						<p><label>Name:<input type="text" name="customerName" required placeholder="Enter your name"></label><br>
-							<label>Email:<input type="email" name="customerEmail" placeholder="Enter your
-							email"></label><br>
-							<label>Phone:<input type="text" name="customerPhone" placeholder="Enter your phone
-							number"></label><br>
+						<!--Splitting across multiple lines to stop white space nodes being introduced-->
+						<p><label>Name:<input type="text" name="customerName" required placeholder="Enter your name."
+								></label><br>
+							<label>Email:<input type="email" name="customerEmail" placeholder="Enter your email"
+								></label><br>
+							<label>Phone:<input type="text" name="customerPhone" placeholder="Enter your phone number"
+								></label><br>
 							<label id="messageType">Message Type:
 								<select name="messageType">
-									<option value="general">General Inquiry
-									</option>
+									<option value="general">General Inquiry</option>
 									<option value="sale">Sales Inquiry</option>
 								</select></label><br>
-							<label>Message Title:<input type="text"
-														name="messageTitle"
+							<label>Message Title:<input type="text" name="messageTitle"
 														placeholder="Enter your message's title"
 								></label><br>
-							<label><span
-										id="textAreaLabel">Message:</span><textarea
-										id="customerMessage"
-										placeholder="Enter your message"
-										required></textarea></label></p>
+							<label><span id="textAreaLabel">Message:</span
+								><textarea id="customerMessage" placeholder="Enter your message"
+										   required></textarea></label></p>
 					</fieldset>
 				</form>
 			</article>
@@ -130,14 +128,8 @@
 				</table>
 				<h3>Business Location</h3>
 				<p>Elanora, Queensland, Australia.</p>
-				<iframe src="https://www.google
-				.com/maps/embed?pb=!1m18!1m12!1m3!1d28146.056913179313!2d153
-				.43400975368306!3d-28
-				.138660037360847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
-				.1!3m3!1m2!1s0x6b91026870e4b43f%3A0x502a35af3dea2a0!2sElanora
-				+QLD+4221!5e0!3m2!1sen!2sau!4v1515917209715" width="320"
-						height="240" frameborder="0" style="border:0"
-						allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28146.056913179313!2d153.43400975368306!3d-28.138660037360847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91026870e4b43f%3A0x502a35af3dea2a0!2sElanora+QLD+4221!5e0!3m2!1sen!2sau!4v1515917209715"
+						width="320" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</article>
 		</aside>
 	</main>
