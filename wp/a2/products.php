@@ -16,23 +16,21 @@
 			<ul>
 				<li><a href="index.php" class="current">Home</a></li>
 				<li><a href="products.php" class="">Shop</a></li>
-				<li><a href="contact_us.php" class="">Contact</a></li>
 				<li><a href="blog.php" class="">Blog</a></li>
-				<li><a href="about_us.php" class="">About</a></li>
+				<li><a href="contact_us.php" class="">Contact Us</a></li>
+				<li><a href="#bottomNavigation" class="">Bottom</a></li>
 			</ul>
 		</nav>
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
-			<form action="login.php" class="membersubmits">
-				<input id="submitSignIn" type="submit" name="signIn" value="Sign In">
+			<form action="login.php" class="memberButtons">
+				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
 			</form>
-			<form action="signup.php" class="membersubmits">
-				<input id="submitSignUp" type="submit" name="signUp" value="Sign Up">
+			<form action="signup.php" class="memberButtons">
+				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
 			</form>
 		</fieldset>
-		<span class="breadcrumbs">
-			<a href="index.php">Home</a>
-		</span>
+		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Shop</span>
 	</header>
 	<main id="singlePage">
 		<h2>Golden Tree Production Products &amp; Services</h2>
@@ -162,10 +160,12 @@
 		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px"></a>
 		<nav id="bottomNavigation">
 			<ul>
+				<li><a href="about_us.php" class="">About</a></li>
+				<li><a href="contact_us.php" class="">Contact Us</a></li>
+				<li><a href="privacy.php" class="">Privacy Policy</a></li>
 				<li><a href="returns_and_refunds.php" class="">Returns & Refunds</a></li>
 				<li><a href="terms_and_conditions.php" class="">Terms & Conditions</a></li>
-				<li><a href="privacy.php" class="">Privacy Policy</a></li>
-				<li><a href="contact_us.php" class="">Contact Us</a></li>
+				<li><a href="#topNavigation" class="">Top</a></li>
 			</ul>
 		</nav>
 		<div id="finalMessage">&copy; Golden Tree Productions,
