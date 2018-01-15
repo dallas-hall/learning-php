@@ -29,9 +29,7 @@
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
 			</form>
 		</fieldset>
-		<span class="breadcrumbs">
-			<a href="index.php">Home</a>
-		</span>
+		<span class="breadcrumbs">Home</span>
 	</header>
 	<main id="singlePage">
 		<section class="aboveTheFold">

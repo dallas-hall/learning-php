@@ -30,7 +30,8 @@
 			</form>
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"><a href=
-			"products.php">Shop</a></span><span class="breadcrumbs"> Product</span>
+																								  "products.php">Shop</a></span><span
+				class="breadcrumbs"> Product</span>
 	</header>
 	<main id="dualPage">
 		<section class="mainContent">
@@ -51,20 +52,20 @@
 					<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
 					<label>Amount Of Videos I Have:</label><input type="button" name="quantityMinus" value="-"
 																  id="quantityMinus"
-				><input type="text" value="0" id="quantityText"
-				><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
+					><input type="text" value="0" id="quantityText"
+					><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
 				><br><label id="sourceType">Video Storage Media I Have:
-				<select name="sourceType">
-					<option value="vhs">VHS</option>
-					<option value="super8">Super8</option>
-				</select></label
-			><br><label id="copyType">Video Storage Media I Want:
-				<select name="copyType">
-					<option value="cd">CD</option>
-					<option value="dvd">DVD</option>
-					<option value="usb">USB</option>
-					<option value="sd">SD Card</option>
-				</select></label><br>
+					<select name="sourceType">
+						<option value="vhs">VHS</option>
+						<option value="super8">Super8</option>
+					</select></label
+				><br><label id="copyType">Video Storage Media I Want:
+					<select name="copyType">
+						<option value="cd">CD</option>
+						<option value="dvd">DVD</option>
+						<option value="usb">USB</option>
+						<option value="sd">SD Card</option>
+					</select></label><br>
 				<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
 				<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
 				<script src="js/quantity.js"></script>
@@ -74,9 +75,11 @@
 			<article>
 				<h2>Testimonials &amp; Samples</h2>
 				<p><i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i>
-					Roger Pearson - Musician- Song Writer</p>
+					Roger Pearson - Musician &amp; song writer.</p>
 				<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0"
-						gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+						allowfullscreen></iframe>
+				<br>
+				<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allowfullscreen></iframe>
 			</article>
 		</aside>
 	</main>
