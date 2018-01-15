@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"  rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -41,17 +40,11 @@
 				<form action="" method="post">
 					<fieldset class="messageFieldSet">
 						<legend>Message Details</legend>
-						<p><label>Name:<input type="text"
-											  name="customerName"
-											  required
-											  placeholder="Enter your name"></label><br>
-							<label>Email:<input type="email"
-												name="customerEmail"
-												placeholder="Enter your email"></label><br>
-							<label>Phone:<input type="text"
-												name="customerPhone"
-												placeholder="Enter your phone
-												 number"></label><br>
+						<p><label>Name:<input type="text" name="customerName" required placeholder="Enter your name"></label><br>
+							<label>Email:<input type="email" name="customerEmail" placeholder="Enter your
+							email"></label><br>
+							<label>Phone:<input type="text" name="customerPhone" placeholder="Enter your phone
+							number"></label><br>
 							<label id="messageType">Message Type:
 								<select name="messageType">
 									<option value="general">General Inquiry
