@@ -42,7 +42,7 @@
 			<article>
 				<form action="" method="post">
 					<fieldset class="messageFieldSet">
-						<legend>Send Us A Message</legend>
+						<legend>Message Details</legend>
 						<p><label>Name:<input type="text"
 											  name="customerName"
 											  required
@@ -62,8 +62,8 @@
 								</select></label><br>
 							<label>Message Title:<input type="text"
 														name="messageTitle"
-														placeholder="Enter your message's
-														title"></label><br>
+														placeholder="Enter your message's title"
+														></label><br>
 							<label><span id="textAreaLabel">Message:</span><textarea
 										id="customerMessage"
 										placeholder="Enter your message"

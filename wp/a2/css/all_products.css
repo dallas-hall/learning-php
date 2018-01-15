@@ -1,0 +1,6 @@
+#productsPage article {
+	min-width: 300px;
+	width: 30%;
+	float: left;
+	padding: 0 0.25%;
+}
