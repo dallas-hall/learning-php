@@ -12,7 +12,8 @@
 	<header>
 		<a href="index.php"><img
 					src="img/logos/gtp_new_logo_tree_only.png" width="50px"
-					height="50px"><h1>Golden Tree Productions</h1></a>
+					height="50px">
+			<h1>Golden Tree Productions</h1></a>
 		<nav id="topNavigation">
 			<ul>
 				<li><a href="index.php" class="current">Home</a></li>
@@ -41,14 +42,17 @@
 			<img src="img/logos/gtp_new_logo_half_size.png">
 			<p>This is a place to learn about yourself and the
 				universe. And capture it too!</p>
-			<a href="products.php" class="productsLink">Video Services <img
-						src="img/people/jack_with_camera.jpg" width="115px"
-						height="100px"></a>
-			<a href="products.php" class="productsLink">Psychic Services
-				<img src="img/people/amanda_and_cards.jpg" width="130px"
-					 height="100px"></a>
-
-			<hr>
+			<div id="servicesLinks"><a href="products.php#videoServices"
+									   class="productsLink">
+					<img src="img/people/jack_with_camera.jpg" width="115px"
+						 height="100px">
+					<p>Video Products &amp; Services</p></a>
+				<a href="products.php#psychicServices"
+				   class="productsLink">
+					<img src="img/people/amanda_and_cards.jpg" width="130px"
+						 height="100px">
+					<p>Psychic Products &amp; Services</p></a>
+			</div><hr>
 		</section>
 		<section class="belowTheFold">
 			<div id="column1">
@@ -102,8 +106,10 @@
 					height="50px"></a>
 		<nav id="bottomNavigation">
 			<ul>
-				<li><a href="returns_and_refunds.php" class="">Returns & Refunds</a></li>
-				<li><a href="terms_and_conditions.php" class="">Terms & Conditions</a></li>
+				<li><a href="returns_and_refunds.php" class="">Returns &
+						Refunds</a></li>
+				<li><a href="terms_and_conditions.php" class="">Terms &
+						Conditions</a></li>
 				<li><a href="privacy.php" class="">Privacy Policy</a></li>
 				<li><a href="contact_us.php" class="">Contact Us</a></li>
 			</ul>

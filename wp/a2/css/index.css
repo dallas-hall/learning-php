@@ -2,6 +2,11 @@
 	background-image: none;
 }
 
+#servicesLinks {
+	display: inline-flex;
+}
+
+
 #indexPage  section.aboveTheFold {
 	clear: both;
 	float: none;
@@ -10,10 +15,14 @@
 	width: 95%;
 }
 
-#indexPage .aboveTheFold, .aboveTheFold p, .aboveTheFold img {
+#indexPage .aboveTheFold, .aboveTheFold p {
 	text-align: center;
 	font-size: 125%;
 	padding: 10px 10px;
+}
+
+.aboveTheFold img {
+	margin: 0 auto;
 }
 
 #indexPage .belowTheFold {
