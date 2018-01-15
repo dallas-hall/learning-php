@@ -7,7 +7,7 @@
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="dualTemplate">
+<div class="pageWrapper" id="singleTemplate">
 	<header>
 		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
 			<h1>Golden Tree Productions</h1></a>
@@ -33,14 +33,14 @@
 			<a href="index.php">Home</a>
 		</span>
 	</header>
-	<main id="dualPage">
+	<main id="singlePage">
 		<section class="mainContent">
 			<h2>Video Transfer</h2>
 			<article id="videoTransfer">
 				<!--
 				This free image was sourced at https://www.pexels.com/photo/classic-phonograph-record-retro-tech-157540/
 				-->
-				<img src="img/products/video/vcr.jpg" width="480" height="270">
+				<img src="img/products/video/vcr.jpg" width="640" height="360">
 				<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
 					some old tapes locked in a cupboard that we are going to do something with. Well today is the day
 					. Get them out sort through them. What is special and you want to keep for future generations.
@@ -50,36 +50,27 @@
 				<p>The price is $30.00 AUD per video copy.</p>
 				<span id="quantityButton">
 					<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
-					<label>Amount Of Videos I Have:</label><input type="button" name="quantityMinus" value="-"
-																  id="quantityMinus"
-				><input type="text" value="0" id="quantityText"
-				><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
-				><br><label id="sourceType">Video Storage Media I Have:
-				<select name="sourceType">
-					<option value="vhs">VHS</option>
-					<option value="super8">Super8</option>
-				</select></label
-			><br><label id="copyType">Video Storage Media I Want:
-				<select name="copyType">
-					<option value="cd">CD</option>
-					<option value="dvd">DVD</option>
-					<option value="usb">USB</option>
-					<option value="sd">SD Card</option>
-				</select></label><br>
+					<label>Videos To Transfer:</label><input type="button" name="quantityMinus" value="-"
+															 id="quantityMinus"
+					><input type="text" value="0" id="quantityText"
+					><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
+				><label id="sourceType">Copy From:
+					<select name="sourceType">
+						<option value="vhs">VHS</option>
+						<option value="super8">Super8</option>
+					</select></label
+				><label id="copyType">Copy To:
+					<select name="copyType">
+						<option value="cd">CD</option>
+						<option value="dvd">DVD</option>
+						<option value="usb">USB</option>
+						<option value="sd">SD Card</option>
+					</select></label><br>
 				<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
 				<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
 				<script src="js/quantity.js"></script>
 			</article>
 		</section>
-		<aside id="sideContent">
-			<article>
-				<h2>Testimonials &amp; Samples</h2>
-				<p><i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i>
-					Roger Pearson - Musician- Song Writer</p>
-				<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0"
-						gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-			</article>
-		</aside>
 	</main>
 	<footer>
 		<h2>Additional Links</h2>

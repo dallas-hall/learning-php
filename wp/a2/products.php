@@ -81,7 +81,7 @@
 				<article id="simplyTarotSets" class="allProducts">
 					<h5>Simply Tarot Set With DVD</h5>
 					<a href="product.php"><img src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
-											   width="256px" height="170px"></a>
+																		width="256px" height="170px"></a>
 					<p>This Simply Tarot Set includes:</p>
 					<ul>
 						<li>Simply Tarot Training DVD.</li>
@@ -96,7 +96,7 @@
 				<article id="simplyTarotKitsNoVD" class="allProducts">
 					<h5>Simply Tarot Set Without DVD</h5>
 					<a href="product.php"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
-											   width="256px" height="170px"></a>
+																		width="256px" height="170px"></a>
 					<p>This Simply Tarot Set includes:</p>
 					<ul>
 						<li>Simply Tarot Training Book.</li>
@@ -110,7 +110,7 @@
 				<article id="simplyTarotCandles" class="allProducts">
 					<h5>Simply Tarot Candles</h5>
 					<a href="product.php"><img src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
-											   width="256px" height="170px"></a>
+																		width="256px" height="170px"></a>
 					<p>There are 2 types of Simply Tarot Candles.</p>
 					<ol>
 						<li>One Large Simply Tarot Candle</li>
@@ -128,7 +128,7 @@
 				<article id="secretsOfTarotSet" class="allProducts">
 					<h5>Simply Tarot Set</h5>
 					<a href="product.php"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
-											   width="256px" height="170px"></a>
+																		width="256px" height="170px"></a>
 					<p>This Secrets Of Tarot Set includes:</p>
 					<ul>
 						<li>Simply Tarot Training Book.</li>
@@ -142,7 +142,7 @@
 				<article id="secretsOfTarotCandles" class="allProducts">
 					<h5>Simply Tarot Candles</h5>
 					<a href="product.php"><img src="img/products/psychic/candles/secrets/large_secrets_candle.jpg"
-											   width="210px" height="244"></a>
+																		width="210px" height="244"></a>
 					<p>There are 2 types of Secrets Of Tarot Candles</p>
 					<ol>
 						<li>One Large Secrets Of Tarot Candle</li>
