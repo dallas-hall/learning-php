@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="indexPage">
+<div class="pageWrapper" id="singleTemplate">
 	<header>
 		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
 			<h1>Golden Tree Productions</h1></a>
@@ -35,62 +34,16 @@
 		</span>
 	</header>
 	<main id="singlePage">
-		<section class="aboveTheFold">
-			<p>Welcome to...</p>
-			<img src="img/logos/gtp_new_logo_half_size.png">
-			<p>This is a place to learn about yourself and the universe. And capture it too!</p>
-			<div id="servicesLinks"><a href="products.php#videoServices" class="productsLink">
-					<img src="img/people/jack_with_camera.jpg" width="115px" height="100px">
-					<p>Video Products &amp; Services</p></a>
-				<a href="products.php#psychicServices" class="productsLink">
-					<img src="img/people/amanda_and_cards.jpg" width="130px" height="100px">
-					<p>Psychic Products &amp; Services</p></a>
-			</div>
-			<hr>
-		</section>
-		<section class="belowTheFold">
-			<div id="column1">
-				<h2>Video Services</h2>
-				<ul>
-					<li>Video Production</li>
-					<ul>
-						<li>Video Filming</li>
-						<li>Video Editing</li>
-						<li>Pre &amp; Post Media Production</li>
-						<li>Video Stills As Photos</li>
-						<li>Television Documentaries</li>
-						<li>Video Show Reels</li>
-						<li>Video Music Clips</li>
-						<li>Corporate Training Video &amp; DVD's</li>
-						<li>Resume on DVD</li>
-					</ul>
-					<li>Video Tape (VHS &amp; Super 8) Transfer To</li>
-					<ul>
-						<li>CD</li>
-						<li>DVD</li>
-						<li>USB</li>
-						<li>SD Cards</li>
-					</ul>
-				</ul>
-			</div>
-			<div id="column2">
-				<h2>Psychic Services</h2>
-				<ul>
-					<li>Accolades</li>
-					<ul>
-						<li>Psychic Hall Of Fame 2013</li>
-						<li>Australian Psychic of the Year 2014/15/16</li>
-					</ul>
-					<li>Psychic phone &amp; email readings</li>
-					<li>Astrology Charts</li>
-					<li>Simply Tarot Sets</li>
-					<li>Secrets of Tarot set</li>
-					<li>Tarot Courses</li>
-					<li>Astrology courses</li>
-					<li>Soy Candles</li>
-					<li>The Amanda Hall Psychic Show</li>
-				</ul>
-			</div>
+		<section class="mainContent">
+			<h2>Golden Tree Production Customer Login</h2>
+			<article>
+				<fieldset>
+					<legend>Login Details</legend>
+					<label>Username:<input type="email" placeholder="Your email address." required></label><br>
+					<label>Password:<input type="password" placeholder="Your password." required></label><br>
+					<input type="submit" name="buttonLogin" value="Log In">
+				</fieldset>
+			</article>
 		</section>
 	</main>
 	<footer>

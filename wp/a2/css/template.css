@@ -63,12 +63,19 @@ header #membersArea {
 	padding: 16px 16px;
 }
 
+header .memberButtons {
+	width: 80px;
+	float: left;
+}
+
 header #buttonSignIn {
 	text-align: center;
 	background-color: #81a2f2;
 	color: black;
 	width: 72px;
-	margin-right: 11px; /* this is 11 because of the text in the middle */
+	/*
+	margin-right: 11px; !* this is 11 because of the text in the middle *!
+	*/
 }
 
 header #buttonSignUp {
@@ -92,7 +99,7 @@ main {
 /* Style footer */
 footer {
 	clear: both;
-	padding: 2% 2%;
+	padding: 0 2% 2%;
 }
 
 footer a {
