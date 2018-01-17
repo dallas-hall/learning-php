@@ -28,11 +28,28 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #f2d181;
 }
 
+/* Style the header block
+
+Add some padding all around it - top/bottom and right/left
+ */
 header {
 	padding: 2% 2%;
 }
 
-/* Style the header
+/* Style the header & footer logo image links
+
+Change the text colour to always be black.
+Change the background colour when active / hovered
+ */
+a:link.navigation_image, a:visited.navigation_image {
+	color: black;
+}
+
+a:active.navigation_image, a:hover.navigation_image {
+	background-color: #bea053;
+}
+
+/* Style the header h1
 
 Change to an inline element
 Set the font size to be 110% of the user's font
@@ -48,47 +65,38 @@ header h1 {
 }
 
 /*The ideas of the link styling was sourced from https://www.w3schools.com/CSS/css_link.asp*/
-/* Style the header and footer nav bars */
-header nav li {
+/* Style the header and footer nav bar list items
+
+Give it a different background colour
+Add some padding around it
+
+*/
+header nav li, footer nav li{
 	background-color: #ffffb2;
 	padding: 9px 12px;
 }
 
-footer nav li {
-	background-color: #ffffb2;
-	padding: 9px 12px;
-}
+/* Style header and footer nav bar links (visited and unisited)
 
-/* Style the header and footer nav bars unvisited and visited links */
+Change text colour
+Align the text
+
+ */
 #topNavigation a:link, #topNavigation a:visited, #bottomNavigation a:link, #bottomNavigation a:visited  {
 	color: black;
 	text-align: center;
 }
 
-#topNavigation a:active, #topNavigation a:hover, #bottomNavigation a:hover, #bottomNavigation a:active  {
+/* Style header and footer nav bar links (visited and unvisited)
+
+Change background colour when active / hovered
+
+ */
+#topNavigation a:active, #topNavigation a:hover, #bottomNavigation a:hover, #bottomNavigation a:active {
 	background-color: #bea053;
 	color: black;
 	text-align: center;
 }
-
-/* Style the header and footer logo links */
-a:link.navigation_image, a:visited.navigation_image {
-	color: black;
-}
-
-a:active.navigation_image, a:hover.navigation_image {
-	background-color: #bea053;
-}
-
-/* Style the main page services links */
-#servicesLinks a:link, #servicesLinks a:visited {
-	color: black;
-}
-
-#servicesLinks a:active, #servicesLinks a:hover {
-	background-color: #bea053;
-}
-
 
 header a {
 	display: inline-block;
@@ -102,64 +110,97 @@ header nav ul, header nav li {
 	padding-left: 16px;
 }
 
+/* Style the members area
 
+Set a width and padding for the box
 
+ */
 header #membersArea {
 	width: 160px;
 	padding: 16px 16px;
 }
 
+/* Style the members area buttons
+
+Set width and alignment
+Align text, set background colour, update text colour, and width.
+
+ */
 header .memberButtons {
 	width: 80px;
 	float: left;
 }
 
-header #buttonSignIn {
-	text-align: center;
-	background-color: #ffffb2;
-	color: black;
-	width: 72px;
-	/*
-	margin-right: 11px; !* this is 11 because of the text in the middle *!
-	*/
-}
-
-header #buttonSignUp {
+header #buttonSignIn, #buttonSignUp  {
 	text-align: center;
 	background-color: #ffffb2;
 	color: black;
 	width: 72px;
 }
 
+/* Style the breadcrumbs
+
+Set alignment and padding.
+Update text colour and background colour when visited and unvisited links, as well as active and hover scenarios.
+ */
 header .breadcrumbs a {
 	display: inline;
 	float: left;
 	padding-right: 8px;
 }
 
-/* Style main section */
+header .breadcrumbs a:link,  header .breadcrumbs a:visited {
+	color: black;
+}
+
+header .breadcrumbs a:active,  header .breadcrumbs a:hover {
+	background-color: #bea053;
+}
+
+/* Style main section
+
+Add some padding spacing.
+*/
 main {
 	padding: 2% 2%;
 }
 
-/* Style footer */
+/* Style footer
+
+Add some padding spacing.
+
+*/
 footer {
-	clear: both;
 	padding: 0 2% 2%;
 }
 
+/* Style the footer
+
+Allow a tags to be inline and adjust positioning.
+
+ */
 footer a {
 	display: inline;
 	float: left;
 }
 
+/* Style footer lists and list items
+
+Make inline, adjust position, and setup spacing for final position adjustment.
+
+ */
 footer nav ul, footer nav li {
 	display: inline;
 	float: left;
-	padding-right: 16px;
 	padding-left: 16px;
+	padding-right: 16px;
 }
 
+/* Style the final page message
+
+Using clear: both here as the textbook suggested it as a way to fix elements within a container element from touching each other,
+this effectively brings the final message onto a ewn line.
+ */
 footer #finalMessage {
 	clear: both;
 }

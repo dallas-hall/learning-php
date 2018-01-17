@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<meta charset="UTF-8">
+	<meta name="author" content="Dallas Hall">
+	<meta name="keywords" content="Golden Tree Productions,Amanda Hall,Jack Egerton,Simply Tarot,Secrets of Tarot,
+	Tarot,Astrology,Psychic,Video Production,Video,Candle,Candles">
+	<meta name="description" content="This is the shopping page for Golden Tree Productions, which sells video
+	production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.">
 	<title>Golden Tree Productions</title>
-	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="productsPage">
+<div class="pageWrapper" id="allProductsPage">
 	<header>
-		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
+		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+														  height="50px"
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
 			<h1>Golden Tree Productions</h1></a>
 		<nav id="topNavigation">
 			<ul>
@@ -157,7 +164,9 @@
 	</main>
 	<footer>
 		<h2>Additional Links</h2>
-		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px"></a>
+		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+														  height="50px"
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
 		<nav id="bottomNavigation">
 			<ul>
 				<li><a href="about_us.php" class="">About</a></li>
