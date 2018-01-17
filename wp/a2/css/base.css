@@ -1,0 +1,165 @@
+/* Make sure everything is at block by default so that old browsers know how to handle these new HTML5 elements */
+header, nav, main, section, aside, article, figure, figcaption, footer {
+	display: block;
+}
+
+/* Style entire page */
+body {
+	background-color: #bea053;
+}
+
+/* Set the heading font stack */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Cardo', serif;
+}
+
+/* Default page settings for a 960 single page - this idea was taken from the unit text book end of chapter example in chapter 17 */
+.pageWrapper {
+	/*background-image: url("../img/logos/gtp_new_logo_tree_only.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 700px 700px;*/
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 1.4em;
+	max-width: 960px;
+	min-width: 320px;
+	margin: 20px auto;
+	border: 2px solid #000000;
+	background-color: #f2d181;
+}
+
+header {
+	padding: 2% 2%;
+}
+
+/* Style the header
+
+Change to an inline element
+Set the font size to be 110% of the user's font
+Float the element to the left
+Add some padding after it to put space between it at the logo
+
+*/
+header h1 {
+	display: inline-block;
+	font-size: 110%;
+	float: right;
+	padding-left: 16px;
+}
+
+/*The ideas of the link styling was sourced from https://www.w3schools.com/CSS/css_link.asp*/
+/* Style the header and footer nav bars */
+header nav li {
+	background-color: #ffffb2;
+	padding: 9px 12px;
+}
+
+footer nav li {
+	background-color: #ffffb2;
+	padding: 9px 12px;
+}
+
+/* Style the header and footer nav bars unvisited and visited links */
+#topNavigation a:link, #topNavigation a:visited, #bottomNavigation a:link, #bottomNavigation a:visited  {
+	color: black;
+	text-align: center;
+}
+
+#topNavigation a:active, #topNavigation a:hover, #bottomNavigation a:hover, #bottomNavigation a:active  {
+	background-color: #bea053;
+	color: black;
+	text-align: center;
+}
+
+/* Style the header and footer logo links */
+a:link.navigation_image, a:visited.navigation_image {
+	color: black;
+}
+
+a:active.navigation_image, a:hover.navigation_image {
+	background-color: #bea053;
+}
+
+/* Style the main page services links */
+#servicesLinks a:link, #servicesLinks a:visited {
+	color: black;
+}
+
+#servicesLinks a:active, #servicesLinks a:hover {
+	background-color: #bea053;
+}
+
+
+header a {
+	display: inline-block;
+	float: left;
+}
+
+header nav ul, header nav li {
+	display: inline;
+	float: left;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+
+
+header #membersArea {
+	width: 160px;
+	padding: 16px 16px;
+}
+
+header .memberButtons {
+	width: 80px;
+	float: left;
+}
+
+header #buttonSignIn {
+	text-align: center;
+	background-color: #ffffb2;
+	color: black;
+	width: 72px;
+	/*
+	margin-right: 11px; !* this is 11 because of the text in the middle *!
+	*/
+}
+
+header #buttonSignUp {
+	text-align: center;
+	background-color: #ffffb2;
+	color: black;
+	width: 72px;
+}
+
+header .breadcrumbs a {
+	display: inline;
+	float: left;
+	padding-right: 8px;
+}
+
+/* Style main section */
+main {
+	padding: 2% 2%;
+}
+
+/* Style footer */
+footer {
+	clear: both;
+	padding: 0 2% 2%;
+}
+
+footer a {
+	display: inline;
+	float: left;
+}
+
+footer nav ul, footer nav li {
+	display: inline;
+	float: left;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+footer #finalMessage {
+	clear: both;
+}

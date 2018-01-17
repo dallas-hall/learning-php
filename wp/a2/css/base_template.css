@@ -70,7 +70,7 @@ header .memberButtons {
 
 header #buttonSignIn {
 	text-align: center;
-	background-color: #81a2f2;
+	background-color: #b5d3ff;
 	color: black;
 	width: 72px;
 	/*
@@ -80,7 +80,7 @@ header #buttonSignIn {
 
 header #buttonSignUp {
 	text-align: center;
-	background-color: #81a2f2;
+	background-color: #b5d3ff;
 	color: black;
 	width: 72px;
 }

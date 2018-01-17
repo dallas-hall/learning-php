@@ -4,22 +4,31 @@ function takeOne() {
 	var currentValue = parseInt(targetElement.value.toString());
 	console.log(currentValue + ' before REMOVE one');
 	targetElement.textContent = currentValue;
-	if (currentValue > 0 && !isNaN(currentValue)) {
+	// Make sure subtraction won't go under 0
+	if (currentValue > 0) {
 		currentValue--;
 		console.log(currentValue + ' after REMOVE on');
 		targetElement.value = currentValue;
 	}
 	else {
-		console.log("NaN or < 0 found in subtraction.");
+		console.log("0 found in subtraction.");
 	}
 }
 
 function checkUserInput() {
 	var targetElement = document.getElementById("quantityText");
 	console.log(targetElement.value.toString() + ' userinput before parseInt.');
+	// parseInt will remove [^0-9]
 	var currentValue = parseInt(targetElement.value.toString());
 	console.log(currentValue + ' userinput after parseInt.');
-	targetElement.value = currentValue;
+	// Catch any input below zero or backspaces
+	if (currentValue > 0 && !isNaN(currentValue)) {
+		targetElement.value = currentValue;
+	}
+	else {
+		targetElement.value = 0;
+		console.log("NaN or < 0 found in subtraction.");
+	}
 }
 
 function addOne() {
