@@ -7,11 +7,12 @@
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="singleTemplate">
+<div class="pageWrapper" id="signUpPage">
 	<header>
-		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px">
+		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+														  height="50px"
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
 			<h1>Golden Tree Productions</h1></a>
-		<nav id="topNavigation">
 			<ul>
 				<li><a href="index.php" class="current">Home</a></li>
 				<li><a href="products.php" class="">Shop</a></li>
@@ -47,7 +48,9 @@
 	</main>
 	<footer>
 		<h2>Additional Links</h2>
-		<a href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px" height="50px"></a>
+		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
+														  height="50px"
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
 		<nav id="bottomNavigation">
 			<ul>
 				<li><a href="about_us.php" class="">About</a></li>

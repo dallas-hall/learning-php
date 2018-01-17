@@ -1,4 +1,4 @@
-#productsPage article {
+#allProductsPage article {
 	min-width: 300px;
 	width: 30%;
 	float: left;
@@ -23,4 +23,12 @@
 	border: black;
 	border-style: dotted;
 	border-width: 1px;
+}
+
+#videoServices a:active, #videoServices a:hover {
+	background-color: #b5d3ff;
+}
+
+#psychicServices a:active, #psychicServices a:hover {
+	background-color: #b5d3ff;
 }

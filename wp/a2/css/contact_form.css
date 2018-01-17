@@ -39,3 +39,8 @@ input[type="text"], input[type="email"]{
 	width: 160px;
 	margin-left: 2%;
 }
+
+/* Style the email addresses when they are active / hovered */
+td a:active, td a:hover {
+	background-color: #b5d3ff;
+}
