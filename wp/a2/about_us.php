@@ -131,7 +131,8 @@
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
 														  height="50px"
-														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book."
+			></a>
 		<nav id="bottomNavigation">
 			<ul>
 				<li><a href="about_us.php" class="">About</a></li>

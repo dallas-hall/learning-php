@@ -13,6 +13,7 @@
 														  height="50px"
 														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
 			<h1>Golden Tree Productions</h1></a>
+		<nav id="topNavigation">
 			<ul>
 				<li><a href="index.php" class="current">Home</a></li>
 				<li><a href="products.php" class="">Shop</a></li>
@@ -30,7 +31,7 @@
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
 			</form>
 		</fieldset>
-		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Sign Up</span>
+		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> About Us</span>
 	</header>
 	<main id="singlePage">
 		<section class="mainContent">
@@ -50,7 +51,8 @@
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
 														  height="50px"
-														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book.">
+														  alt="The new logo of Golden Tree Productions. It has a golden tree sprouting out of what looks a book."
+			></a>
 		<nav id="bottomNavigation">
 			<ul>
 				<li><a href="about_us.php" class="">About</a></li>
