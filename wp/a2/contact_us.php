@@ -33,7 +33,7 @@
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Contact Us</span>
 	</header>
-	<section class="pageBody">
+	<section class="pageBodyDualPage">
 		<main>
 			<article class="column1">
 				<h2>Send Us A Message</h2>

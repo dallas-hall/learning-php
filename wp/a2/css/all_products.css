@@ -1,5 +1,5 @@
 /*, .pageBody #videoServices, .pageBody #psychicServices*/
-.pageBody article {
+.pageBodyDualPage article {
 	min-width: 300px;
 	width: 30%;
 	float: left;

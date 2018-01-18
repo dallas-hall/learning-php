@@ -6,12 +6,13 @@
 /* Styling the above the fold section, concept based on unit textbook chapter 15
 
  */
-#indexPage section.aboveTheFold {
+#indexPage article.aboveTheFold {
 	clear: both;
 	float: none;
 	min-height: 570px;
 	min-width: 320px;
 	width: 95%;
+
 }
 
 /* The text align property is centering the text and the image, I think because the <img> is inside of the <a> */
