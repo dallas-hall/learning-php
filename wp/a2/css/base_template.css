@@ -68,7 +68,7 @@ header .memberButtons {
 	float: left;
 }
 
-header #buttonSignIn {
+header #buttonLogin {
 	text-align: center;
 	background-color: #b5d3ff;
 	color: black;
@@ -99,7 +99,7 @@ main {
 /* Style footer */
 footer {
 	clear: both;
-	padding: 0 2% 2%;
+	padding: 2% 2%;
 }
 
 footer a {

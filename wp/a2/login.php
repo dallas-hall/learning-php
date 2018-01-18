@@ -25,7 +25,7 @@
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
 			<form action="login.php" class="memberButtons">
-				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
+				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
@@ -33,19 +33,19 @@
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Login</span>
 	</header>
-	<main id="singlePage">
-		<section class="mainContent">
-			<h2>Golden Tree Production Customer Login</h2>
-			<article>
-				<fieldset>
-					<legend>Login Details</legend>
-					<label>Username:<input type="email" placeholder="Your email address." required></label><br>
-					<label>Password:<input type="password" placeholder="Your password." required></label><br>
-					<input type="submit" name="buttonLogin" value="Log In">
-				</fieldset>
-			</article>
-		</section>
-	</main>
+	<section class="pageBody">
+		<article class="singlePage">
+			<h2>Golden Tree Production Login</h2>
+				<form action="">
+					<fieldset>
+						<legend>Login Details</legend>
+						<label>Username:<input type="email" placeholder="Your email address." required></label><br>
+						<label>Password:<input type="password" placeholder="Your password." required></label><br>
+						<input type="submit" name="buttonLogin" value="Log In">
+					</fieldset>
+				</form>
+		</article>
+	</section>
 	<footer>
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"

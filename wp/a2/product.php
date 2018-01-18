@@ -25,7 +25,7 @@
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
 			<form action="login.php" class="memberButtons">
-				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
+				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
@@ -35,45 +35,47 @@
 																								  "products.php">Shop</a></span><span
 				class="breadcrumbs"> Product</span>
 	</header>
-	<main id="dualPage">
-		<section class="mainContent">
+	<section class="pageBody">
+		<article class="column1">
 			<h2>Video Transfer</h2>
 			<article id="videoTransfer">
-				<!--
-				This free image was sourced at https://www.pexels.com/photo/classic-phonograph-record-retro-tech-157540/
-				-->
-				<img src="img/products/video/vcr.jpg" width="480" height="270">
-				<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
-					some old tapes locked in a cupboard that we are going to do something with. Well today is the day
-					. Get them out sort through them. What is special and you want to keep for future generations.
-					They make a lovely gift to give. Being able to share memories from family history, special
-					occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and
-					Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
-				<p>The price is $30.00 AUD per video copy.</p>
-				<span id="quantityButton">
+				<main>
+					<!--
+					This free image was sourced at https://www.pexels.com/photo/classic-phonograph-record-retro-tech-157540/
+					-->
+					<img src="img/products/video/vcr.jpg" width="480" height="270">
+					<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
+						some old tapes locked in a cupboard that we are going to do something with. Well today is the day
+						. Get them out sort through them. What is special and you want to keep for future generations.
+						They make a lovely gift to give. Being able to share memories from family history, special
+						occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and
+						Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
+					<p>The price is $30.00 AUD per video copy.</p>
+					<span id="quantityButton">
 					<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
 					<label>Amount Of Videos I Have:</label><input type="button" name="quantityMinus" value="-"
 																  id="quantityMinus"
-					><input type="text" value="0" id="quantityText"
-					><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
-				><br><label id="sourceType">Video Storage Media I Have:
-					<select name="sourceType">
-						<option value="vhs">VHS</option>
-						<option value="super8">Super8</option>
-					</select></label
-				><br><label id="copyType">Video Storage Media I Want:
-					<select name="copyType">
-						<option value="cd">CD</option>
-						<option value="dvd">DVD</option>
-						<option value="usb">USB</option>
-						<option value="sd">SD Card</option>
-					</select></label><br>
-				<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
-				<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
-				<script src="js/quantity.js"></script>
+						><input type="text" value="0" id="quantityText"
+						><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
+					><br><label id="sourceType">Video Storage Media I Have:
+						<select name="sourceType">
+							<option value="vhs">VHS</option>
+							<option value="super8">Super8</option>
+						</select></label
+					><br><label id="copyType">Video Storage Media I Want:
+						<select name="copyType">
+							<option value="cd">CD</option>
+							<option value="dvd">DVD</option>
+							<option value="usb">USB</option>
+							<option value="sd">SD Card</option>
+						</select></label><br>
+					<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
+					<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
+					<script src="js/quantity.js"></script>
+				</main>
 			</article>
-		</section>
-		<aside id="sideContent">
+		</article>
+		<aside id="column2">
 			<article>
 				<h2>Testimonials &amp; Samples</h2>
 				<p><i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i>
@@ -84,7 +86,7 @@
 				<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allowfullscreen></iframe>
 			</article>
 		</aside>
-	</main>
+	</section>
 	<footer>
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="UTF-8">
 	<title>Golden Tree Productions</title>
@@ -26,7 +26,7 @@
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
 			<form action="login.php" class="memberButtons">
-				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
+				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
@@ -34,10 +34,10 @@
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Shop</span>
 	</header>
-	<main id="singlePage">
-		<section class="mainContent">
-			<h2>Refunds &amp; Returns</h2>
-			<article>
+	<section class="pageBody">
+		<article class="singlePage">
+			<main>
+				<h2>Refunds &amp; Returns</h2>
 				<h3>Returns, Refunds and Exchange Policy</h3>
 				<ol>
 					<li> We do not refund or exchange on all video production services. We do not refund, return or
@@ -165,9 +165,9 @@
 					after the reading. You’re continuing to use this website and or any services provided is
 					confirmation that you understand and accept these terms and will act accordingly without
 					recourse.</p>
-			</article>
-		</section>
-	</main>
+			</main>
+		</article>
+	</section>
 	<footer>
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"

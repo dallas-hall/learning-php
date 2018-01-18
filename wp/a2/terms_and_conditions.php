@@ -25,7 +25,7 @@
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
 			<form action="login.php" class="memberButtons">
-				<input id="buttonSignIn" type="submit" name="signIn" value="Sign In">
+				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
@@ -34,10 +34,10 @@
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Terms &amp;
 			Conditions</span>
 	</header>
-	<main id="singlePage">
-		<section class="mainContent">
-			<h2>Terms &amp; Conditions</h2>
-			<article>
+	<section class="pageBody">
+		<article class="singlePage">
+			<main>
+				<h2>Terms &amp; Conditions</h2>
 				<h3>General</h3>
 				<p><a href="www.goldentreeproductions.com.au">Golden Tree Productions</a> 2000 All rights Reserved. All
 					advice, information and Video Production, Pre & Post Production will be to the best of our ability
@@ -265,9 +265,9 @@
 						used for diagnosis.
 					</li>
 				</ol>
-			</article>
-		</section>
-	</main>
+			</main>
+		</article>
+	</section>
 	<footer>
 		<h2>Additional Links</h2>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"

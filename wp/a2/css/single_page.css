@@ -4,11 +4,11 @@
 	background-position: center center;
 	background-size: 700px 700px;
 }
-#singlePage section {
+
+.pageBody .singlePage {
 	clear: both;
 	margin: 1% auto;
 	float: left;
-	min-height: 570px;
 	min-width: 320px;
 	width: 100%;
 }
