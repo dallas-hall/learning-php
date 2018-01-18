@@ -39,10 +39,10 @@
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Shop</span>
 	</header>
-	<section class="pageBody">
+	<section class="pageBodyDualPage">
 		<main>
 			<h2>Golden Tree Production Products &amp; Services</h2>
-			<section id="videoServices" class="allProducts">
+			<section id="videoServices">
 				<h3>Video Products &amp; Services</h3>
 				<article id="videoTransfer" class="allProducts">
 					<h4>Video Transfer</h4>
@@ -79,7 +79,7 @@
 					</form>
 				</article>
 			</section>
-			<section id="psychicServices" class="allProducts">
+			<section id="psychicServices">
 				<h3>Psychic Products &amp; Services</h3>
 				<p><b>Note:</b> All products here have free shipping within Australia and a flat fee of $45.00 AUD for
 					international shipping.</p>
@@ -130,7 +130,7 @@
 						</form>
 					</article>
 				</section>
-				<section id="secretsOfTarot" class="allProducts">
+				<section id="secretsOfTarot">
 					<h4>Secrets Of Tarot</h4>
 					<article id="secretsOfTarotSet" class="allProducts">
 						<h5>Simply Tarot Set</h5>

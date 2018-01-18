@@ -161,7 +161,7 @@ header .breadcrumbs a:active,  header .breadcrumbs a:hover {
 
 Add some padding spacing.
 */
-.pageBody {
+.pageBody, .pageBodyDualPage {
 	padding: 0% 2%;
 }
 
@@ -172,6 +172,7 @@ Add some padding spacing.
 */
 footer {
 	padding: 2% 2%;
+	clear: both;
 }
 
 /* Style the footer
