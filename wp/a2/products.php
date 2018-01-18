@@ -83,7 +83,7 @@
 				<h3>Psychic Products &amp; Services</h3>
 				<p><b>Note:</b> All products here have free shipping within Australia and a flat fee of $45.00 AUD for
 					international shipping.</p>
-				<section id="simplyTarot" class="allProducts">
+				<section id="simplyTarot">
 					<h4>Simply Tarot</h4>
 					<article id="simplyTarotSets" class="allProducts">
 						<h5>Simply Tarot Set With DVD</h5>
