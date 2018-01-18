@@ -45,8 +45,8 @@
 		<span class="breadcrumbs">Home</span>
 	</header>
 	<section class="pageBody">
-		<main>
-			<article class="aboveTheFold">
+		<article class="aboveTheFold">
+			<main>
 				<p>Welcome to...</p><!--<span id="screenReaderGreeting">Golden Tree Productions.</span>-->
 				<img src="img/logos/gtp_new_logo_half_size.png" alt="The new logo of Golden Tree Productions. It has a
 			golden tree sprouting out of what looks a book with the words Golden Tree Production written underneath.">
@@ -60,53 +60,53 @@
 					spread of Tarot cards on the table, and a single big sized promotional card next to her.">
 						<p>Psychic Products &amp; Services</p></a>
 				</div>
-				<hr>
-			</article>
-			<section class="belowTheFold">
-				<div id="column1">
-					<h2>Video Services</h2>
+			</main>
+		</article>
+		<hr>
+		<section class="belowTheFold">
+			<div id="column1">
+				<h2>Video Services</h2>
+				<ul>
+					<li>Video Production</li>
 					<ul>
-						<li>Video Production</li>
-						<ul>
-							<li>Video Filming</li>
-							<li>Video Editing</li>
-							<li>Pre &amp; Post Media Production</li>
-							<li>Video Stills As Photos</li>
-							<li>Television Documentaries</li>
-							<li>Video Show Reels</li>
-							<li>Video Music Clips</li>
-							<li>Corporate Training Video &amp; DVD's</li>
-							<li>Resume on DVD</li>
-						</ul>
-						<li>Video Tape (VHS &amp; Super 8) Transfer To</li>
-						<ul>
-							<li>CD</li>
-							<li>DVD</li>
-							<li>USB</li>
-							<li>SD Cards</li>
-						</ul>
+						<li>Video Filming</li>
+						<li>Video Editing</li>
+						<li>Pre &amp; Post Media Production</li>
+						<li>Video Stills As Photos</li>
+						<li>Television Documentaries</li>
+						<li>Video Show Reels</li>
+						<li>Video Music Clips</li>
+						<li>Corporate Training Video &amp; DVD's</li>
+						<li>Resume on DVD</li>
 					</ul>
-				</div>
-				<div id="column2">
-					<h2>Psychic Services</h2>
+					<li>Video Tape (VHS &amp; Super 8) Transfer To</li>
 					<ul>
-						<li>Accolades</li>
-						<ul>
-							<li>Psychic Hall Of Fame 2013</li>
-							<li>Australian Psychic of the Year 2014/15/16</li>
-						</ul>
-						<li>Psychic phone &amp; email readings</li>
-						<li>Astrology Charts</li>
-						<li>Simply Tarot Sets</li>
-						<li>Secrets of Tarot set</li>
-						<li>Tarot Courses</li>
-						<li>Astrology courses</li>
-						<li>Soy Candles</li>
-						<li>The Amanda Hall Psychic Show</li>
+						<li>CD</li>
+						<li>DVD</li>
+						<li>USB</li>
+						<li>SD Cards</li>
 					</ul>
-				</div>
-			</section>
-		</main>
+				</ul>
+			</div>
+			<div id="column2">
+				<h2>Psychic Services</h2>
+				<ul>
+					<li>Accolades</li>
+					<ul>
+						<li>Psychic Hall Of Fame 2013</li>
+						<li>Australian Psychic of the Year 2014/15/16</li>
+					</ul>
+					<li>Psychic phone &amp; email readings</li>
+					<li>Astrology Charts</li>
+					<li>Simply Tarot Sets</li>
+					<li>Secrets of Tarot set</li>
+					<li>Tarot Courses</li>
+					<li>Astrology courses</li>
+					<li>Soy Candles</li>
+					<li>The Amanda Hall Psychic Show</li>
+				</ul>
+			</div>
+		</section>
 	</section>
 	<footer>
 		<h2>Additional Links</h2>

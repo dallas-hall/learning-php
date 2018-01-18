@@ -33,7 +33,7 @@
 		</fieldset>
 		<span class="breadcrumbs"><a href="index.php">Home</a></span><span class="breadcrumbs"> Blog</span>
 	</header>
-	<section class="pageBody">
+	<section class="pageBodyDualPage">
 		<article class="column1">
 			<main>
 				<h2>Soy Candles by Amanda Hall Psychic</h2>

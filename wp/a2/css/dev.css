@@ -1,3 +1,4 @@
+/*
 .pageBody {
 	padding: 0% 2%;
 }
@@ -17,10 +18,11 @@
 	width: 33%;
 }
 
-/* This makes sure that the footer goes down to the bottom of the page properly */
+!* This makes sure that the footer goes down to the bottom of the page properly *!
 footer {
 	clear: both;
 }
+*/
 
 
 
