@@ -131,7 +131,7 @@ header .memberButtons {
 	float: left;
 }
 
-header #buttonSignIn, #buttonSignUp  {
+header #buttonLogin, #buttonSignUp  {
 	text-align: center;
 	background-color: #ffffb2;
 	color: black;
@@ -157,12 +157,12 @@ header .breadcrumbs a:active,  header .breadcrumbs a:hover {
 	background-color: #bea053;
 }
 
-/* Style main section
+/* Style page body section
 
 Add some padding spacing.
 */
-main {
-	padding: 2% 2%;
+.pageBody {
+	padding: 0% 2%;
 }
 
 /* Style footer
@@ -171,7 +171,7 @@ Add some padding spacing.
 
 */
 footer {
-	padding: 0 2% 2%;
+	padding: 2% 2%;
 }
 
 /* Style the footer

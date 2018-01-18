@@ -1,27 +1,24 @@
 /* Style the main content (left) */
-#dualPage section {
+.pageBody .column1 {
 	clear: both;
 	margin: 0px auto;
 	float: left;
-	min-height: 570px;
 	min-width: 320px;
 	width: 63%;
 }
-
-#dualPage section article {
+#pageBody section article {
 	overflow: auto;
 }
 
 /* Style the aside content (right) */
-#dualPage aside {
+.pageBody .column2 {
 	padding-left: 2%;
 	float: left;
-	min-height: 570px;
 	min-width: 320px;
 	width: 33%;
 }
 
-#dualPage section aside article {
+#pageBody section aside article {
 	clear: both;
 	overflow: auto;
 }

@@ -1,28 +1,34 @@
-#allProductsPage article {
+/*, .pageBody #videoServices, .pageBody #psychicServices*/
+.pageBody article {
 	min-width: 300px;
 	width: 30%;
 	float: left;
 	padding: 0 0.25%;
+	display: inline-block;
 }
 
-.allProducts h2, .allProducts h2, .allProducts h3, .allProducts h4, .allProducts h5{
+.pageBody h2, .pageBody h2, .pageBody h3, .pageBody h4, .pageBody h5{
 	margin: 1.25% 0;
 }
 
 #videoServices {
 	border: black dotted 1px;
+	display: inline-block;
 }
 
 #simplyTarot {
 	border: black;
 	border-style: dotted;
 	border-width: 1px;
+	display: inline-block;
 }
 
 #secretsOfTarot {
 	border: black;
 	border-style: dotted;
 	border-width: 1px;
+	display: inline-block;
+	margin-top: 1%;
 }
 
 #videoServices a:active, #videoServices a:hover {
