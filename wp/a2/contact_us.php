@@ -37,29 +37,33 @@
 		<main>
 			<article class="column1">
 				<h2>Send Us A Message</h2>
-				<form action="" method="post">
+				<script type="text/javascript" src="js/checkContactForm.js"></script>
+				<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post"
+					  onsubmit="return checkContactDetails()">
 					<fieldset class="messageFieldSet">
 						<legend>Message Details</legend>
 						<!--Splitting across multiple lines to stop white space nodes being introduced-->
 						<p><label>Name:<input type="text" name="customerName" required
 											  placeholder="Enter your name."
 								></label><br>
-							<label>Email:<input type="email" name="customerEmail" placeholder="Enter your email"
-								></label><br>
-							<label>Phone:<input type="text" name="customerPhone"
-												placeholder="Enter your phone number"
-								></label><br>
+							<label>Email:<input id="contactEmail" type="email" name="email" placeholder=
+								"Enter your email"></label><br>
+							<label>Phone:<input id="contactPhone" type="text" name="phone"
+												placeholder="Enter your phone number"></label><br>
 							<label id="messageType">Message Type:
-								<select name="messageType">
-									<option value="general">General Inquiry</option>
-									<option value="sale">Sales Inquiry</option>
+								<select id="messageTypeBox" name="messageType">
+									<option value="general" selected>General</option>
+									<option value="sale">Sales</option>
+									<option value="sale">Quote</option>
 								</select></label><br>
 							<label>Message Title:<input type="text" name="messageTitle"
 														placeholder="Enter your message's title"
 								></label><br>
 							<label><span id="textAreaLabel">Message:</span
 								><textarea id="customerMessage" placeholder="Enter your message"
-										   required></textarea></label></p>
+										   required name="messageText"></textarea></label></p>
+						<span id="contactMessage"></span><br>
+						<input id="contactSubmit" type="submit" value="Send Message">
 					</fieldset>
 				</form>
 			</article>

@@ -9,15 +9,28 @@
 	float: left;
 }
 
+#contactUsPage h3 {
+	margin-top: 10%;
+}
+
 #contactUsPage .messageFieldSet {
 	margin-top: 20px;
 	padding: 2%;
 	line-height: 1.6em;
 }
 
+#contactSubmit, #messageTypeBox {
+	background-color: #ffffb2;
+}
+
+#contactUsPage #messageType {
+	text-align: left;
+	padding-left: 4%;
+}
+
 #contactUsPage textarea {
 	height: 200px;
-	width: 70%;
+	width: 73%;
 	margin-left: 2%;
 }
 
@@ -36,11 +49,21 @@ input[type="text"], input[type="email"]{
 }
 
 #contactUsPage select {
-	width: 160px;
+	/*width: 140px;*/
 	margin-left: 2%;
 }
 
-/* Style the email addresses when they are active / hovered */
+#contactSubmit {
+	display: inline-block;
+	float: left;
+	margin-left: 25%;
+}
+
+#contactSubmit:active, #contactSubmit:hover {
+	background-color: #bea053;
+}
+
+	/* Style the email addresses when they are active / hovered */
 td a:active, td a:hover {
 	background-color: #b5d3ff;
 }

@@ -49,7 +49,7 @@
 						<label>Repeat Password:<input id="password2" type="password" name="secondPassword"
 													  placeholder="Repeat your password. They must match."
 													  required></label><br>
-						<input type="submit" value="Sign Up">
+						<input id="signUpButton" type="submit" value="Sign Up">
 					</fieldset>
 					<p id="signUpMessage"></p>
 				</form>
