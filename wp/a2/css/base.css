@@ -15,10 +15,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Default page settings for a 960 single page - this idea was taken from the unit text book end of chapter example in chapter 17 */
 .pageWrapper {
-	/*background-image: url("../img/logos/gtp_new_logo_tree_only.png");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 700px 700px;*/
 	font-family: 'Josefin Sans', sans-serif;
 	line-height: 1.4em;
 	max-width: 960px;

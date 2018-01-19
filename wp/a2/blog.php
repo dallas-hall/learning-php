@@ -96,7 +96,7 @@
 						shop</a>.</p>
 			</main>
 		</article>
-		<aside id="column2">
+		<aside class="column2">
 			<h2>Testimonials</h2>
 			<article>
 				<h3>Cheryl Rathborne</h3>

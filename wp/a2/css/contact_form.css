@@ -10,7 +10,7 @@
 }
 
 #contactUsPage h3 {
-	margin-top: 10%;
+	margin-top: 2.5%;
 }
 
 #contactUsPage .messageFieldSet {
@@ -66,4 +66,15 @@ input[type="text"], input[type="email"], input[type="password"] {
 	/* Style the email addresses when they are active / hovered */
 td a:active, td a:hover {
 	background-color: #b5d3ff;
+}
+
+/* Style the aside content (right) */
+.pageBodyDualPage #column2 {
+	padding-left: 2%;
+	min-width: 320px;
+}
+
+#pageBodyDualPage section aside article {
+	clear: both;
+	overflow: auto;
 }

@@ -6,7 +6,7 @@
 	min-width: 320px;
 	width: 63%;
 }
-#pageBodyDualPage section article {
+.pageBodyDualPage section article {
 	overflow: auto;
 }
 
@@ -18,7 +18,7 @@
 	width: 33%;
 }
 
-#pageBodyDualPage section aside article {
+.pageBodyDualPage section aside article {
 	clear: both;
 	overflow: auto;
 }
