@@ -1,5 +1,5 @@
 #aboutUsPage .pageBody, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage.pageWrapper,
-#privacyPage.pageWrapper, #productsPage .pageBody, #allProductsPage .pageBodyDualPage,
+#privacyPage.pageWrapper, #productPage.pageWrapper, #allProductsPage .pageBodyDualPage,
 #returnsAndRefundsPage .pageBody, #signUpPage.pageWrapper, #termsAndConditionsPage .pageBody {
 	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
 	background-repeat: space;
