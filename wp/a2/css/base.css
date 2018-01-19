@@ -139,13 +139,6 @@ header #buttonLogin, #buttonSignUp  {
 	width: 72px;
 }
 
-#loginButton, #signUpButton {
-	text-align: center;
-	background-color: #ffffb2;
-	color: black;
-	width: 72px;
-}
-
 #buttonLogin:active, #buttonLogin:hover, #buttonSignUp:active, #buttonSignUp:hover   {
 	background-color: #bea053;
 }

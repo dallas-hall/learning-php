@@ -34,3 +34,11 @@
 #psychicServices a:active, #psychicServices a:hover {
 	background-color: #b5d3ff;
 }
+
+#allProductsPage input[type="submit"] {
+	background-color: #ffffb2;
+}
+
+#allProductsPage input[type="submit"]:active, #allProductsPage input[type="submit"]:hover {
+	background-color: #bea053;
+}
