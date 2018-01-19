@@ -124,6 +124,7 @@ header #membersArea {
 
 Set width and alignment
 Align text, set background colour, update text colour, and width.
+Change background colour for active and hover
 
  */
 header .memberButtons {
@@ -136,6 +137,17 @@ header #buttonLogin, #buttonSignUp  {
 	background-color: #ffffb2;
 	color: black;
 	width: 72px;
+}
+
+#loginButton, #signUpButton {
+	text-align: center;
+	background-color: #ffffb2;
+	color: black;
+	width: 72px;
+}
+
+#buttonLogin:active, #buttonLogin:hover, #buttonSignUp:active, #buttonSignUp:hover   {
+	background-color: #bea053;
 }
 
 /* Style the breadcrumbs

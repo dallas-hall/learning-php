@@ -31,7 +31,7 @@
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
 			<form action="login.php" class="memberButtons">
-				<input id="buttonLogin" type="submit" name="signIn" value="Sign In">
+				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
 				<input id="buttonSignUp" type="submit" name="signUp" value="Sign Up">
@@ -42,8 +42,8 @@
 	<section class="pageBodyDualPage">
 		<main>
 			<h2>Golden Tree Production Products &amp; Services</h2>
+			<h3>Video Products &amp; Services</h3>
 			<section id="videoServices">
-				<h3>Video Products &amp; Services</h3>
 				<article id="videoTransfer" class="allProducts">
 					<h4>Video Transfer</h4>
 					<a href="product.php"><img src="img/people/jack_and_equipment.jpg" width="256px" height="170px"></a>
@@ -69,8 +69,7 @@
 						<li>Photography (using film stills)</li>
 					</ul>
 					<p>Please contact us with your job's details so we can arrange a free and obligation free quote.
-						Sorry,
-						but we do not do weddings due to high insurance costs.</p>
+						Sorry, but we do not do weddings due to high insurance costs.</p>
 					<form action="product.php">
 						<input type="submit" name="productionMoreDetails" value="Details">
 					</form>
