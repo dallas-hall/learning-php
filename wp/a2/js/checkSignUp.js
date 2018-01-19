@@ -7,11 +7,12 @@ function checkSignUp() {
 	var secondPasswordContent = secondPasswordElement.value.toString();
 	console.log(secondPasswordContent);
 	/* Concept taken from https://www.w3schools.com/js/js_errors.asp */
-	if (firstPasswordContent.length < 8 || secondPasswordContent.length < 8){
+	if (firstPasswordContent.length < 8 || secondPasswordContent.length < 8) {
 		messageElement.innerText = "Password must be >= 8 characters.";
 		return false;
 	}
-	else if (firstPasswordContent.match(secondPasswordContent) && firstPasswordContent.length >= 8 && secondPasswordContent.length >= 8) {
+	else if (firstPasswordContent.matches(secondPasswordContent)
+		&& firstPasswordContent.length >= 8 && secondPasswordContent.length >= 8) {
 		messageElement.innerHTML = "";
 		return true;
 	}

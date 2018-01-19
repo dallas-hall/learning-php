@@ -7,7 +7,10 @@ function checkContactDetails() {
 	var emailContent = emailElement.value.toString();
 	console.log(emailContent);
 
-	if (phoneContent == null && emailContent == null) {
+	/* logic taken from https://stackoverflow.com/a/154068 */
+	if ((phoneContent === '' && emailContent === '')
+		|| (phoneContent == null && emailContent == null)
+		|| (!phoneContent && !emailContent)) {
 		messageElement.innerHTML = "Must enter phone or email or both.";
 		return false;
 	} else {
