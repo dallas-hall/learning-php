@@ -1,8 +1,10 @@
-#aboutUsPage, #blogPage, #contactUsPage, #privacyPage, #productsPage, #returnsAndRefundsPage, #termsAndConditionsPage {
+#aboutUsPage .pageBody, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage .pageBody,
+#privacyPage.pageWrapper, #productsPage .pageBody, #allProductsPage .pageBodyDualPage,
+#returnsAndRefundsPage .pageBody, #signUpPage .pageBody, #termsAndConditionsPage .pageBody {
 	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
 	background-repeat: space;
 	background-position: center center;
-	background-size: 700px 700px;
+	background-size: 75%;
 }
 
 .pageBody {
