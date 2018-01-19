@@ -77,9 +77,11 @@
 								<option id="usbTransfer" value="usb">USB</option>
 								<option id="sdTransfer" value="sd">SD Card</option>
 							</select></label><br>
-						<input type="submit" value="Buy Now"><br>
-					</form>
-					<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us">
+					</form><br>
+					<form action="contact_us.php"><input id="productBuyButton"
+								class="videoProductionButtons" type="submit" value="Buy Now"><input
+								class="videoProductionButtons" type="submit" name="contactProduction"
+								value="Contact Us">
 					</form>
 					<script src="js/quantity.js"></script>
 				</main>
