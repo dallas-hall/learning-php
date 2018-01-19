@@ -37,15 +37,21 @@
 		<article class="singlePage">
 			<main>
 				<h2>Golden Tree Production Customer Sign Up</h2>
-				<form action="">
+				<script type="text/javascript" src="js/checkPassword.js"></script>
+				<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post"
+					  onsubmit="return checkPasswords()">
 					<fieldset>
 						<legend>Login Details</legend>
-						<label>Username:<input type="email" placeholder="Your email address." required></label><br>
-						<label>Password:<input type="password" placeholder="Your password." required></label><br>
-						<label>Repeat Password:<input type="password" placeholder="Repeat your password."
+						<label>Username:<input type="email" name="email" placeholder="Enter your email address."
+											   required></label><br>
+						<label>Password:<input id="password1" type="password" name="firstPassword" placeholder=
+							"Enter your password." required></label><br>
+						<label>Repeat Password:<input id="password2" type="password" name="secondPassword"
+													  placeholder="Repeat your password. They must match."
 													  required></label><br>
-						<input type="submit" name="buttonSignup" value="Sign Up">
+						<input type="submit" value="Sign Up">
 					</fieldset>
+					<p id="signUpMessage"></p>
 				</form>
 			</main>
 		</article>

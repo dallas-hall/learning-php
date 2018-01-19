@@ -47,6 +47,7 @@
 										   required></label><br>
 					<input type="submit" value="Log In">
 				</fieldset>
+				<p id="loginMessage"></p>
 			</form>
 		</article>
 	</section>
