@@ -35,7 +35,7 @@
 																								  "products.php">Shop</a></span><span
 				class="breadcrumbs"> Product</span>
 	</header>
-	<section class="pageBodyDualPage">
+	<section class="pageBodyDualPage" id="singleProductPage">
 		<article class="column1">
 			<h2>Video Transfer</h2>
 			<article id="videoTransfer">

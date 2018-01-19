@@ -70,11 +70,13 @@
 					</ul>
 					<p>Please contact us with your job's details so we can arrange a free and obligation free quote.
 						Sorry, but we do not do weddings due to high insurance costs.</p>
-					<form action="product.php">
-						<input type="submit" name="productionMoreDetails" value="Details">
+					<form class="videoProductionButtons" action="product.php">
+						<input class="videoProductionButtons" type="submit" name="productionMoreDetails"
+							   value="Details">
 					</form>
-					<form action="contact_us.php">
-						<input type="submit" name="productionMoreContact" value="Contact Us">
+					<form class="videoProductionButtons" action="contact_us.php">
+						<input class="videoProductionButtons" type="submit" name="productionMoreContact"
+							   value="Contact Us">
 					</form>
 				</article>
 			</section>
