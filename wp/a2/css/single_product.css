@@ -31,3 +31,21 @@
 #quantityText {
 	width: 32px;
 }
+
+#singleProductPage input[type="button"], #singleProductPage input[type="submit"], #singleProductPage select{
+	background-color: #ffffb2;
+}
+
+#singleProductPage input[type="button"] {
+	width: 48px;
+}
+
+#singleProductPage select {
+	width: 96px;
+}
+
+#singleProductPage input[type="submit"] {
+	text-align: center;
+	color: black;
+	width: 96px;
+}

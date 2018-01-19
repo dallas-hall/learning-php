@@ -34,7 +34,7 @@
 	margin-left: 2%;
 }
 
-input[type="text"], input[type="email"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="password"] {
 	width: 70%;
 	margin-left: 2%;
 }
@@ -49,7 +49,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 }
 
 #contactUsPage select {
-	/*width: 140px;*/
+	width: 96px;
 	margin-left: 2%;
 }
 

@@ -39,7 +39,7 @@
 				<h2>Soy Candles by Amanda Hall Psychic</h2>
 				<h3>Intent – Purpose – Direction</h3>
 				<figure>
-					<img src="">
+					<img src="img/blog/2018-01-candles/blog01.jpg">
 					<figcaption>Fortunes Told Naturaul Eco Candle Range, 100% Natural Eco soy candles Eco friendly.
 					</figcaption>
 				</figure>
@@ -53,7 +53,7 @@
 					based
 					candles which have scent in them to make our homes and work spaces smell nice.</p>
 				<figure>
-					<img src="">
+					<img src="img/blog/2018-01-candles/blog02.jpg">
 					<figcaption>Soy candle production.</figcaption>
 				</figure>
 				<p>You may very well like the smell of scented candles in your home. Most of us don’t know the
@@ -88,7 +88,7 @@
 					direct on table. Make sure you always extinguish your candle with snuffer or glass
 					snuffer lid. Always burn your candle in a safe location. Never place in a direct draft
 					or under fan. Always keep away from children.</p>
-				<figure><img src="">
+				<figure><img src="img/blog/2018-01-candles/blog03.jpg">
 					<figcaption>3 Candles your, choose your very own Soy Candles from the range.
 					</figcaption>
 				</figure>
