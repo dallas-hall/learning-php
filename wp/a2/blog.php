@@ -50,8 +50,7 @@
 				<h3>So what is the difference I hear you ask!</h3>
 				<p>In our modern times and so much research is being done into our health it is no surprise that
 					scientists are trying to find the one of the many causes of cancer so now they are chemical
-					based
-					candles which have scent in them to make our homes and work spaces smell nice.</p>
+					based candles which have scent in them to make our homes and work spaces smell nice.</p>
 				<figure>
 					<img src="img/blog/2018-01-candles/blog02.jpg">
 					<figcaption>Soy candle production.</figcaption>
@@ -59,13 +58,6 @@
 				<p>You may very well like the smell of scented candles in your home. Most of us don’t know the
 					difference between Chemical based candles and Natural Eco Soy with lead free wicks. Moat
 					consumers shop by price point and value for our hard earned money.</p>
-				<h3>So what is the difference I hear you ask!</h3>
-				<p>In our modern times and so much research is being done into our health it is no surprise that
-					scientists are trying to find the one of the many causes of cancer so now they are chemical
-					based candles which have scent in them to make our homes and work spaces smell nice.</p>
-				<figure><img src="">
-					<figcaption>Soy candle production.</figcaption>
-				</figure>
 				<h3>What Chemicals?</h3>
 				<p>Yes they are a chemical cocktail of many ingredients such as
 					petroleum, benzene and alpha-pinene can be present the most common chemical released is
