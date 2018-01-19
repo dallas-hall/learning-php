@@ -45,32 +45,42 @@
 					-->
 					<img src="img/products/video/vcr.jpg" width="480" height="270">
 					<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
-						some old tapes locked in a cupboard that we are going to do something with. Well today is the day
+						some old tapes locked in a cupboard that we are going to do something with. Well today is the
+						day
 						. Get them out sort through them. What is special and you want to keep for future generations.
 						They make a lovely gift to give. Being able to share memories from family history, special
-						occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and
+						occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS
+						and
 						Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
 					<p>The price is $30.00 AUD per video copy.</p>
+					<script type="text/javascript" src="js/createCartItem.js"></script>
+					<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post"
+						  onsubmit="return createCartItem()">
 					<span id="quantityButton">
-					<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
-					<label>Amount Of Videos I Have:</label><input type="button" name="quantityMinus" value="-"
+						<input id="videoTransferService" type="hidden" name="id" value="videoTransfer">
+						<!--Splitting across lines with 'broken' tags so no white space nodes are introduced-->
+					<label>Amount Of Videos I Have:</label><input type="button"
+																  name="quantityMinus" value="-"
 																  id="quantityMinus"
-						><input type="text" value="0" id="quantityText"
-						><input type="button" name="quantityAdd" value="+" id="quantityAdd"></span
-					><br><label id="sourceType">Video Storage Media I Have:
-						<select name="sourceType">
-							<option value="vhs">VHS</option>
-							<option value="super8">Super8</option>
-						</select></label
-					><br><label id="copyType">Video Storage Media I Want:
-						<select name="copyType">
-							<option value="cd">CD</option>
-							<option value="dvd">DVD</option>
-							<option value="usb">USB</option>
-							<option value="sd">SD Card</option>
-						</select></label><br>
-					<form action=""><input type="submit" name="buyNow" value="Buy Now"><br></form>
-					<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us"></form>
+						><input type="text" name="quantity" value="0" id="quantityText"
+						><input type="button" name="quantityAdd" value="+" id="quantityAdd">
+					</span
+					><br><label>Video Storage Media I Have:
+							<select id="transferSource" name="sourceType">
+								<option id="vhsTransfer" value="vhs" selected>VHS</option>
+								<option id="super8Transfer" value="super8">Super8</option>
+							</select></label
+						><br><label>Video Storage Media I Want:
+							<select id="transferTarget" name="targetType">
+								<option id="cdTransfer" value="cd" selected>CD</option>
+								<option id="dvdTransfer" value="dvd">DVD</option>
+								<option id="usbTransfer" value="usb">USB</option>
+								<option id="sdTransfer" value="sd">SD Card</option>
+							</select></label><br>
+						<input type="submit" value="Buy Now"><br>
+					</form>
+					<form action="contact_us.php"><input type="submit" name="contactProduction" value="Contact Us">
+					</form>
 					<script src="js/quantity.js"></script>
 				</main>
 			</article>
@@ -83,7 +93,8 @@
 				<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0"
 						allowfullscreen></iframe>
 				<br>
-				<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allowfullscreen></iframe>
+				<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0"
+						allowfullscreen></iframe>
 			</article>
 		</aside>
 	</section>
