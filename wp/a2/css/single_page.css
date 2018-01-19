@@ -1,6 +1,6 @@
-#aboutUsPage .pageBody, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage .pageBody,
+#aboutUsPage .pageBody, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage.pageWrapper,
 #privacyPage.pageWrapper, #productsPage .pageBody, #allProductsPage .pageBodyDualPage,
-#returnsAndRefundsPage .pageBody, #signUpPage .pageBody, #termsAndConditionsPage .pageBody {
+#returnsAndRefundsPage .pageBody, #signUpPage.pageWrapper, #termsAndConditionsPage .pageBody {
 	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
 	background-repeat: space;
 	background-position: center center;
