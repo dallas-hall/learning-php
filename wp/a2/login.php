@@ -7,7 +7,7 @@
 	<link href="css/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="pageWrapper" id="singleTemplate">
+<div class="pageWrapper" id="loginPage">
 	<header>
 		<a class="navigation_image" href="index.php"><img src="img/logos/gtp_new_logo_tree_only.png" width="50px"
 														  height="50px"
