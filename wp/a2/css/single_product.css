@@ -36,6 +36,10 @@
 	background-color: #ffffb2;
 }
 
+#singleProductPage input[type="button"]:hover, #singleProductPage input[type="submit"]:hover, #singleProductPage select:hover{
+	background-color: #bea053;
+}
+
 #singleProductPage input[type="button"] {
 	width: 48px;
 }
