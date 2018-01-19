@@ -24,7 +24,7 @@
 		</nav>
 		<fieldset id="membersArea">
 			<legend>Members Area</legend>
-			<form action="login.php" class="memberButtons">
+			<form action="/~e54061/wp/processing.php" class="memberButtons">
 				<input id="buttonLogin" type="submit" name="login" value="Login">
 			</form>
 			<form action="signup.php" class="memberButtons">
