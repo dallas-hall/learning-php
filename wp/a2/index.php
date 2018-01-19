@@ -56,8 +56,8 @@
 					video camera.">
 						<p>Video Products &amp; Services</p></a>
 					<a href="products.php#psychicServices" class="productsLink">
-						<img src="img/people/amanda_and_cards.jpg" width="130px" height="100px" alt="Amanda Hall with a
-					spread of Tarot cards on the table, and a single big sized promotional card next to her.">
+						<img src="img/people/amanda_interview.jpg" width="130px" height="100px" alt="Amanda Hall
+						being interviewed about the release of Simply Tarot.">
 						<p>Psychic Products &amp; Services</p></a>
 				</div>
 			</main>
