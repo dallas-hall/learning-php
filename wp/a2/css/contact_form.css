@@ -68,6 +68,10 @@ td a:active, td a:hover {
 	background-color: #b5d3ff;
 }
 
+#contactUsPage select:hover {
+	background-color: #bea053;
+}
+
 /* Style the aside content (right) */
 .pageBodyDualPage #column2 {
 	padding-left: 2%;
