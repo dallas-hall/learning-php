@@ -11,7 +11,7 @@ function checkSignUp() {
 		messageElement.innerText = "Password must be >= 8 characters.";
 		return false;
 	}
-	else if (firstPasswordContent.matches(secondPasswordContent)
+	else if (firstPasswordContent === secondPasswordContent
 		&& firstPasswordContent.length >= 8 && secondPasswordContent.length >= 8) {
 		messageElement.innerHTML = "";
 		return true;
