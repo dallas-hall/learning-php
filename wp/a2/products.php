@@ -136,7 +136,7 @@
 					<article id="secretsOfTarotSet" class="allProducts">
 						<h5>Simply Tarot Set</h5>
 						<a href="product.php"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
-												   width="256px" height="170px"></a>
+												   width="210px" height="244"></a>
 						<p>This Secrets Of Tarot Set includes:</p>
 						<ul>
 							<li>Simply Tarot Training Book.</li>
