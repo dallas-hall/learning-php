@@ -1,0 +1,59 @@
+/* Add spacing to labels*/
+#videoTransfer label {
+	text-align: left;
+	padding: 0 1%;
+}
+
+#quantityButton label {
+	text-align: left;
+	padding-left: 0;
+	padding-right: 2%;
+}
+
+/* Remove all spacing around the input elements */
+#quantityButton input {
+	margin: 0;
+	padding: 0;
+}
+
+/* Centre the image */
+#videoTransfer img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Centre the button text */
+#quantityMinus, #quantityAdd{
+	text-align: center;
+}
+
+/* Set the input textfield width */
+#quantityText {
+	width: 32px;
+}
+
+#singleProductPage input[type="button"], #singleProductPage input[type="submit"], #singleProductPage select{
+	background-color: #ffffb2;
+}
+
+#singleProductPage input[type="button"]:hover, #singleProductPage input[type="submit"]:hover, #singleProductPage select:hover{
+	background-color: #bea053;
+}
+
+#singleProductPage input[type="button"] {
+	width: 48px;
+}
+
+#singleProductPage select {
+	width: 96px;
+}
+
+#singleProductPage input[type="submit"] {
+	text-align: center;
+	color: black;
+	width: 96px;
+}
+
+#productBuyButton {
+	margin-right: 1%;
+}

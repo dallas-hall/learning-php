@@ -1,0 +1,16 @@
+#aboutUsPage .pageBody, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage.pageWrapper,
+#privacyPage.pageWrapper, #productPage.pageWrapper, #allProductsPage .pageBodyDualPage,
+#returnsAndRefundsPage .pageBody, #signUpPage.pageWrapper, #termsAndConditionsPage .pageBody {
+	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
+	background-repeat: space;
+	background-position: center center;
+	background-size: 75%;
+}
+
+.pageBody {
+	clear: both;
+	margin: 1% auto;
+	float: left;
+	min-width: 320px;
+	/*width: 96%;*/
+}

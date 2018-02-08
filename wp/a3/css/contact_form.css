@@ -1,0 +1,84 @@
+#contactUsPage label {
+	padding: 2%;
+	display: inline-block;
+	text-align: right;
+	width: 90%;
+}
+
+#messageType {
+	float: left;
+}
+
+#contactUsPage h3 {
+	margin-top: 5%;
+}
+
+#contactUsPage .messageFieldSet {
+	margin-top: 20px;
+	padding: 2%;
+	line-height: 1.6em;
+}
+
+#contactSubmit, #messageTypeBox {
+	background-color: #ffffb2;
+}
+
+#contactUsPage #messageType {
+	text-align: left;
+	padding-left: 4%;
+}
+
+#contactUsPage textarea {
+	height: 200px;
+	width: 73%;
+	margin-left: 2%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 70%;
+	margin-left: 2%;
+}
+
+#messageType label {
+	float: left;
+}
+
+/* Align the textarea label to the top of the element - https://www.w3schools.com/csS/css_align.asp */
+#textAreaLabel {
+	vertical-align: top;
+}
+
+#contactUsPage select {
+	width: 96px;
+	margin-left: 2%;
+}
+
+#contactSubmit {
+	display: inline-block;
+	float: left;
+	margin-left: 25%;
+}
+
+#contactSubmit:active, #contactSubmit:hover {
+	background-color: #bea053;
+}
+
+	/* Style the email addresses when they are active / hovered */
+td a:active, td a:hover {
+	background-color: #b5d3ff;
+}
+
+#contactUsPage select:hover {
+	background-color: #bea053;
+}
+
+/* Style the aside content (right) */
+.pageBodyDualPage #column2 {
+	padding-left: 2%;
+	min-width: 320px;
+}
+
+#pageBodyDualPage section aside article {
+	clear: both;
+	overflow: auto;
+}
