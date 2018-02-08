@@ -1,0 +1,67 @@
+/* Remove background image from the home page. */
+#indexPage {
+	background-image: none;
+}
+
+/* Styling the above the fold section, concept based on unit textbook chapter 15
+
+ */
+#indexPage article.aboveTheFold {
+	clear: both;
+	float: none;
+	min-height: 570px;
+	min-width: 320px;
+	width: 95%;
+
+}
+
+/* The text align property is centering the text and the image, I think because the <img> is inside of the <a> */
+#indexPage .aboveTheFold, .aboveTheFold p {
+	text-align: center;
+
+	font-size: 125%;
+	padding: 10px 10px;
+}
+
+/* Was trying to use this to centre images but since they are inside <p> it isn't needed - I think I butchered the way I
+ am using CSS to actually get what I want, it is working the way I want it to work, just not the way I thought I needed to do it.
+.aboveTheFold img {
+	margin: 0 auto;
+}
+*/
+
+/* Using this so the pictures and text will sit side by side */
+#servicesLinks {
+	display: inline-flex;
+}
+
+/* Style the main page services links so text colour is always the same and has a new background colour for contrast */
+#servicesLinks a:link, #servicesLinks a:visited {
+	color: black;
+}
+
+#servicesLinks a:active, #servicesLinks a:hover {
+	background-color: #bea053;
+}
+
+/* Styling the below the fold section */
+#indexPage .belowTheFold {
+	min-height: auto;
+	min-width: 320px;
+	width: 95%;
+}
+
+/* Create 2 columns below the fold */
+#indexPage .belowTheFold #column1 {
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding: 10px 10px;
+}
+
+#indexPage .belowTheFold #column2 {
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding: 10px 10px;
+}

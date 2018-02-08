@@ -1,0 +1,24 @@
+/* Style the main content (left) */
+.pageBodyDualPage .column1 {
+	clear: both;
+	margin: 0px auto;
+	float: left;
+	min-width: 320px;
+	width: 63%;
+}
+.pageBodyDualPage section article {
+	overflow: auto;
+}
+
+/* Style the aside content (right) */
+.pageBodyDualPage .column2 {
+	padding-left: 2%;
+	float: left;
+	min-width: 320px;
+	width: 33%;
+}
+
+.pageBodyDualPage section aside article {
+	clear: both;
+	overflow: auto;
+}

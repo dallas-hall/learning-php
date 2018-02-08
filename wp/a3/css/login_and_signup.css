@@ -1,0 +1,25 @@
+#loginPage .pageBody, #signUpPage .pageBody {
+	width: 96%;
+}
+
+#loginPage label {
+	padding: 2%;
+	display: inline-block;
+	text-align: right;
+	width: 90%;
+}
+
+#signUpPage label {
+	padding: 2%;
+	display: inline-block;
+	text-align: right;
+	width: 90%;
+}
+
+#loginButton, #signUpButton {
+	text-align: center;
+	background-color: #ffffb2;
+	color: black;
+	width: 72px;
+	margin-left: 27%;
+}
