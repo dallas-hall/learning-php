@@ -1,6 +1,7 @@
 /*, .pageBody #videoServices, .pageBody #psychicServices*/
 .pageBodyDualPage .allProducts {
 	min-width: 300px;
+	min-height: 420px;
 	width: 32%;
 	float: left;
 	padding: 0 0.25%;

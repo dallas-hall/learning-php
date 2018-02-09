@@ -22,7 +22,8 @@ require_once("functions.php");
 			<section id="videoServices">
 				<article id="videoTransfer" class="allProducts">
 					<h4>Video Transfer</h4>
-					<a href="product.php"><img src="img/people/jack_and_equipment.jpg" width="256px" height="170px"></a>
+					<a href="product.php?productID=videoTransfer"><img src="img/people/jack_and_equipment.jpg" width="256px"
+												height="170px"></a>
 					<p>The video transfer services we provide are:</p>
 					<ul>
 						<li>Transfer VHS or Super 8 to CD.</li>
@@ -38,7 +39,7 @@ require_once("functions.php");
 				</article>
 				<article id="videoProduction" class="allProducts">
 					<h4>Video Production</h4>
-					<a href="product.php"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>
+					<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>
 					<p>The video productions services we provide are:</p>
 					<ul>
 						<li>Filming &amp; editing</li>
@@ -64,7 +65,8 @@ require_once("functions.php");
 					<h4>Simply Tarot</h4>
 					<article id="simplyTarotSets" class="allProducts">
 						<h5>Simply Tarot Set With DVD</h5>
-						<a href="product.php"><img src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
+						<a href="product.php?productID=simplyTarotSetDVD"><img
+									src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
 												   width="256px" height="170px"></a>
 						<p>This Simply Tarot Set includes:</p>
 						<ul>
@@ -72,41 +74,56 @@ require_once("functions.php");
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
-						<p>The Simply Tarot set with the DVD is $103.00 AUD.</p>
+						<p>This set is $103.00 AUD.</p>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotSets">
+							<input type="hidden" name="productID" value="simplyTarotSetDVD">
 						</form>
 					</article>
-					<article id="simplyTarotSetsNoVD" class="allProducts">
+					<article id="simplyTarotSetNoDVD" class="allProducts">
 						<h5>Simply Tarot Set Without DVD</h5>
-						<a href="product.php"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
+						<a href="product.php?productID=simplyTarotSetNoDVD"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
 												   width="256px" height="170px"></a>
 						<p>This Simply Tarot Set includes:</p>
 						<ul>
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
-						<p>The Simply Tarot set with the DVD is $83.00 AUD.</p>
+						<p>This set is $83.00 AUD.</p>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotSetsNoVD">
+							<input type="hidden" name="productID" value="simplyTarotSetNoDVD">
 						</form>
 					</article>
-					<article id="simplyTarotCandles" class="allProducts">
-						<h5>Simply Tarot Candles</h5>
-						<a href="product.php"><img src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
-												   width="256px" height="170px"></a>
+					<article id="simplyTarotCandleLarge" class="allProducts">
+						<h5>Simply Tarot 1 Large Candle</h5>
+						<a href="product.php?productID=simplyTarotCandleLarge"><img src="img/products/psychic/candles/simply/large_simply_candle.jpg"
+							width="210px" height="244"></a>
 						<p>There are 2 types of Simply Tarot Candles.</p>
 						<ol>
 							<li>One Large Simply Tarot Candle</li>
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
-						<p>The single large candle is $57.95 AUD and the gift pack containing 3 small candles are $49.95
-							AUD.</p>
+						<p>This candle is $57.95 AUD.</p>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotCandles">
+							<input type="hidden" name="productID" value="simplyTarotCandleLarge">
+						</form>
+					</article>
+					<article id="simplyTarotCandlesSmall" class="allProducts">
+						<h5>Simply Tarot 3 Small Candles </h5>
+						<a href="product.php?productID=simplyTarotCandlesSmall"><img
+									src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
+																				width="256px" height="170px"></a>
+						<p>There are 2 types of Simply Tarot Candles.</p>
+						<ol>
+							<li>One Large Simply Tarot Candle</li>
+							<li>Three Small Simply Tarot Candles.</li>
+						</ol>
+						<p>These candles are $49.95 AUD.</p>
+						<form action="product.php">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="simplyTarotCandlesSmall">
 						</form>
 					</article>
 				</section>
@@ -114,7 +131,7 @@ require_once("functions.php");
 					<h4>Secrets Of Tarot</h4>
 					<article id="secretsOfTarotSet" class="allProducts">
 						<h5>Simply Tarot Set</h5>
-						<a href="product.php"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
+						<a href="product.php?productID=secretsOfTarotSet"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
 												   width="210px" height="244"></a>
 						<p>This Secrets Of Tarot Set includes:</p>
 						<ul>
@@ -126,21 +143,36 @@ require_once("functions.php");
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="secretsOfTarotSet">
 						</form>
+						<br>
 					</article>
-					<article id="secretsOfTarotCandles" class="allProducts">
-						<h5>Simply Tarot Candles</h5>
-						<a href="product.php"><img src="img/products/psychic/candles/secrets/large_secrets_candle.jpg"
+					<article id="secretsOfTarotCandleLarge" class="allProducts">
+						<h5>Secrets Of Tarot 1 Large Candle</h5>
+						<a href="product.php?productID=secretsOfTarotCandleLarge"><img src="img/products/psychic/candles/secrets/large_secrets_candle.jpg"
 												   width="210px" height="244"></a>
 						<p>There are 2 types of Secrets Of Tarot Candles</p>
 						<ol>
 							<li>One Large Secrets Of Tarot Candle</li>
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
-						<p>The single large candle is $57.95 AUD and the gift pack containing 3 small candles are $49.95
-							AUD.</p>
+						<p>This candle is $57.95 AUD.</p>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="secretsOfTarotCandles">
+							<input type="hidden" name="productID" value="secretsOfTarotCandleLarge">
+						</form>
+					</article>
+					<article id="secretsOfTarotCandlesSmall" class="allProducts">
+						<h5>Secrets Of Tarot 3 Small Candles</h5>
+						<a href="product.php?productID=secretsOfTarotCandlesSmall"><img src="img/products/psychic/candles/secrets/3_small_secrets_candle.jpg"
+																						width="256px" height="170px"></a>
+						<p>There are 2 types of Secrets Of Tarot Candles</p>
+						<ol>
+							<li>One Large Secrets Of Tarot Candle</li>
+							<li>Three Small Secrets Of Tarot Candles.</li>
+						</ol>
+						<p>These candles are $49.95 AUD.</p>
+						<form action="product.php">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="secretsOfTarotCandlesSmall">
 						</form>
 					</article>
 				</section>

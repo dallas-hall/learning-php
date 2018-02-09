@@ -57,3 +57,8 @@
 #productBuyButton {
 	margin-right: 1%;
 }
+
+.videoProductionButtons {
+	width: 96px;
+	display: inline-block;
+}

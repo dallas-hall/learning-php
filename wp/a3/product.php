@@ -4,6 +4,7 @@ require_once("functions.php");
 require_once("product_script.php");
 
 /*showFormattedArray($allProducts);*/
+/*showFormattedArray($productsTree);*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,22 +21,18 @@ require_once("product_script.php");
 	<?php require("header.php"); ?>
 	<section class="pageBodyDualPage" id="singleProductPage">
 		<article class="column1">
-			<h2>Video Transfer</h2>
-			<article id="videoTransfer">
+			<!--<h2><?php /*echo $productsTree[$_GET['productID']]['productTitle']*/?></h2>-->
+			<h2><?php echo $productsTree[PRODUCT_ID]['productTitle']?></h2>
+			<article id="aProduct">
 				<main>
 					<!--
 					This free image was sourced at https://www.pexels.com/photo/classic-phonograph-record-retro-tech-157540/
 					-->
-					<img src="img/products/video/vcr.jpg" width="480" height="270">
-					<p>In today’s fast moving world our lives move so fast and memories fade just as quick. We all have
-						some old tapes locked in a cupboard that we are going to do something with. Well today is the
-						day
-						. Get them out sort through them. What is special and you want to keep for future generations.
-						They make a lovely gift to give. Being able to share memories from family history, special
-						occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS
-						and
-						Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
-					<p>The price is $30.00 AUD per video copy.</p>
+					<img src="<?php echo $productsTree[PRODUCT_ID]['productImage']?>" width="480" height="270"
+						 alt="<?php echo $productsTree[PRODUCT_ID]['productImageText']?>">
+					<p><?php echo $productsTree[PRODUCT_ID]['productDescription']?></p>
+					<!--NEED A PHP IF STATEMENT HERE TO DIFFERENTIATE PRODUCTS-->
+					<p>The price is $<?php echo $productsTree[PRODUCT_ID]['price']?> AUD per video copy.</p>
 					<script type="text/javascript" src="js/createCartItem.js"></script>
 					<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post"
 						  onsubmit="return createCartItem()">
@@ -48,7 +45,8 @@ require_once("product_script.php");
 						><input type="text" name="quantity" value="0" id="quantityText"
 						><input type="button" name="quantityAdd" value="+" id="quantityAdd">
 					</span
-					><br><label>Video Storage Media I Have:
+					><!--NEED A PHP IF STATEMENT HERE TO DIFFERENTIATE PRODUCTS-->
+						<br><label>Video Storage Media I Have:
 							<select id="transferSource" name="sourceType">
 								<option id="vhsTransfer" value="vhs" selected>VHS</option>
 								<option id="super8Transfer" value="super8">Super8</option>
@@ -73,13 +71,16 @@ require_once("product_script.php");
 		<aside id="column2">
 			<article>
 				<h2>Testimonials &amp; Samples</h2>
-				<p><i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i>
-					Roger Pearson - Musician &amp; song writer.</p>
-				<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0"
-						allowfullscreen></iframe>
-				<br>
-				<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0"
-						allowfullscreen></iframe>
+					<?php
+					foreach ($productsTree[PRODUCT_ID]['Testimonials']['Quotes'] as $aKey => $aValuePair) {
+						echo "\t\t\t\t<p>$aValuePair</p>\n";
+					}
+					 ?>
+					<?php
+					foreach ($productsTree[PRODUCT_ID]['Testimonials']['Samples'] as $aKey => $aValuePair) {
+						echo "\t\t\t\t<p>$aValuePair</p>\n";
+					}
+					?>
 			</article>
 		</aside>
 	</section>
