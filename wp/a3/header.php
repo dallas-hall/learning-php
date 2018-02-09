@@ -1,4 +1,6 @@
 <?php
+$currentFilename = getFilenameWithoutExtension(__FILE__);
+
 echo "<header>\n";
 echo "\t\t<a class=\"navigation_image\" href=\"index.php\"><img src=\"img/logos/gtp_new_logo_tree_only.png\" width=\"50px\"\n";
 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t  height=\"50px\"\n";
@@ -24,6 +26,34 @@ echo "\t\t\t<form action=\"signup.php\" class=\"memberButtons\">\n";
 echo "\t\t\t\t<input id=\"buttonSignUp\" type=\"submit\" name=\"signUp\" value=\"Sign Up\">\n";
 echo "\t\t\t</form>\n";
 echo "\t\t</fieldset>\n";
-echo "\t\t<span class=\"breadcrumbs\">Home</span><hr>\n";
+switch($currentFilename) {
+	case 'about_us':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> About Us</span>\n";
+	break;
+	case 'blog':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Blog</span>\n";
+		break;
+	case 'contact_us':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Contact Us</span>\n";
+		break;
+	case 'index':
+		echo "\t\t<span class=\"breadcrumbs\">Home</span>\n";
+		break;
+	case 'privacy':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Privacy</span>\n";
+		break;
+	case 'product':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\">Shop</a></span><span class=\"breadcrumbs\"> Product</span>\n";
+		break;
+	case 'products':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
+		break;
+	case 'returns_and_refunds':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
+		break;
+	case 'terms_and_conditions':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Terms &amp; Conditions</span>\n";
+		break;
+}
 echo "\t</header>\n";
 ?>
