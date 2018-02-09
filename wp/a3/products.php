@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once("functions.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +31,9 @@
 						<li>Transfer VHS or Super 8 to SD Card.</li>
 					</ul>
 					<p>All video transfer services cost $30.00 AUD.</p>
-					<form action="product.php">
-						<input type="submit" name="transferBuyNow" value="Details & Buy Now ">
+					<form action="product.php" method="GET">
+						<input type="submit" value="Details & Buy Now ">
+						<input type="hidden" name="productID" value="videoTransfer">
 					</form>
 				</article>
 				<article id="videoProduction" class="allProducts">
@@ -43,12 +48,11 @@
 					<p>Please contact us with your job's details so we can arrange a free and obligation free quote.
 						Sorry, but we do not do weddings due to high insurance costs.</p>
 					<form class="videoProductionButtons" action="product.php">
-						<input class="videoProductionButtons" type="submit" name="productionMoreDetails"
-							   value="Details">
+						<input class="videoProductionButtons" type="submit" value="Details">
+						<input type="hidden" name="productID" value="videoProduction">
 					</form>
 					<form class="videoProductionButtons" action="contact_us.php">
-						<input class="videoProductionButtons" type="submit" name="productionMoreContact"
-							   value="Contact Us">
+						<input class="videoProductionButtons" type="submit" value="Contact Us">
 					</form>
 				</article>
 			</section>
@@ -70,10 +74,11 @@
 						</ul>
 						<p>The Simply Tarot set with the DVD is $103.00 AUD.</p>
 						<form action="product.php">
-							<input type="submit" name="simplyTarotDVDBuyNow" value="Details & Buy Now ">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="simplyTarotSets">
 						</form>
 					</article>
-					<article id="simplyTarotKitsNoVD" class="allProducts">
+					<article id="simplyTarotSetsNoVD" class="allProducts">
 						<h5>Simply Tarot Set Without DVD</h5>
 						<a href="product.php"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
 												   width="256px" height="170px"></a>
@@ -84,7 +89,8 @@
 						</ul>
 						<p>The Simply Tarot set with the DVD is $83.00 AUD.</p>
 						<form action="product.php">
-							<input type="submit" name="simplyTarotBuyNow" value="Details & Buy Now ">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="simplyTarotSetsNoVD">
 						</form>
 					</article>
 					<article id="simplyTarotCandles" class="allProducts">
@@ -99,7 +105,8 @@
 						<p>The single large candle is $57.95 AUD and the gift pack containing 3 small candles are $49.95
 							AUD.</p>
 						<form action="product.php">
-							<input type="submit" name="simplyTarotSmallCandlesBuyNow" value="Details & Buy Now ">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="simplyTarotCandles">
 						</form>
 					</article>
 				</section>
@@ -116,7 +123,8 @@
 						</ul>
 						<p>This set is limited edition and will cost $49.95 AUD.</p>
 						<form action="product.php">
-							<input type="submit" name="secretsOfTarotBuyNow" value="Details & Buy Now ">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="secretsOfTarotSet">
 						</form>
 					</article>
 					<article id="secretsOfTarotCandles" class="allProducts">
@@ -131,7 +139,8 @@
 						<p>The single large candle is $57.95 AUD and the gift pack containing 3 small candles are $49.95
 							AUD.</p>
 						<form action="product.php">
-							<input type="submit" name="secretsOfTarotBuyNow" value="Details & Buy Now ">
+							<input type="submit" value="Details & Buy Now ">
+							<input type="hidden" name="productID" value="secretsOfTarotCandles">
 						</form>
 					</article>
 				</section>
