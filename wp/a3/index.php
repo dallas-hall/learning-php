@@ -12,9 +12,6 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<!-- using modules for repeated code -->
 	<?php require("head.php")?>
-	<meta name="description" content="This is the home page for Golden Tree Productions, which sells video production
-	 services and tarot products and services, such as Simply Tarot and Secrets of Tarot.">
-	<title>Golden Tree Productions</title>
 </head>
 <body>
 <!--The page design layout was sourced from the course textbook, using concepts discussed in chapter 15, such as the

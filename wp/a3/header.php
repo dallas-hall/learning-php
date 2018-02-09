@@ -24,6 +24,7 @@ echo "\t\t\t<form action=\"signup.php\" class=\"memberButtons\">\n";
 echo "\t\t\t\t<input id=\"buttonSignUp\" type=\"submit\" name=\"signUp\" value=\"Sign Up\">\n";
 echo "\t\t\t</form>\n";
 echo "\t\t</fieldset>\n";
+/* Using this to set the breadcrumbs dynamically for each page*/
 switch($currentFilename) {
 	case 'about_us':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> About Us</span>\n";
