@@ -24,6 +24,6 @@ echo "\t\t\t<form action=\"signup.php\" class=\"memberButtons\">\n";
 echo "\t\t\t\t<input id=\"buttonSignUp\" type=\"submit\" name=\"signUp\" value=\"Sign Up\">\n";
 echo "\t\t\t</form>\n";
 echo "\t\t</fieldset>\n";
-echo "\t\t<span class=\"breadcrumbs\">Home</span>\n";
+echo "\t\t<span class=\"breadcrumbs\">Home</span><hr>\n";
 echo "\t</header>\n";
 ?>
