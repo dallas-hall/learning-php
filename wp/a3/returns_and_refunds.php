@@ -4,6 +4,7 @@ if(!isset($_SESSION)){
 	session_start();
 }
 require_once("functions.php");
+$currentFilename = getFilenameWithoutExtension(__FILE__);
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">

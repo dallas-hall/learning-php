@@ -5,6 +5,7 @@ if(!isset($_SESSION)){
 }
 require_once("functions.php");
 require_once("product_script.php");
+$currentFilename = getFilenameWithoutExtension(__FILE__);
 
 /*showFormattedArray($allProducts);*/
 /*showFormattedArray($productsTree);*/

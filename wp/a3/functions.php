@@ -29,7 +29,7 @@ function php2js($anArray, $jsArrayName) {
 	echo "</script>\n\n";
 }
 
-/*https://stackoverflow.com/a/4221345*/
+/* https://stackoverflow.com/a/4221345 */
 function getFilenameWithoutExtension($filename) {
 	return pathinfo($filename, PATHINFO_FILENAME);
 }
