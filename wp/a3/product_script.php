@@ -1,5 +1,8 @@
 <?php
-session_start();
+/* Check if the session has already been started. */
+if(!isset($_SESSION)){
+	session_start();
+}
 /* The idea of this was taken from Trevor's video that he posted onto the discussion forum */
 define(PRODUCT_ID, $_GET['productID']);
 

@@ -1,5 +1,8 @@
 <?php
-session_start();
+/* Check if the session has already been started. */
+if(!isset($_SESSION)){
+	session_start();
+}
 require_once("functions.php");
 require_once("product_script.php");
 
