@@ -247,5 +247,6 @@
 	</section>
 	<?php require("footer.php"); ?>
 </div>
+<?php require("debug.php"); ?>
 </body>
 </html>

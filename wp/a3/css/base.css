@@ -165,6 +165,19 @@ Add some padding spacing.
 .pageBody, .pageBodyDualPage {
 	padding: 0% 2%;
 }
+/* Style all pages to have the same background image except the home page
+
+ */
+
+#aboutUsPage.pageWrapper, #blogPage.pageWrapper, #contactUsPage.pageWrapper, #loginPage.pageWrapper,
+#privacyPage.pageWrapper, #productPage.pageWrapper, #allProductsPage.pageWrapper,
+#returnsAndRefundsPage.pageWrapper, #signUpPage.pageWrapper, #termsAndConditionsPage.pageWrapper {
+	background-image: url("../img/logos/gtp_new_logo_tree_only_transparent.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: 30%;
+}
 
 /* Style footer
 
