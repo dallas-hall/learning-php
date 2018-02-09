@@ -3,7 +3,7 @@
 <head>
 	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<!-- using modules for repeated code -->
-	<?php require("head.php")?>
+	<<?php require("head.php")?>
 	<meta name="description" content="This is the shopping page for Golden Tree Productions, which sells video
 	production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.">
 	<title>GTP - All Products</title>
