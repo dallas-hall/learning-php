@@ -1,6 +1,4 @@
 <?php
-$currentFilename = getFilenameWithoutExtension(__FILE__);
-
 echo "<header>\n";
 echo "\t\t<a class=\"navigation_image\" href=\"index.php\"><img src=\"img/logos/gtp_new_logo_tree_only.png\" width=\"50px\"\n";
 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t  height=\"50px\"\n";
