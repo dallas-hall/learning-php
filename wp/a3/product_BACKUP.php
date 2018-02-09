@@ -1,10 +1,3 @@
-<?php
-session_start();
-require_once("functions.php");
-require_once("product_script.php");
-
-/*showFormattedArray($allProducts);*/
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
