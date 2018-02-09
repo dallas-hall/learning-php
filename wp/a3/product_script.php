@@ -4,12 +4,12 @@ if(!isset($_SESSION)){
 	session_start();
 }
 /* The idea of this was taken from Trevor's video that he posted onto the discussion forum */
-define(PRODUCT_ID, $_GET['productID']);
+define('PRODUCT_ID', $_GET['productID']);
 
 $allProducts = ['videoTransfer', 'videoProduction'
 	,'simplyTarotSetDVD', 'simplyTarotSetNoDVD', 'simplyTarotCandleLarge',	'simplyTarotCandlesSmall'
 	,'secretsOfTarotSet', 'secretsOfTarotCandleLarge', 'secretsOfTarotCandlesSmall'];
-if(!isset($_GET[productID]) || !in_array(PRODUCT_ID, $allProducts, true)) {
+if(!isset($_GET['productID']) || !in_array(PRODUCT_ID, $allProducts, true)) {
 	header('Location: products.php');
 }
 /*echo PRODUCT_ID;*/
