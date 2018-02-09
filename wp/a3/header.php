@@ -53,5 +53,6 @@ switch($currentFilename) {
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Terms &amp; Conditions</span>\n";
 		break;
 }
+echo "\t\t<hr>";
 echo "\t</header>\n";
 ?>
