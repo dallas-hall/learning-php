@@ -71,14 +71,30 @@ $productsTree = array (
 		)
 	)
 )
-	
+
 	,'simplyTarotSetDVD' => array (
 		'productTitle' => 'Simply Tarot Set With DVD'
 		,'productImage' => 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg'
 		,'productImageText' => ''
 		,'productImageWidth' => '480'
 		,'productImageHeight' => '270'
-		,'productDescription' => ''
+		,'productDescription' => 'During my time teaching students over the years
+it was always hard for them to remember the meaning of the cards from their work book.
+So I suggested we print the meaning on the bottom of the card.
+This made teaching so easy for me and the students love it.
+Reading the Tarot became easy and they were confident with ability quickly.
+We chose to make a DVD for those people who find it easier to learn visually.
+Our book is mirror of the DVD and this makes it easy to reference when performing a reading. 
+<h2>Can I Teach Myself Tarot?</h2>
+Yes we can also teach our selves Tarot.
+It is very easy with our step-by-step-guide to learning Tarot with my tried and tested method.
+<p>This Simply Tarot Set includes:</p>
+<ul>
+  <li>Simply Tarot Training DVD.</li>
+  <li>Simply Tarot Training Book.</li>
+  <li>Simply Tarot Card Set.</li>
+</ul>
+'
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -106,7 +122,23 @@ $productsTree = array (
 		,'productImageText' => ''
 		,'productImageWidth' => '480'
 		,'productImageHeight' => '270'
-		,'productDescription' => ''
+		,'productDescription' => 'During my time teaching students over the years
+it was always hard for them to remember the meaning of the cards from their work book.
+So I suggested we print the meaning on the bottom of the card.
+This made teaching so easy for me and the students love it.
+Reading the Tarot became easy and they were confident with ability quickly.
+Our book is simple and easy to follow in full colour makes it easy to reference when performing a reading.
+<h2>Can I Teach Myself Tarot?</h2>
+Yes we can also teach our selves Tarot
+Yes it is very easy with our step-by-step-guide to learning Tarot with my tried and tested method
+So take the next step today and buy your very own set.
+A new career might born.
+<p>This Simply Tarot Set includes:</p>
+<ul>
+  <li>Simply Tarot Training Book.</li>
+  <li>Simply Tarot Card Set.</li>
+</ul>
+'
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (

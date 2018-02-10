@@ -22,7 +22,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBodyDualPage">
 		<article class="column1">
 			<main>
-				<h1>Soy Candles by Amanda Hall Psychic</h1>
+				<h1>Soy Candles</h1>
 				<h2>Intent – Purpose – Direction</h2>
 				<figure>
 					<img src="img/blog/2018-01-candles/blog01.jpg">
@@ -72,6 +72,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				</figure>
 				<p>To purchase these amazing candle visit <a href="products.php#psychicServices">our web
 						shop</a>.</p>
+				<p>This blog was written by Amanda Hall.</p>
 			</main>
 		</article>
 		<aside class="column2">
