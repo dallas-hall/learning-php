@@ -11,14 +11,14 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 <head>
 	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<!-- using modules for repeated code -->
-	<?php require("head_script.php") ?>
+	<?php require_once("head_script.php") ?>
 	<meta name="description" content="This is the login page for Golden Tree Productions, which sells video
 	production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.">
 	<title>GTP - Login</title>
 </head>
 <body>
 <div class="pageWrapper" id="loginPage">
-	<?php require("header_script.php"); ?>
+	<?php require_once("header_script.php"); ?>
 	<section class="pageBody">
 		<article class="singlePage">
 			<h2>Golden Tree Production Login</h2>
@@ -37,7 +37,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			</form>
 		</article>
 	</section>
-	<?php require("footer_script.php"); ?>
+	<?php require_once("footer_script.php"); ?>
 </div>
 <?php include_once("/home/eh1/e54061/public_html/wp/debug.php"); ?>
 <?php include_once("debug.php"); ?>

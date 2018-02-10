@@ -37,7 +37,7 @@ $productsTree = array (
 			'hasPrice' => true
 			,'shopPrice' => array (
 				'normalPrice' => '30.00'
-				,'salePrice' => '0.00'
+				,'salePrice' => '5.00'
 			)
 			,'postagePrice' => array (
 				'domesticPrice' => null
@@ -62,8 +62,14 @@ $productsTree = array (
 	,'productImageWidth' => '480'
 	,'productImageHeight' => '272'
 	,'productDescription' => "
-\t\t\t\t<p>Each job will require different resources to complete, so please contact us for a detailed free quote.
-\t\t\t\tPlease note that we do not do weddings because of insurance prices, we are sorry for any inconvenience.</p>
+\t\t\t\t<p>The video productions services we provide are:</p>
+\t\t\t\t<ul>
+\t\t\t\t\t<li>Filming &amp; editing</li>
+\t\t\t\t\t<li>Pre &amp; post production</li>
+\t\t\t\t\t<li>Photography (using film stills)</li>
+\t\t\t\t\t</ul>
+\t\t\t\t<p>Please contact us with your job's details so we can arrange a free and obligation free quote.
+\t\t\t\tSorry, but we do not do weddings due to high insurance costs.</p>
 \t\t\t\t<p>The events that we typically offer video production services for are:</p>
 \t\t\t\t<ul>
 \t\t\t\t\t<li>Family events.</li>

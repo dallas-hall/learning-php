@@ -29,17 +29,21 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
 	echo "the product has no price<br>";
 }*/
 
-/* Using this to set the purchasing options dynamically for each page*/
+/* Using this to dynamically set the pricing options of each page. */
 if ($finalPrice === null) {
 	echo "<p>Please contact us for a detailed quote.</p>";
-} else {
-	printf("<p>The product's current price is $%1.2f</p>\n", $finalPrice);
+} elseif ($salePrice === '0.00') {
+	printf("<p>The product's current price is <b>$%1.2f</b></p>\n", $normalPrice);
+} elseif ($salePrice !== '0.00') {
+	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!</p>\n", $normalPrice,
+		$finalPrice);
 }
+/* Using this to dynamically set the purchasing options of each page. */
 switch($_GET['productID']) {
 	case 'videoTransfer':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem()\">";
+		echo "\t  onsubmit=\"return createCartItem('videoTransferService', 'quantityText', true)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"videoTransferService\" type=\"hidden\" name=\"id\" value=\"videoTransfer\">";
 		echo "\t\t\t\t\t<label>Amount Of Videos I Have:</label><input type=\"button\"";
@@ -64,7 +68,7 @@ switch($_GET['productID']) {
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"videoProductionButtons\" type=\"submit\" name=\"contactProduction\"";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
 		echo "\t\tvalue=\"Contact Us\">";
 		echo "</form>";
 		echo "<script src=\"js/quantity.js\"></script>";
@@ -76,26 +80,151 @@ switch($_GET['productID']) {
 		echo "</form>";
 		break;
 	case 'simplyTarotSetDVD':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetDVD\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'simplyTarotSetNoDVD':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetNoDVD\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'simplyTarotCandleLarge':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandleLarge\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'simplyTarotCandlesSmall':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandlesSmall\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'secretsOfTarotSet':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotSet\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'secretsOfTarotCandleLarge':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandleLarge\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'secretsOfTarotCandlesSmall':
-
+		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
+		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandlesSmall\">";
+		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+		echo "\t\t\t\t\t</span><br>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "</form>";
+		echo "<br>";
+		echo "<form action=\"contact_us.php\"><input";
+		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+		echo "\t\tvalue=\"Contact Us\">";
+		echo "</form>";
+		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 }
-
 ?>
