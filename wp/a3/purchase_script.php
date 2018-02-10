@@ -15,7 +15,6 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice'] === true) {
 	$finalPrice = null;
 }
 
-
 // Testing Variables
 /*
 echo "productID: " . $_GET['productID'] . "<br>";
@@ -38,6 +37,7 @@ if ($finalPrice === null) {
 	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!</p>\n", $normalPrice,
 		$finalPrice);
 }
+
 /* Using this to dynamically set the purchasing options of each page. */
 switch($_GET['productID']) {
 	case 'videoTransfer':

@@ -4,6 +4,7 @@ if(!isset($_SESSION)){
 	session_start();
 }
 require_once("functions_script.php");
+require_once("all_products_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 ?>
 <!DOCTYPE html>
@@ -32,7 +33,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						<li>Transfer VHS or Super 8 to USB.</li>
 						<li>Transfer VHS or Super 8 to SD Card.</li>
 					</ul>
-					<p>All video transfer services cost $30.00 AUD.</p>
+					<?php
+					require_once("price_script.php");
+					getElement("videoTransfer", $productsTree);
+					?>
 					<form action="product.php" method="GET">
 						<input type="submit" value="Details & Buy Now ">
 						<input type="hidden" name="productID" value="videoTransfer">
@@ -66,7 +70,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					international shipping.</p>
 				<section id="simplyTarot">
 					<h3>Simply Tarot</h3>
-					<article id="simplyTarotSets" class="allProducts">
+					<article id="simplyTarotSetDVD" class="allProducts">
 						<h5>Simply Tarot Set With DVD</h5>
 						<a href="product.php?productID=simplyTarotSetDVD"><img
 									src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
@@ -77,7 +81,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
-						<p>This set is $103.00 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("simplyTarotSetDVD", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="simplyTarotSetDVD">
@@ -92,7 +99,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
-						<p>This set is $83.00 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("simplyTarotSetNoDVD", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="simplyTarotSetNoDVD">
@@ -107,7 +117,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>One Large Simply Tarot Candle</li>
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
-						<p>This candle is $57.95 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("simplyTarotCandleLarge", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="simplyTarotCandleLarge">
@@ -123,7 +136,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>One Large Simply Tarot Candle</li>
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
-						<p>These candles are $49.95 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("simplyTarotCandlesSmall", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="simplyTarotCandlesSmall">
@@ -141,7 +157,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
-						<p>This set is limited edition and will cost $49.95 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("secretsOfTarotSet", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="secretsOfTarotSet">
@@ -157,7 +176,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>One Large Secrets Of Tarot Candle</li>
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
-						<p>This candle is $57.95 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("secretsOfTarotCandleLarge", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="secretsOfTarotCandleLarge">
@@ -172,7 +194,10 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>One Large Secrets Of Tarot Candle</li>
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
-						<p>These candles are $49.95 AUD.</p>
+						<?php
+						require_once("price_script.php");
+						getElement("secretsOfTarotCandlesSmall", $productsTree);
+						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
 							<input type="hidden" name="productID" value="secretsOfTarotCandlesSmall">
