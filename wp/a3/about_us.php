@@ -19,7 +19,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h2>Who is Golden Tree Productions?</h2>
+				<h1>Who is Golden Tree Productions?</h1>
 				<p>Golden Tree Productions journey began in 2004 on the Gold Coast. We evolved from Golden Tree
 					Wholistic Health which commenced in 2000 with a dream to share their knowledge, educate the
 					public and introduce them to the wonderful world of the Psychic Modalities and the Complimentary
@@ -35,7 +35,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				<p>With our experienced team of experts in most areas of the "New Age Revolution" we opened our
 					clinic in Currumbin on the Gold Coast. Our talented team commenced classes, workshops &amp;
 					lectures in a variety of subjects. </p>
-				<h3>We are all on the highway of life, what will the next turn bring?</h3>
+				<h2>We are all on the highway of life, what will the next turn bring?</h2>
 				<p>Then is 2004 we changed direction and went back to our roots of Television/ Video Film Production
 					and became a Video Production House with a difference. Also changing direction was the Award
 					winning Television Video Producer/Director Jack Egerton joined our team and we evolved into
@@ -56,7 +56,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					<li>Video/DVD Production: Director/Producer: Jack Egerton - Golden Tree Productions</li>
 					<li>Publisher/Distributor: Hinkler Books Australia Pty Ltd</li>
 				</ul>
-				<h2>The Journey continues!</h2>
+				<h1>The Journey continues!</h1>
 				<p>Changes in technology have made the world our stage. Amanda Hall has clients from all over the
 					world seeking her services in readings and courses. This can be delivered seamlessly now with
 					all modern forms of technology. The Amanda Hall Psychic show is broadcast worldwide weekly
@@ -65,8 +65,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					&amp; FM broadcast stations, not just places like our four spots on iTubes Radio, Nokia, Tunein,
 					Reciva Roku. This show is produced by Golden Tree Productions for A1R Psychic Radio on
 					Moonstruck TV/Radio Station in Washington, District of Columbia.</p>
-				<h2>Our Team</h2>
-				<h3>Jack Egerton - Formerly Channel 7 TV</h3>
+				<h1>Our Team</h1>
+				<h2>Jack Egerton - Formerly Channel 7 TV</h2>
 				<ul>
 					<li>TV Director/producer/cameraman with over 30 years broadcast experience.</li>
 				</ul>
@@ -88,7 +88,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					great understanding of how the tarot cards worked and bring to life in the dvd a nd the rest is
 					history as they say as it went on to win awards also. Wrote Filmed & Directed The Award Winning
 					“Simply Tarot DVD “with Amanda Hall Simply Tarot for Hinkler Books Australia.</p>
-				<h3>Amanda Hall Psychic</h3>
+				<h2>Amanda Hall Psychic</h2>
 				<p>I commenced my journey into Psychic work when I was very young. Now with a career spanning over
 					40 years Tarot has always been my passion but I also love working with Astrology I have been
 					fortunate to receive many industry awards for my Psychic work. Including Psychic Hall Of Fame

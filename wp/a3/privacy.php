@@ -22,15 +22,15 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h2>Privacy Policy</h2>
+				<h1>Privacy Policy</h1>
 				<article>
-					<h3>Privacy Statement</h3>
+					<h2>Privacy Statement</h2>
 					<p>Amanda Hall @ Golden Tree Productions has created our privacy policy to demonstrate our firm
 						commitment to your privacy and the protection of any information that you send or share with us.
 						All clients’ personal details and information is considered extremely sensitive and very
 						private. Under no circumstance will your information be shared or sold without your written
 						permission.</p>
-					<h3>Protecting Your Privacy</h3>
+					<h2>Protecting Your Privacy</h2>
 					<p>Amanda Hall @ Golden Tree Productions is operated by myself and a small professional trusted team
 						for website administration and technical support. We only store minimal information necessary
 						for administration purposes. We use security measures to protect against the loss, misuse and

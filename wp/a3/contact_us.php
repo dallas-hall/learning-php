@@ -22,7 +22,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBodyDualPage">
 		<main>
 			<article class="column1">
-				<h2>Send Us A Message</h2>
+				<h1>Send Us A Message</h1>
 				<script type="text/javascript" src="js/checkContactForm.js"></script>
 				<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post"
 					  onsubmit="return checkContactDetails()">
@@ -54,8 +54,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				</form>
 			</article>
 			<aside class="column2">
-				<h2>Contact Us</h2>
-				<h3>Jack</h3>
+				<h1>Contact Us</h1>
+				<h2>Jack</h2>
 				<table>
 					<thead></thead>
 					<tbody>
@@ -78,7 +78,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</tbody>
 					<tfoot></tfoot>
 				</table>
-				<h3>Amanda</h3>
+				<h2>Amanda</h2>
 				<table>
 					<thead></thead>
 					<tbody>
@@ -102,7 +102,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</tbody>
 					<tfoot></tfoot>
 				</table>
-				<h3>Operating Hours</h3>
+				<h2>Operating Hours</h2>
 				<table>
 					<thead></thead>
 					<tbody>
@@ -121,7 +121,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</tbody>
 					<tfoot></tfoot>
 				</table>
-				<h3>Business Location</h3>
+				<h2>Business Location</h2>
 				<p>Elanora, Queensland, Australia.</p>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28146.056913179313!2d153.43400975368306!3d-28.138660037360847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91026870e4b43f%3A0x502a35af3dea2a0!2sElanora+QLD+4221!5e0!3m2!1sen!2sau!4v1515917209715"
 						width="320" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>

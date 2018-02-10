@@ -1,6 +1,6 @@
 <?php
 echo "<footer>\n";
-echo "\t\t<hr><h2>Additional Links</h2>\n";
+echo "\t\t<hr><h1>Additional Links</h1>\n";
 echo "\t\t<a class=\"navigation_image\" href=\"index.php\"><img src=\"img/logos/gtp_new_logo_tree_only.png\"\n";
 echo "\t\t\twidth=\"50px\" height=\"50px\" alt=\"The new logo of Golden Tree Productions. It has a \n";
 echo "\t\t\t\t\t\tgolden tree sprouting out of what looks a book.\"\n";

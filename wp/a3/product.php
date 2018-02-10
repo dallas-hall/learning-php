@@ -26,7 +26,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBodyDualPage" id="singleProductPage">
 		<article class="column1">
 			<!--<h2><?php /*echo $productsTree[$_GET['productID']]['productTitle']*/?></h2>-->
-			<h2><?php echo $productsTree[PRODUCT_ID]['productTitle']?></h2>
+			<h1><?php echo $productsTree[PRODUCT_ID]['productTitle']?></h1>
 			<article id="aProduct">
 				<main>
 					<!--
@@ -74,7 +74,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 		</article>
 		<aside id="column2">
 			<article>
-				<h2>Testimonials &amp; Samples</h2>
+				<h1>Testimonials &amp; Samples</h1>
 					<?php
 					foreach ($productsTree[PRODUCT_ID]['Testimonials']['Quotes'] as $aKey => $aValuePair) {
 						echo "\t\t\t\t<p>$aValuePair</p>\n";

@@ -40,7 +40,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 		<hr>
 		<section class="belowTheFold">
 			<div id="column1">
-				<h2>Video Services</h2>
+				<h1>Video Services</h1>
 				<ul>
 					<li>Video Production</li>
 					<ul>
@@ -64,7 +64,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				</ul>
 			</div>
 			<div id="column2">
-				<h2>Psychic Services</h2>
+				<h1>Psychic Services</h1>
 				<ul>
 					<li>Accolades</li>
 					<ul>

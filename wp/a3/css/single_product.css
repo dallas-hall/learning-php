@@ -16,12 +16,6 @@
 	padding: 0;
 }
 
-/* Centre the image */
-#videoTransfer img {
-	display: block;
-	margin: 0 auto;
-}
-
 /* Centre the button text */
 #quantityMinus, #quantityAdd{
 	text-align: center;
