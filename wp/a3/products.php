@@ -3,7 +3,7 @@
 if(!isset($_SESSION)){
 	session_start();
 }
-require_once("functions.php");
+require_once("functions_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 ?>
 <!DOCTYPE html>
@@ -11,14 +11,14 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 <head>
 	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<!-- using modules for repeated code -->
-	<?php require("head.php")?>
+	<?php require("head_script.php") ?>
 	<meta name="description" content="This is the shopping page for Golden Tree Productions, which sells video
 	production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.">
 	<title>GTP - All Products</title>
 </head>
 <body>
 <div class="pageWrapper" id="allProductsPage">
-	<?php require("header.php"); ?>
+	<?php require("header_script.php"); ?>
 	<section class="pageBodyDualPage">
 		<main>
 			<h1>Golden Tree Production Products &amp; Services</h1>
@@ -43,7 +43,9 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				</article>
 				<article id="videoProduction" class="allProducts">
 					<h3>Video Production</h3>
-					<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>
+					<!--<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>-->
+					<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_band_no_border.jpg"
+																		 width="256px" height="170px"></a>
 					<p>The video productions services we provide are:</p>
 					<ul>
 						<li>Filming &amp; editing</li>
@@ -183,7 +185,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			</section>
 		</main>
 	</section>
-	<?php require("footer.php"); ?>
+	<?php require("footer_script.php"); ?>
 </div>
 <?php include_once("/home/eh1/e54061/public_html/wp/debug.php"); ?>
 <?php include_once("debug.php"); ?>

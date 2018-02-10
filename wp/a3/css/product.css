@@ -26,23 +26,23 @@
 	width: 32px;
 }
 
-#singleProductPage input[type="button"], #singleProductPage input[type="submit"], #singleProductPage select{
+#productPage input[type="button"], #productPage input[type="submit"], #productPage select{
 	background-color: #ffffb2;
 }
 
-#singleProductPage input[type="button"]:hover, #singleProductPage input[type="submit"]:hover, #singleProductPage select:hover{
+#productPage input[type="button"]:hover, #productPage input[type="submit"]:hover, #productPage select:hover{
 	background-color: #bea053;
 }
 
-#singleProductPage input[type="button"] {
+#productPage input[type="button"] {
 	width: 48px;
 }
 
-#singleProductPage select {
+#productPage select {
 	width: 96px;
 }
 
-#singleProductPage input[type="submit"] {
+#productPage input[type="submit"] {
 	text-align: center;
 	color: black;
 	width: 96px;
@@ -55,4 +55,9 @@
 .videoProductionButtons {
 	width: 96px;
 	display: inline-block;
+}
+
+#purchaseSection {
+	clear: both;
+	padding: 2% 2%;
 }
