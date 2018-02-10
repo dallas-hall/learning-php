@@ -11,14 +11,14 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 <head>
 	<!--Setting page information, which I learnt in the course textbook and also at https://www.w3schools.com/tags/tag_meta.asp-->
 	<!-- using modules for repeated code -->
-	<?php require("head_script.php") ?>
+	<?php require_once("head_script.php") ?>
 </head>
 <body>
 <!--The page design layout was sourced from the course textbook, using concepts discussed in chapter 15, such as the
 960 grid design pattern and above/below the fold. But particularly the layout of the end of chapter example in chapter
  17 was used as a starting point.-->
 <div class="pageWrapper" id="indexPage">
-	<?php require("header_script.php"); ?>
+	<?php require_once("header_script.php"); ?>
 	<section class="pageBody">
 		<article class="aboveTheFold">
 			<main>
@@ -83,7 +83,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			</div>
 		</section>
 	</section>
-	<?php require("footer_script.php"); ?>
+	<?php require_once("footer_script.php"); ?>
 </div>
 <?php include_once("/home/eh1/e54061/public_html/wp/debug.php"); ?>
 <?php include_once("debug.php"); ?>
