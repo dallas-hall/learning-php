@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 	session_start();
 }
 require_once("functions_script.php");
-require_once("products_script.php");
+require_once("product_id_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 
 /*showFormattedArray($allProducts);*/
