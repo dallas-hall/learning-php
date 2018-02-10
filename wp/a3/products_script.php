@@ -18,6 +18,8 @@ $productsTree = array (
 		'productTitle' => 'Video Transfer'
 		,'productImage' => 'img/products/video/vcr.jpg'
 		,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
 		,'price' => array (
 			'hasPrice' => true
@@ -35,17 +37,19 @@ $productsTree = array (
 				'<i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i><br>Roger Pearson - Musician &amp; song writer.'
 			)
 			,'Samples' => array (
-				'<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0" allowfullscreen></iframe>'
-				,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allowfullscreen></iframe>'
+				'<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+				,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
 
 	,'videoProduction' => array (
 	'productTitle' => 'Video Production'
-	,'productImage' => 'img/products/video/vcr.jpg'
-	,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
-	,'productDescription' => 'Contact us for a detailed free quote.'
+	,'productImage' => 'img/people/jack_and_client.jpg'
+	,'productImageText' => 'A picture of a Jack Egerton and a country band in the Australian outback.'
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '270'
+	,'productDescription' => 'Each job will require different resources to complete, so please contact us for a detailed free quote. Please note that we do not do weddings because of insurance prices, we are sorry for any inconvenience.'
 	,'price' => array (
 		'hasPrice' => false
 		,'shopPrice' => array (
@@ -59,11 +63,11 @@ $productsTree = array (
 	)
 ,'Testimonials' => array (
 		'Quotes' => array (
-			'<i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i><br>Roger Pearson - Musician &amp; song writer.'
+			null
 		)
 	,'Samples' => array (
-			'<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0" allowfullscreen></iframe>'
-		,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allowfullscreen></iframe>'
+			'<iframe width="320" height="240" src="https://www.youtube.com/embed/c0YC5aQFqVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+			,'<iframe width="320" height="240" src="https://www.youtube.com/embed/IYPVS55EW_M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 		)
 	)
 )
@@ -72,6 +76,8 @@ $productsTree = array (
 		'productTitle' => 'Simply Tarot Set With DVD'
 		,'productImage' => 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg'
 		,'productImageText' => ''
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => ''
 		,'price' => array (
 			'hasPrice' => true
@@ -98,6 +104,8 @@ $productsTree = array (
 		'productTitle' => 'Simply Tarot Set Without DVD'
 		,'productImage' => 'img/products/psychic/tarot/simply/simply_book_and_card.jpg'
 		,'productImageText' => ''
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => ''
 		,'price' => array (
 			'hasPrice' => true
@@ -115,7 +123,7 @@ $productsTree = array (
 				'<i>"Your cards helped me to become a professional reader. I have a massive soft spot for the cards. And the DVD that came with them helped too. I just can’t say a big enough thank you - xxx. You certainly can place my comment on the site. They have got a magic. Really lovely. I recommend them to others who are new to tarot also x"</i> - Sophie'
 			)
 		,'Samples' => array (
-				'<iframe width="320" height="240" src="https://www.youtube.com/embed/Enfs2-KBgdg" frameborder="0" allowfullscreen></iframe>'
+				'<iframe width="320" height="240" src="https://www.youtube.com/embed/Enfs2-KBgdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
@@ -124,6 +132,8 @@ $productsTree = array (
 		'productTitle' => '1 Large Simply Tarot Candle'
 		,'productImage' => 'img/products/psychic/candles/simply/large_simply_candle.jpg'
 		,'productImageText' => ''
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
 		,'price' => array (
 			'hasPrice' => true
@@ -154,6 +164,8 @@ $productsTree = array (
 		'productTitle' => '3 Small Simply Tarot Candles'
 		,'productImage' => 'img/products/psychic/candles/simply/3_small_simply_candle.jpg'
 		,'productImageText' => ''
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
 		,'price' => array (
 			'hasPrice' => true
@@ -184,6 +196,8 @@ $productsTree = array (
 		'productTitle' => 'Secrets Of Tarot Set'
 		,'productImage' => 'img/products/psychic/tarot/secrets/secrets_book_and_card.jpg'
 		,'productImageText' => ''
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '270'
 		,'productDescription' => '<p>Secrets of  Tarot is now the latest edition to the Tarot family.
 Our very own Simply Tarot  has a face lift with a new look 
 The meaning on the Tarot cards have not changed just the look and finish.
@@ -231,6 +245,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 		'productTitle' => '1 Large Secrets Of Tarot Candle'
 	,'productImage' => 'img/products/psychic/candles/secrets/large_secrets_candle.jpg'
 	,'productImageText' => ''
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '270'
 	,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
 	,'price' => array (
 			'hasPrice' => true
@@ -261,6 +277,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 		'productTitle' => '3 Small Secrets Of Tarot Candles'
 	,'productImage' => 'img/products/psychic/candles/secrets/3_small_secrets_candle.jpg'
 	,'productImageText' => ''
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '270'
 	,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
 	,'price' => array (
 			'hasPrice' => true
