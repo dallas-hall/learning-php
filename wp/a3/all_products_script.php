@@ -29,7 +29,7 @@ $productsTree = array (
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '30.00'
-			,'salePrice' => '5.00'
+			,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => null
@@ -190,11 +190,11 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '57.95'
-			,'salePrice' => '0.00'
+				,'salePrice' => '48.99'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -206,7 +206,12 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 			,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
 			)
 		,'Samples' => array (
-				''
+				'
+<p>Creating sacred reading space. Increase intuition.
+Simply Tarot 100 % Natural Eco Soy X Large Candle
+Intent- Purpose – Direction
+ Candle Fragrance – Lavender & Vanilla 
+Simply Tarot X Large Candle Natural Eco Soy Candle to set your intent- direction – purpose</p>'
 			)
 		)
 	)
@@ -222,11 +227,11 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '45.95'
-			,'salePrice' => '0.00'
+				,'salePrice' => '36.95'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -275,11 +280,11 @@ Our new book is easy to work with and makes it easy to reference when performing
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '49.95'
-			,'salePrice' => '0.00'
+				,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -287,7 +292,7 @@ Our new book is easy to work with and makes it easy to reference when performing
 				''
 			)
 		,'Samples' => array (
-				''
+				'<iframe width="320" height="240" src="https://www.youtube.com/embed/MXQiXjYr1Xo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
@@ -304,11 +309,11 @@ Our new book is easy to work with and makes it easy to reference when performing
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '57.95'
-			,'salePrice' => '0.00'
+				,'salePrice' => '48.99'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -320,7 +325,7 @@ Our new book is easy to work with and makes it easy to reference when performing
 			,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
 			)
 		,'Samples' => array (
-				''
+				'<iframe "320" height="240" src="https://www.youtube.com/embed/SCgunZNvSIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
@@ -336,7 +341,7 @@ Our new book is easy to work with and makes it easy to reference when performing
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '49.95'
-			,'salePrice' => '0.00'
+				,'salePrice' => '36.95'
 			)
 		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
@@ -352,7 +357,7 @@ Our new book is easy to work with and makes it easy to reference when performing
 			,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
 			)
 		,'Samples' => array (
-				''
+				'<iframe "320" height="240" src="https://www.youtube.com/embed/SCgunZNvSIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)

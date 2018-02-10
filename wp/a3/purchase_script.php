@@ -10,9 +10,9 @@
 if ($productsTree[PRODUCT_ID]['price']['hasPrice'] === true) {
 	$normalPrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['normalPrice'];
 	$salePrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['salePrice'];
-	$finalPrice = $normalPrice - $salePrice;
 } else {
-	$finalPrice = null;
+	$normalPrice = null;
+	$salePrice = null;
 }
 
 // Testing Variables
@@ -29,13 +29,13 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
 }*/
 
 /* Using this to dynamically set the pricing options of each page. */
-if ($finalPrice === null) {
+if ($normalPrice === null && $salePrice === null) {
 	echo "<p>Please contact us for a detailed quote.</p>";
 } elseif ($salePrice === '0.00') {
 	printf("<p>The product's current price is <b>$%1.2f</b></p>\n", $normalPrice);
 } elseif ($salePrice !== '0.00') {
 	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!</p>\n", $normalPrice,
-		$finalPrice);
+		$salePrice);
 }
 
 /* Using this to dynamically set the purchasing options of each page. */
