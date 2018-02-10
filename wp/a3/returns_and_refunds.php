@@ -22,8 +22,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h2>Refunds &amp; Returns</h2>
-				<h3>Returns, Refunds and Exchange Policy</h3>
+				<h1>Refunds &amp; Returns</h1>
+				<h2>Returns, Refunds and Exchange Policy</h2>
 				<ol>
 					<li> We do not refund or exchange on all video production services. We do not refund, return or
 						exchange on psychic reading astrology session/ discussion, training program/psychic or astrology
@@ -42,7 +42,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					friend, relative or persons requested by you, the customer un less approved by Amanda Hall @ Golden
 					Tree Productions.</li>
 				</ol>
-				<h3>Bookings</h3>
+				<h2>Bookings</h2>
 				<p>Bookings via our contact details on our website; www.goldentreeproductions.com.au or sms 0412-435 558
 					You agree to be available for your scheduled video production shoot/edit/or service at time/date
 					that has been requested by you when making your booking. Incorrect scheduled bookings will be
@@ -50,7 +50,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					agree to be available for your phone booking time/date that has been requested by you when making
 					your booking. Incorrect scheduled bookings will be treated as a missed appointment in accordance
 					with our ‘Bookings Cancellations’ set out below.</p>
-				<h3>Cancellation/ Policy/ Rescheduling</h3>
+				<h2>Cancellation/ Policy/ Rescheduling</h2>
 				<ol>
 					<li> To cancel an booking/appointment, simply send us your
 						request – via our contact details located on the bottom
@@ -64,7 +64,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						times mentioned above.
 					</li>
 				</ol>
-				<h3>Client Acknowledgments</h3>
+				<h2>Client Acknowledgments</h2>
 				<p>You warrant that;</p>
 				<ol>
 					<li> The information you provide to us is true and correct.</li>
@@ -112,7 +112,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						offered for entertainment purposes only.
 					</li>
 				</ol>
-				<h3>Disclaimer & Limitation Of Liability </h3>
+				<h2>Disclaimer & Limitation Of Liability </h2>
 				<p>I Amanda Hall – www.goldentreeproductions.au and all of our Psychic Serves offered to you by ‘us’ on
 					our site, are for entertainment purposes only. All users are to be 18 years of age or older.
 				<p>www.goldentreeproductions.com.au and it’s advisors, psychics, clairvoyants, tarot readers,

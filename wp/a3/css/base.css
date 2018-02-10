@@ -176,7 +176,7 @@ Add some padding spacing.
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
-	background-size: 30%;
+	background-size: 60vmin;
 }
 
 /* Style footer

@@ -21,13 +21,13 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<?php require("header.php"); ?>
 	<section class="pageBodyDualPage">
 		<main>
-			<h2>Golden Tree Production Products &amp; Services</h2>
-			<h3>Video Products &amp; Services</h3>
+			<h1>Golden Tree Production Products &amp; Services</h1>
+			<h2>Video Products &amp; Services</h2>
 			<section id="videoServices">
 				<article id="videoTransfer" class="allProducts">
-					<h4>Video Transfer</h4>
-					<a href="product.php?productID=videoTransfer"><img src="img/people/jack_and_equipment.jpg" width="256px"
-												height="170px"></a>
+					<h3>Video Transfer</h3>
+					<a href="product.php?productID=videoTransfer"><img src="img/people/jack_and_equipment.jpg"
+						 width="256px" height="170px"></a>
 					<p>The video transfer services we provide are:</p>
 					<ul>
 						<li>Transfer VHS or Super 8 to CD.</li>
@@ -42,7 +42,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</form>
 				</article>
 				<article id="videoProduction" class="allProducts">
-					<h4>Video Production</h4>
+					<h3>Video Production</h3>
 					<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>
 					<p>The video productions services we provide are:</p>
 					<ul>
@@ -62,11 +62,11 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				</article>
 			</section>
 			<section id="psychicServices">
-				<h3>Psychic Products &amp; Services</h3>
+				<h2>Psychic Products &amp; Services</h2>
 				<p><b>Note:</b> All products here have free shipping within Australia and a flat fee of $45.00 AUD for
 					international shipping.</p>
 				<section id="simplyTarot">
-					<h4>Simply Tarot</h4>
+					<h3>Simply Tarot</h3>
 					<article id="simplyTarotSets" class="allProducts">
 						<h5>Simply Tarot Set With DVD</h5>
 						<a href="product.php?productID=simplyTarotSetDVD"><img
@@ -85,7 +85,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						</form>
 					</article>
 					<article id="simplyTarotSetNoDVD" class="allProducts">
-						<h5>Simply Tarot Set Without DVD</h5>
+						<h4>Simply Tarot Set Without DVD</h4>
 						<a href="product.php?productID=simplyTarotSetNoDVD"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
 												   width="256px" height="170px"></a>
 						<p>This Simply Tarot Set includes:</p>
@@ -100,7 +100,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						</form>
 					</article>
 					<article id="simplyTarotCandleLarge" class="allProducts">
-						<h5>Simply Tarot 1 Large Candle</h5>
+						<h4>Simply Tarot 1 Large Candle</h4>
 						<a href="product.php?productID=simplyTarotCandleLarge"><img src="img/products/psychic/candles/simply/large_simply_candle.jpg"
 							width="210px" height="244"></a>
 						<p>There are 2 types of Simply Tarot Candles.</p>
@@ -115,7 +115,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						</form>
 					</article>
 					<article id="simplyTarotCandlesSmall" class="allProducts">
-						<h5>Simply Tarot 3 Small Candles </h5>
+						<h4>Simply Tarot 3 Small Candles </h4>
 						<a href="product.php?productID=simplyTarotCandlesSmall"><img
 									src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
 																				width="256px" height="170px"></a>
@@ -132,9 +132,9 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</article>
 				</section>
 				<section id="secretsOfTarot">
-					<h4>Secrets Of Tarot</h4>
+					<h3>Secrets Of Tarot</h3>
 					<article id="secretsOfTarotSet" class="allProducts">
-						<h5>Simply Tarot Set</h5>
+						<h4>Simply Tarot Set</h4>
 						<a href="product.php?productID=secretsOfTarotSet"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
 												   width="210px" height="244"></a>
 						<p>This Secrets Of Tarot Set includes:</p>
@@ -150,7 +150,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						<br>
 					</article>
 					<article id="secretsOfTarotCandleLarge" class="allProducts">
-						<h5>Secrets Of Tarot 1 Large Candle</h5>
+						<h4>Secrets Of Tarot 1 Large Candle</h4>
 						<a href="product.php?productID=secretsOfTarotCandleLarge"><img src="img/products/psychic/candles/secrets/large_secrets_candle.jpg"
 												   width="210px" height="244"></a>
 						<p>There are 2 types of Secrets Of Tarot Candles</p>
@@ -165,7 +165,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						</form>
 					</article>
 					<article id="secretsOfTarotCandlesSmall" class="allProducts">
-						<h5>Secrets Of Tarot 3 Small Candles</h5>
+						<h4>Secrets Of Tarot 3 Small Candles</h4>
 						<a href="product.php?productID=secretsOfTarotCandlesSmall"><img src="img/products/psychic/candles/secrets/3_small_secrets_candle.jpg"
 																						width="256px" height="170px"></a>
 						<p>There are 2 types of Secrets Of Tarot Candles</p>

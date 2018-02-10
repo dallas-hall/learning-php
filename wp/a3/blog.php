@@ -22,8 +22,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBodyDualPage">
 		<article class="column1">
 			<main>
-				<h2>Soy Candles by Amanda Hall Psychic</h2>
-				<h3>Intent – Purpose – Direction</h3>
+				<h1>Soy Candles by Amanda Hall Psychic</h1>
+				<h2>Intent – Purpose – Direction</h2>
 				<figure>
 					<img src="img/blog/2018-01-candles/blog01.jpg">
 					<figcaption>Fortunes Told Naturaul Eco Candle Range, 100% Natural Eco soy candles Eco friendly.
@@ -33,7 +33,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					difference between Chemical based candles and Natural Eco Soy with lead free wicks. Moat
 					consumers
 					shop by price point and value for our hard earned money.</p>
-				<h3>So what is the difference I hear you ask!</h3>
+				<h2>So what is the difference I hear you ask!</h2>
 				<p>In our modern times and so much research is being done into our health it is no surprise that
 					scientists are trying to find the one of the many causes of cancer so now they are chemical
 					based candles which have scent in them to make our homes and work spaces smell nice.</p>
@@ -44,23 +44,23 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				<p>You may very well like the smell of scented candles in your home. Most of us don’t know the
 					difference between Chemical based candles and Natural Eco Soy with lead free wicks. Moat
 					consumers shop by price point and value for our hard earned money.</p>
-				<h3>What Chemicals?</h3>
+				<h2>What Chemicals?</h2>
 				<p>Yes they are a chemical cocktail of many ingredients such as
 					petroleum, benzene and alpha-pinene can be present the most common chemical released is
 					limonene.</p>
-				<h3>Why Choose 100% Eco Natural Soy Candles?</h3>
+				<h2>Why Choose 100% Eco Natural Soy Candles?</h2>
 				<p>Eco Soy candles are made from natural ingredients, which are bio degradable and
 					renewable. Eco Soy candles are nontoxic, burn clean leaving behind a sparking glass
 					container. So the choice becomes very clear for your health and well being Natural Eco
 					Soy Candles with lead free wicks.</p>
-				<h3>Burn Times?</h3>
+				<h2>Burn Times?</h2>
 				<p>You can expect a longer burn time up to 50% longer than normal candles. The fragrance of
 					the candle lasts throughout the whole burning of the candle. Eco Soy candles do not get
 					hot, even when burning. But beware the container glass the candle is burning it will get
 					hot during the burning process.</p>
-				<h3>Clean Up If I spill the candle?</h3>
+				<h2>Clean Up If I spill the candle?</h2>
 				<p>Soy candles are easy to clean up with water if you spill the candle accidentally.</p>
-				<h3>Getting ready to use your candle?</h3>
+				<h2>Getting ready to use your candle?</h2>
 				<p>Before you burn your Soy Candle, always keep the wick trimmed to about 4-5 cm and this
 					will increase burn time. Always place your soy candle on a glass plate of coaster never
 					direct on table. Make sure you always extinguish your candle with snuffer or glass
@@ -75,18 +75,18 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			</main>
 		</article>
 		<aside class="column2">
-			<h2>Testimonials</h2>
+			<h1>Testimonials</h1>
 			<article>
-				<h3>Cheryl Rathborne</h3>
+				<h2>Cheryl Rathborne</h2>
 				<p>Pleasure meeting at Festival of Dreams…wishcraft in my oil burner today was divine..much gratitude
 					Amanda…love those sunflowers.</p>
-				<h3>Maz Rukz</h3>
+				<h2>Maz Rukz</h2>
 				<p>It was so lovely to see you Amanda and your beautiful new candle range they’re amazing</p>
-				<h3>Kat Simicevic</h3>
+				<h2>Kat Simicevic</h2>
 				<p>I’m loving them. Best purchase I tell you and they smell so good you could eat them.</p>
-				<h3>Terry Virgina</h3>
+				<h2>Terry Virgina</h2>
 				<p>Beautiful Smelling Candles for Every situation..</p>
-				<h3>Gerry Crow</h3>
+				<h2>Gerry Crow</h2>
 				<p>You should be proud Amanda! These candles are impressive, with unique spiritual, magical and healing
 					properties. I have had very strong spiritual experiences while meditating with the beautiful Healing
 					candle that you gave me. As soon as I lit it I had the vision of an ancient medicine woman. I heard

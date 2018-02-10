@@ -22,8 +22,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h2>Terms &amp; Conditions</h2>
-				<h3>General</h3>
+				<h1>Terms &amp; Conditions</h1>
+				<h2>General</h2>
 				<p><a href="www.goldentreeproductions.com.au">Golden Tree Productions</a> 2000 All rights Reserved. All
 					advice, information and Video Production, Pre & Post Production will be to the best of our ability
 					and conducted in a professional and positive way.</p>
@@ -47,7 +47,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						by Amanda Hall Psychic @ Golden Tree Productions.
 					</li>
 				</ol>
-				<h3>Orders</h3>
+				<h2>Orders</h2>
 				<ol>
 					<li>You agree to order services or products from us through the choice of phone order or thought the
 						web site/various social media site. As mentioned on this site it is your responsibility to
@@ -61,7 +61,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						for that service.
 					</li>
 				</ol>
-				<h3>Payments, Prices &amp; Fees Charged</h3>
+				<h2>Payments, Prices &amp; Fees Charged</h2>
 				<ol>
 					<li>You agree to pay the total amount specified on our quote in writing/or verbal this includes web
 						site/ social media outlet /by phone/email/sms for the service specified on this site at the time
@@ -79,7 +79,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</li>
 					<li>Prices may change without notice. It is recommended that you regularly check our website.</li>
 				</ol>
-				<h3>Cancellations/availability</h3>
+				<h2>Cancellations/availability</h2>
 				<p>All services/bookings and or purchases are subject to availability by Golden Tree Productions.</p>
 				<ol>
 					<li>If we need to either cancel or change your scheduled video production service or psychic
@@ -94,7 +94,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						Availability and all reasonable endeavours to accommodate any request for changes to your
 					</li>
 				</ol>
-				<h3>Code Of Ethics</h3>
+				<h2>Code Of Ethics</h2>
 				<ol>
 					<li><b>Confidentiality &amp; Privacy:</b> All video/production/pre&amp; post services &amp;
 						psychic/astrology/mediumship readings are private and confidential. Psychic reading astrology
