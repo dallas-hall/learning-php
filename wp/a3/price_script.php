@@ -3,9 +3,9 @@ function getElement($elementName, $productsTree) {
 	if ($productsTree[$elementName]['price']['hasPrice'] === true) {
 		$normalPrice = $productsTree[$elementName]['price']['shopPrice']['normalPrice'];
 		$salePrice = $productsTree[$elementName]['price']['shopPrice']['salePrice'];
-		$finalPrice = $normalPrice - $salePrice;
 	} else {
-		$finalPrice = null;
+		$normalPrice = null;
+		$salePrice = null;
 	}
 
 	// Testing Variables
@@ -20,13 +20,13 @@ function getElement($elementName, $productsTree) {
 		echo "the product has no price<br>";
 	}*/
 
-	if ($finalPrice === null) {
+	if ($normalPrice === null && $salePrice === null) {
 		echo "<p>Please contact us for a detailed quote.</p>";
 	} elseif ($salePrice === '0.00') {
 		printf("<p>The product's current price is <b>$%1.2f</b></p>\n", $normalPrice);
 	} elseif ($salePrice !== '0.00') {
 		printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!</p>\n", $normalPrice,
-			$finalPrice);
+			$salePrice);
 	}
 }
 ?>
