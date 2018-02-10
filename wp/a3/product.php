@@ -31,7 +31,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					 width="<?php echo $productsTree[PRODUCT_ID]['productImageWidth'] ?>"
 					 height="<?php echo $productsTree[PRODUCT_ID]['productImageHeight'] ?>"
 					 alt="<?php echo $productsTree[PRODUCT_ID]['productImageText'] ?>">
-				<p><?php echo $productsTree[PRODUCT_ID]['productDescription'] ?></p>
+				<?php echo $productsTree[PRODUCT_ID]['productDescription'] ?>
 			</main>
 		</article>
 		<aside class="column2">
@@ -51,7 +51,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 		</aside>
 	</section>
 	<section id="purchaseSection">
-		<?php require_once("purchase_script.php");?>
+		<?php require("purchase_script.php"); ?>
 	</section>
 	<?php require("footer_script.php"); ?>
 </div>

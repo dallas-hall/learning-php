@@ -19,8 +19,20 @@ $productsTree = array (
 		,'productImage' => 'img/products/video/vcr.jpg'
 		,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
 		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
-		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
+		,'productImageHeight' => '272'
+		,'productDescription' => "
+\t\t\t\t<p>In today’s fast moving world our lives move so fast and memories fade just as quick.
+\t\t\t\tWe all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day.
+\t\t\t\tGet them out sort through them. What is special and you want to keep for future generations.
+\t\t\t\tThey make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun.
+\t\t\t\tWe can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.</p>
+\t\t\t\t<p>The video transfer services we provide are:</p>
+\t\t\t\t<ul>
+\t\t\t\t\t<li>Transfer VHS or Super 8 to CD.</li>
+\t\t\t\t\t<li>Transfer VHS or Super 8 to DVD.</li>
+\t\t\t\t\t<li>Transfer VHS or Super 8 to USB.</li>
+\t\t\t\t\t<li>Transfer VHS or Super 8 to SD Card.</li>
+\t\t\t\t</ul>\n"
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -28,8 +40,8 @@ $productsTree = array (
 				,'salePrice' => '0.00'
 			)
 			,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-				,'internationalPrice' => '0.00'
+				'domesticPrice' => null
+				,'internationalPrice' => null
 			)
 		)
 		,'Testimonials' => array (
@@ -48,17 +60,26 @@ $productsTree = array (
 	,'productImage' => 'img/people/jack_and_client.jpg'
 	,'productImageText' => 'A picture of a Jack Egerton and a country band in the Australian outback.'
 	,'productImageWidth' => '480'
-	,'productImageHeight' => '270'
-	,'productDescription' => 'Each job will require different resources to complete, so please contact us for a detailed free quote. Please note that we do not do weddings because of insurance prices, we are sorry for any inconvenience.'
+	,'productImageHeight' => '272'
+	,'productDescription' => "
+\t\t\t\t<p>Each job will require different resources to complete, so please contact us for a detailed free quote.
+\t\t\t\tPlease note that we do not do weddings because of insurance prices, we are sorry for any inconvenience.</p>
+\t\t\t\t<p>The events that we typically offer video production services for are:</p>
+\t\t\t\t<ul>
+\t\t\t\t\t<li>Family events.</li>
+\t\t\t\t\t<li>Music events.</li>
+\t\t\t\t\t<li>Social events.</li>
+\t\t\t\t\t<li>Sporting events.</li>
+\t\t\t\t</ul>\n"
 	,'price' => array (
 		'hasPrice' => false
 		,'shopPrice' => array (
-			'normalPrice' => '0.00'
-			,'salePrice' => '0.00'
+			'normalPrice' => null
+			,'salePrice' => null
 		)
 		,'postagePrice' => array (
-			'domesticPrice' => '0.00'
-			,'internationalPrice' => '0.00'
+			'domesticPrice' => null
+			,'internationalPrice' => null
 		)
 	)
 ,'Testimonials' => array (
@@ -77,24 +98,23 @@ $productsTree = array (
 		,'productImage' => 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg'
 		,'productImageText' => ''
 		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
-		,'productDescription' => 'During my time teaching students over the years
+		,'productImageHeight' => '272'
+		,'productDescription' => '<h2>Can I Teach Myself Tarot?</h2>
+<p>Yes we can also teach our selves Tarot.
+It is very easy with our step-by-step-guide to learning Tarot with my tried and tested method.</p>
+<p>During my time teaching students over the years
 it was always hard for them to remember the meaning of the cards from their work book.
 So I suggested we print the meaning on the bottom of the card.
 This made teaching so easy for me and the students love it.
 Reading the Tarot became easy and they were confident with ability quickly.
 We chose to make a DVD for those people who find it easier to learn visually.
-Our book is mirror of the DVD and this makes it easy to reference when performing a reading. 
-<h2>Can I Teach Myself Tarot?</h2>
-Yes we can also teach our selves Tarot.
-It is very easy with our step-by-step-guide to learning Tarot with my tried and tested method.
+Our book is mirror of the DVD and this makes it easy to reference when performing a reading.</p> 
 <p>This Simply Tarot Set includes:</p>
 <ul>
   <li>Simply Tarot Training DVD.</li>
   <li>Simply Tarot Training Book.</li>
   <li>Simply Tarot Card Set.</li>
-</ul>
-'
+</ul>'
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -121,18 +141,19 @@ It is very easy with our step-by-step-guide to learning Tarot with my tried and 
 		,'productImage' => 'img/products/psychic/tarot/simply/simply_book_and_card.jpg'
 		,'productImageText' => ''
 		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
-		,'productDescription' => 'During my time teaching students over the years
+		,'productImageHeight' => '272'
+		,'productDescription' => '
+<h2>Can I Teach Myself Tarot?</h2>
+<p>Yes we can also teach our selves Tarot.
+Yes it is very easy with our step-by-step-guide to learning Tarot with my tried and tested method
+So take the next step today and buy your very own set.
+A new career might born.</p>
+<p>During my time teaching students over the years
 it was always hard for them to remember the meaning of the cards from their work book.
 So I suggested we print the meaning on the bottom of the card.
 This made teaching so easy for me and the students love it.
 Reading the Tarot became easy and they were confident with ability quickly.
-Our book is simple and easy to follow in full colour makes it easy to reference when performing a reading.
-<h2>Can I Teach Myself Tarot?</h2>
-Yes we can also teach our selves Tarot
-Yes it is very easy with our step-by-step-guide to learning Tarot with my tried and tested method
-So take the next step today and buy your very own set.
-A new career might born.
+Our book is simple and easy to follow in full colour makes it easy to reference when performing a reading.</p>
 <p>This Simply Tarot Set includes:</p>
 <ul>
   <li>Simply Tarot Training Book.</li>
@@ -164,9 +185,9 @@ A new career might born.
 		'productTitle' => '1 Large Simply Tarot Candle'
 		,'productImage' => 'img/products/psychic/candles/simply/large_simply_candle.jpg'
 		,'productImageText' => ''
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
-		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
+		,'productImageWidth' => '420'
+		,'productImageHeight' => '488'
+		,'productDescription' => 'I LOVE CANDLES YO.'
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -197,8 +218,8 @@ A new career might born.
 		,'productImage' => 'img/products/psychic/candles/simply/3_small_simply_candle.jpg'
 		,'productImageText' => ''
 		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
-		,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
+		,'productImageHeight' => '272'
+		,'productDescription' => 'I LOVE CANDLES YO.'
 		,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -228,15 +249,15 @@ A new career might born.
 		'productTitle' => 'Secrets Of Tarot Set'
 		,'productImage' => 'img/products/psychic/tarot/secrets/secrets_book_and_card.jpg'
 		,'productImageText' => ''
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '270'
+		,'productImageWidth' => '420'
+		,'productImageHeight' => '488'
 		,'productDescription' => '<p>Secrets of  Tarot is now the latest edition to the Tarot family.
 Our very own Simply Tarot  has a face lift with a new look 
 The meaning on the Tarot cards have not changed just the look and finish.
 Yes Tarot has been my  life’s work of many years of reading and teaching over the years.
 Now with the Secrets of Tarot the dream lives on in a new dress
 So then people would be able to learn quickly in the privacy of their own home.
-I feel very humbled and honoured my Australian Publisher Hinkler Books want to keep the Tarot journey alive 
+I feel very humbled and honoured by Australian Publisher Hinkler Books wanting to keep the Tarot journey alive 
 Now with the old world charm of the Secrets of Tarot cards face lift is a new era for a new audience .
 So now a new journey begins with the the Secrets Of Tarot. 
 I will always have a soft spot for our original Simply Tarot Cards and hope to keep them in production.
@@ -277,9 +298,10 @@ Our new book is easy to work with and makes it easy to reference when performing
 		'productTitle' => '1 Large Secrets Of Tarot Candle'
 	,'productImage' => 'img/products/psychic/candles/secrets/large_secrets_candle.jpg'
 	,'productImageText' => ''
-	,'productImageWidth' => '480'
-	,'productImageHeight' => '270'
-	,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
+	,'productImageWidth' => '420'
+	,'productImageHeight' => '488'
+	,'productDescription' => 'I LOVE CANDLES YO.
+	'
 	,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
@@ -310,8 +332,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 	,'productImage' => 'img/products/psychic/candles/secrets/3_small_secrets_candle.jpg'
 	,'productImageText' => ''
 	,'productImageWidth' => '480'
-	,'productImageHeight' => '270'
-	,'productDescription' => 'In today’s fast moving world our lives move so fast and memories fade just as quick. We all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day . Get them out sort through them. What is special and you want to keep for future generations. They make a lovely gift to give. Being able to share memories from family history, special occasions, weddings, christenings, or even the family just having fun. We can transfer old VHS and Super 8 to CD, DVD, SD Card, or USB memory stick.'
+	,'productImageHeight' => '272'
+	,'productDescription' => 'I LOVE CANDLES YO.'
 	,'price' => array (
 			'hasPrice' => true
 			,'shopPrice' => array (
