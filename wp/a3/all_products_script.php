@@ -1,26 +1,18 @@
 <?php
-/* Check if the session has already been started. */
-if(!isset($_SESSION)){
-	session_start();
-}
-/* The idea of this was taken from Trevor's video that he posted onto the discussion forum */
-define('PRODUCT_ID', $_GET['productID']);
-
+/* Valid product list */
 $allProducts = ['videoTransfer', 'videoProduction'
 	,'simplyTarotSetDVD', 'simplyTarotSetNoDVD', 'simplyTarotCandleLarge',	'simplyTarotCandlesSmall'
 	,'secretsOfTarotSet', 'secretsOfTarotCandleLarge', 'secretsOfTarotCandlesSmall'];
-if(!isset($_GET['productID']) || !in_array (PRODUCT_ID, $allProducts, true)) {
-	header('Location: products.php');
-}
-/*echo PRODUCT_ID;*/
+
+/* Valid product data */
 $productsTree = array (
 	'videoTransfer' => array (
 		'productTitle' => 'Video Transfer'
-		,'productImage' => 'img/products/video/vcr.jpg'
-		,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '272'
-		,'productDescription' => "
+	,'productImage' => 'img/products/video/vcr.jpg'
+	,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '272'
+	,'productDescription' => "
 \t\t\t\t<p>In today’s fast moving world our lives move so fast and memories fade just as quick.
 \t\t\t\tWe all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day.
 \t\t\t\tGet them out sort through them. What is special and you want to keep for future generations.
@@ -33,30 +25,30 @@ $productsTree = array (
 \t\t\t\t\t<li>Transfer VHS or Super 8 to USB.</li>
 \t\t\t\t\t<li>Transfer VHS or Super 8 to SD Card.</li>
 \t\t\t\t</ul>\n"
-		,'price' => array (
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '30.00'
-				,'salePrice' => '5.00'
+			,'salePrice' => '5.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => null
-				,'internationalPrice' => null
+			,'internationalPrice' => null
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i><br>Roger Pearson - Musician &amp; song writer.'
 			)
-			,'Samples' => array (
+		,'Samples' => array (
 				'<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-				,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+			,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
 
-	,'videoProduction' => array (
-	'productTitle' => 'Video Production'
+,'videoProduction' => array (
+		'productTitle' => 'Video Production'
 	,'productImage' => 'img/people/jack_and_client.jpg'
 	,'productImageText' => 'A picture of a Jack Egerton and a country band in the Australian outback.'
 	,'productImageWidth' => '480'
@@ -78,34 +70,34 @@ $productsTree = array (
 \t\t\t\t\t<li>Sporting events.</li>
 \t\t\t\t</ul>\n"
 	,'price' => array (
-		'hasPrice' => false
+			'hasPrice' => false
 		,'shopPrice' => array (
-			'normalPrice' => null
+				'normalPrice' => null
 			,'salePrice' => null
-		)
+			)
 		,'postagePrice' => array (
-			'domesticPrice' => null
+				'domesticPrice' => null
 			,'internationalPrice' => null
+			)
 		)
-	)
-,'Testimonials' => array (
-		'Quotes' => array (
-			null
-		)
-	,'Samples' => array (
-			'<iframe width="320" height="240" src="https://www.youtube.com/embed/c0YC5aQFqVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+	,'Testimonials' => array (
+			'Quotes' => array (
+				null
+			)
+		,'Samples' => array (
+				'<iframe width="320" height="240" src="https://www.youtube.com/embed/c0YC5aQFqVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			,'<iframe width="320" height="240" src="https://www.youtube.com/embed/IYPVS55EW_M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+			)
 		)
 	)
-)
 
-	,'simplyTarotSetDVD' => array (
+,'simplyTarotSetDVD' => array (
 		'productTitle' => 'Simply Tarot Set With DVD'
-		,'productImage' => 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg'
-		,'productImageText' => ''
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '272'
-		,'productDescription' => '<h2>Can I Teach Myself Tarot?</h2>
+	,'productImage' => 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg'
+	,'productImageText' => ''
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '272'
+	,'productDescription' => '<h2>Can I Teach Myself Tarot?</h2>
 <p>Yes we can also teach our selves Tarot.
 It is very easy with our step-by-step-guide to learning Tarot with my tried and tested method.</p>
 <p>During my time teaching students over the years
@@ -121,34 +113,34 @@ Our book is mirror of the DVD and this makes it easy to reference when performin
   <li>Simply Tarot Training Book.</li>
   <li>Simply Tarot Card Set.</li>
 </ul>'
-		,'price' => array (
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '103.00'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"Your cards helped me to become a professional reader. I have a massive soft spot for the cards. And the DVD that came with them helped too. I just can’t say a big enough thank you - xxx. You certainly can place my comment on the site. They have got a magic. Really lovely. I recommend them to others who are new to tarot also x"</i> - Sophie'
 			)
-			,'Samples' => array (
+		,'Samples' => array (
 				'<iframe width="320" height="240" src="https://www.youtube.com/embed/Enfs2-KBgdg" frameborder="0" allowfullscreen></iframe>'
 			)
 		)
 	)
 
-	,'simplyTarotSetNoDVD' => array (
+,'simplyTarotSetNoDVD' => array (
 		'productTitle' => 'Simply Tarot Set Without DVD'
-		,'productImage' => 'img/products/psychic/tarot/simply/simply_book_and_card.jpg'
-		,'productImageText' => ''
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '272'
-		,'productDescription' => '
+	,'productImage' => 'img/products/psychic/tarot/simply/simply_book_and_card.jpg'
+	,'productImageText' => ''
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '272'
+	,'productDescription' => '
 <h2>Can I Teach Myself Tarot?</h2>
 <p>Yes we can also teach our selves Tarot.
 Yes it is very easy with our step-by-step-guide to learning Tarot with my tried and tested method
@@ -166,18 +158,18 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
   <li>Simply Tarot Card Set.</li>
 </ul>
 '
-		,'price' => array (
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '83.00'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"Your cards helped me to become a professional reader. I have a massive soft spot for the cards. And the DVD that came with them helped too. I just can’t say a big enough thank you - xxx. You certainly can place my comment on the site. They have got a magic. Really lovely. I recommend them to others who are new to tarot also x"</i> - Sophie'
 			)
@@ -187,77 +179,77 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 		)
 	)
 
-	,'simplyTarotCandleLarge' => array (
+,'simplyTarotCandleLarge' => array (
 		'productTitle' => '1 Large Simply Tarot Candle'
-		,'productImage' => 'img/products/psychic/candles/simply/large_simply_candle.jpg'
-		,'productImageText' => ''
-		,'productImageWidth' => '420'
-		,'productImageHeight' => '488'
-		,'productDescription' => 'I LOVE CANDLES YO.'
-		,'price' => array (
+	,'productImage' => 'img/products/psychic/candles/simply/large_simply_candle.jpg'
+	,'productImageText' => ''
+	,'productImageWidth' => '420'
+	,'productImageHeight' => '488'
+	,'productDescription' => 'I LOVE CANDLES YO.'
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '57.95'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"It was so lovely to see you Amanda and your beautiful new candle range they’re amazing.</i>" - Maz Rukz '
-				,'<i>"It certainly was amazing, and special for us all to be in the same place together, connecting, yaking, laughing, made my heart sing! Lighting my very special new Amanda candles today.</i>" - Gerry Crow'
-				,'<i>"I’m loving them. Best purchase I tell you and they smell so good you could eat them.</i>" - Kat Simicevic'
-				,'<i>"Beautiful Smelling Candles for Every situation.. Amanda Halls Awesome Collection.</i>" - Terry Virgina'
-				,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
+			,'<i>"It certainly was amazing, and special for us all to be in the same place together, connecting, yaking, laughing, made my heart sing! Lighting my very special new Amanda candles today.</i>" - Gerry Crow'
+			,'<i>"I’m loving them. Best purchase I tell you and they smell so good you could eat them.</i>" - Kat Simicevic'
+			,'<i>"Beautiful Smelling Candles for Every situation.. Amanda Halls Awesome Collection.</i>" - Terry Virgina'
+			,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
 			)
-			,'Samples' => array (
+		,'Samples' => array (
 				''
 			)
 		)
 	)
 
-	,'simplyTarotCandlesSmall' => array (
+,'simplyTarotCandlesSmall' => array (
 		'productTitle' => '3 Small Simply Tarot Candles'
-		,'productImage' => 'img/products/psychic/candles/simply/3_small_simply_candle.jpg'
-		,'productImageText' => ''
-		,'productImageWidth' => '480'
-		,'productImageHeight' => '272'
-		,'productDescription' => 'I LOVE CANDLES YO.'
-		,'price' => array (
+	,'productImage' => 'img/products/psychic/candles/simply/3_small_simply_candle.jpg'
+	,'productImageText' => ''
+	,'productImageWidth' => '480'
+	,'productImageHeight' => '272'
+	,'productDescription' => 'I LOVE CANDLES YO.'
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '45.95'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"It was so lovely to see you Amanda and your beautiful new candle range they’re amazing.</i>" - Maz Rukz '
-				,'<i>"It certainly was amazing, and special for us all to be in the same place together, connecting, yaking, laughing, made my heart sing! Lighting my very special new Amanda candles today.</i>" - Gerry Crow'
-				,'<i>"I’m loving them. Best purchase I tell you and they smell so good you could eat them.</i>" - Kat Simicevic'
-				,'<i>"Beautiful Smelling Candles for Every situation.. Amanda Halls Awesome Collection.</i>" - Terry Virgina'
-				,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
+			,'<i>"It certainly was amazing, and special for us all to be in the same place together, connecting, yaking, laughing, made my heart sing! Lighting my very special new Amanda candles today.</i>" - Gerry Crow'
+			,'<i>"I’m loving them. Best purchase I tell you and they smell so good you could eat them.</i>" - Kat Simicevic'
+			,'<i>"Beautiful Smelling Candles for Every situation.. Amanda Halls Awesome Collection.</i>" - Terry Virgina'
+			,'<i>"How blessed am I to receive these candles in the mail today. So grateful for all the wonderful gifts in life!! Wishing you all magic miracles every day. ❤</i>" - Magic Maree'
 			)
-			,'Samples' => array (
+		,'Samples' => array (
 				''
 			)
 		)
 	)
 
-	,'secretsOfTarotSet' => array (
+,'secretsOfTarotSet' => array (
 		'productTitle' => 'Secrets Of Tarot Set'
-		,'productImage' => 'img/products/psychic/tarot/secrets/secrets_book_and_card.jpg'
-		,'productImageText' => ''
-		,'productImageWidth' => '420'
-		,'productImageHeight' => '488'
-		,'productDescription' => '<p>Secrets of  Tarot is now the latest edition to the Tarot family.
+	,'productImage' => 'img/products/psychic/tarot/secrets/secrets_book_and_card.jpg'
+	,'productImageText' => ''
+	,'productImageWidth' => '420'
+	,'productImageHeight' => '488'
+	,'productDescription' => '<p>Secrets of  Tarot is now the latest edition to the Tarot family.
 Our very own Simply Tarot  has a face lift with a new look 
 The meaning on the Tarot cards have not changed just the look and finish.
 Yes Tarot has been my  life’s work of many years of reading and teaching over the years.
@@ -279,28 +271,28 @@ So I suggested we print the meaning on the bottom of the card.
 This made teaching so easy for me and the students love it.
 Reading the Tarot became easy and they were confident with ability quickly.
 Our new book is easy to work with and makes it easy to reference when performing a reading.</p>'
-		,'price' => array (
+	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '49.95'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
-		,'Testimonials' => array (
+	,'Testimonials' => array (
 			'Quotes' => array (
 				''
 			)
-			,'Samples' => array (
+		,'Samples' => array (
 				''
 			)
 		)
 	)
 
-	,'secretsOfTarotCandleLarge' => array (
+,'secretsOfTarotCandleLarge' => array (
 		'productTitle' => '1 Large Secrets Of Tarot Candle'
 	,'productImage' => 'img/products/psychic/candles/secrets/large_secrets_candle.jpg'
 	,'productImageText' => ''
@@ -310,13 +302,13 @@ Our new book is easy to work with and makes it easy to reference when performing
 	'
 	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '57.95'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -333,7 +325,7 @@ Our new book is easy to work with and makes it easy to reference when performing
 		)
 	)
 
-	,'secretsOfTarotCandlesSmall' => array (
+,'secretsOfTarotCandlesSmall' => array (
 		'productTitle' => '3 Small Secrets Of Tarot Candles'
 	,'productImage' => 'img/products/psychic/candles/secrets/3_small_secrets_candle.jpg'
 	,'productImageText' => ''
@@ -342,13 +334,13 @@ Our new book is easy to work with and makes it easy to reference when performing
 	,'productDescription' => 'I LOVE CANDLES YO.'
 	,'price' => array (
 			'hasPrice' => true
-			,'shopPrice' => array (
+		,'shopPrice' => array (
 				'normalPrice' => '49.95'
-				,'salePrice' => '0.00'
+			,'salePrice' => '0.00'
 			)
-			,'postagePrice' => array (
+		,'postagePrice' => array (
 				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+			,'internationalPrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -365,5 +357,5 @@ Our new book is easy to work with and makes it easy to reference when performing
 		)
 	)
 );
-/*showFormattedarray ($productsTree);*/
+//showFormattedarray ($productsTree);
 ?>
