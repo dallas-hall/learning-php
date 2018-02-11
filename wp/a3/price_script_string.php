@@ -1,11 +1,10 @@
 <?php
 function getProductPriceString($elementName, $productsTree) {
+	$normalPrice = null;
+	$salePrice = null;
 	if ($productsTree[$elementName]['price']['hasPrice'] === true) {
 		$normalPrice = $productsTree[$elementName]['price']['shopPrice']['normalPrice'];
 		$salePrice = $productsTree[$elementName]['price']['shopPrice']['salePrice'];
-	} else {
-		$normalPrice = null;
-		$salePrice = null;
 	}
 
 	// Testing Variables

@@ -82,8 +82,7 @@ false)\">";
 		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'videoProduction':
-		echo "<form action=\"contact_us.php\"><input>";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
+		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
 		echo "\t\tvalue=\"Contact Us\">";
 		echo "</form>";
 		break;
