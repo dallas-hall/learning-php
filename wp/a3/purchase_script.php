@@ -89,7 +89,7 @@ false)\">";
 		break;
 	case 'simplyTarotSetDVD':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\" onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetDVD\">";
@@ -111,7 +111,7 @@ false)\">";
 		break;
 	case 'simplyTarotSetNoDVD':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
@@ -134,7 +134,7 @@ false)\">";
 		break;
 	case 'simplyTarotCandleLarge':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
@@ -157,7 +157,7 @@ false)\">";
 		break;
 	case 'simplyTarotCandlesSmall':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
@@ -180,7 +180,7 @@ false)\">";
 		break;
 	case 'secretsOfTarotSet':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
@@ -203,7 +203,7 @@ false)\">";
 		break;
 	case 'secretsOfTarotCandleLarge':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
@@ -226,7 +226,7 @@ false)\">";
 		break;
 	case 'secretsOfTarotCandlesSmall':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
+		echo "<form action=\"cart.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
