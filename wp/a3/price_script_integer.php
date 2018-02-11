@@ -1,5 +1,5 @@
 <?php
-function getElementPriceInt($elementName, $productsTree) {
+function getProductPriceInt($elementName, $productsTree) {
 	if ($productsTree[$elementName]['price']['hasPrice'] === true) {
 		$normalPrice = $productsTree[$elementName]['price']['shopPrice']['normalPrice'];
 		$salePrice = $productsTree[$elementName]['price']['shopPrice']['salePrice'];
