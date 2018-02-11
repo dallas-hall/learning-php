@@ -9,6 +9,7 @@ function createCartItem(elementID, elementClass, isVideoTransfer) {
 	console.log("elementClass is " + elementClass + "\n");
 
 	// Get the values from the various elements
+	cartItem.addItem = "true";
 	cartItem.id = document.getElementById(elementID.toString()).getAttribute("value");
 	cartItem.quantity = document.getElementById(elementClass.toString()).getAttribute("value");
 
@@ -27,6 +28,7 @@ function createCartItem(elementID, elementClass, isVideoTransfer) {
 		cartItem.target = target.options[target.selectedIndex].text;
 	}
 
+	console.log(cartItem.add.toString());
 	console.log(cartItem.id.toString());
 	console.log(cartItem.quantity.toString());
 	if(isVideoTransfer === true) {
@@ -35,5 +37,6 @@ function createCartItem(elementID, elementClass, isVideoTransfer) {
 	}
 
 	// Return the object
+	console.log(cartItem.toString());
 	return cartItem;
 }
