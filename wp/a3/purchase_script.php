@@ -32,7 +32,7 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
 if ($normalPrice === null && $salePrice === null) {
 	echo "<p>Please contact us for a detailed quote.</p>";
 } elseif ($salePrice === '0.00') {
-	printf("<p>The product's current price is $<span id=\"price\">%1.2f</span></p>\n", $normalPrice);
+	printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span></b></p>\n", $normalPrice);
 } elseif ($salePrice !== '0.00') {
 	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$<span id=\"price\">%1.2f</span></b>!</p>\n",
 		$normalPrice,
