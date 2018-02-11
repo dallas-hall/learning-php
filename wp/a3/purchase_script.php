@@ -43,6 +43,11 @@ if ($normalPrice === null && $salePrice === null) {
 switch($_GET['productID']) {
 	case 'videoTransfer':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+/* !!! WARNING !!!
+The POST method doesn't work with cart.php in PhpStorm because of the built-in web server problem, it works fine
+locally on httpd and remotely on RMIT
+servers
+*/
 		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('videoTransferService', 'quantityText', 
 false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
