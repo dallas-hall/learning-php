@@ -17,7 +17,24 @@ $videoSourceType = null;
 $videoTargetType = null;
 $errorMessage = null;
 $errorFound = false;
+$firstVisit = true;
 $message = null;
+
+// Check if first time visting
+if(isset($_SESSION['cart'])) {
+	$firstVisit = false;
+	$message = "WELCOME BACK<br>";
+	foreach ($_SESSION['cart'] as $aKey => $aValuePair) {
+		$message .= "$aKey and ";
+		foreach ($aValuePair as $anotherKey => $anotherValuePair) {
+			$message .= "$anotherValuePair<br>";
+		}
+	}
+} else {
+	$firstVisit = true;
+	$message = "WELCOME!";
+}
+echo $message;
 
 // Do something if the customer has cart options
 if(isset($_POST['add'], $_POST['id'], $_POST['quantity'], $_POST['sourceType'], $_POST['targetType'])) {
@@ -122,9 +139,9 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 	// Add to cart
 	$_SESSION['cart'][$_POST['id']]['quantity'] = $_POST['quantity'];
 	//header("Location: cart.php");
-} else {
+} elseif ($firstVisit) {
 	$message = "<p>Your shopping cart is empty, please <a href=\"products.php\">visit our shop</a> to purchase items.</p>";
-}
+} else
 
 
 //
@@ -146,7 +163,9 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 			<main>
 				<h1>Your Shopping Cart</h1>
 				<?php
-				if($errorFound) {
+				if ($firstVisit) {
+					echo $message;
+				} else if($errorFound) {
 					echo "$errorMessage";
 				}
 				else {

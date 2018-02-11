@@ -24,7 +24,8 @@ $productsTree = array (
 \t\t\t\t\t<li>Transfer VHS or Super 8 to DVD.</li>
 \t\t\t\t\t<li>Transfer VHS or Super 8 to USB.</li>
 \t\t\t\t\t<li>Transfer VHS or Super 8 to SD Card.</li>
-\t\t\t\t</ul>\n"
+\t\t\t\t</ul>
+\t\t\t\t<p>Please contact us to arrange the service.</p>\n"
 	,'price' => array (
 			'hasPrice' => true
 		,'shopPrice' => array (
