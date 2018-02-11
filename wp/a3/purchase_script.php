@@ -48,8 +48,8 @@ The POST method doesn't work with cart.php in PhpStorm because of the built-in w
 locally on httpd and remotely on RMIT
 servers
 */
-		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('videoTransferService', 'quantityText', 
-false)\">";
+/*		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('videoTransferService',
+			'quantityText',false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"videoTransferService\" type=\"hidden\" name=\"id\" value=\"videoTransfer\">";
@@ -74,12 +74,11 @@ false)\">";
 		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
 		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
+		echo "<br>";*/
+		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
 		echo "\t\tvalue=\"Contact Us\">";
 		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		//echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'videoProduction':
 		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
