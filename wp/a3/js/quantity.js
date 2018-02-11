@@ -9,6 +9,7 @@ function takeOne() {
 		console.log(currentValue + ' after REMOVE on');
 		targetElement.textContent = currentValue.toString();
 		targetElement.setAttribute("value", currentValue.toString());
+		updatePrice(currentValue);
 	}
 	else {
 		console.log("0 found in subtraction.");
@@ -41,10 +42,20 @@ function addOne() {
 		console.log(currentValue + ' after ADD one');
 		targetElement.textContent = currentValue.toString();
 		targetElement.setAttribute("value", currentValue.toString());
+		updatePrice(currentValue);
 	}
 	else {
 		console.log("NaN found in addition.");
 	}
+}
+
+function updatePrice(currentValue) {
+	var subTotalElement = document.getElementById("subTotal");
+	var priceElement = document.getElementById("price");
+	console.log(subTotalElement.innerText);
+	console.log(priceElement.innerText);
+	// https://stackoverflow.com/a/6134070
+	subTotalElement.innerText = parseFloat(currentValue * priceElement.innerText).toFixed(2);
 }
 
 // @@@ Variables @@@
