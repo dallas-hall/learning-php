@@ -18,7 +18,17 @@ if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 	// - product/service option is valid
 	//$_SESSION['cart'][$_POST['id']]['qty'] = $_POST['qty'];
 	// repeat to add the valid option
-	header("Location: cart.php");
+	//header("Location: cart.php");
+} else if(isset($_POST['add'], $_POST['id'], $_POST['quantity'],	$_POST['sourceType'],  $_POST['targetType'])) {
+	echo "<p>HELLO IM A CART</p>";
+	echo "<p>$_POST[add]</p>";
+	echo "<p>$_POST[id]</p>";
+	echo "<p>$_POST[quantity]</p>";
+	echo "<p>$_POST[sourceType]</p>";
+	echo "<p>$_POST[targetType]</p>";
+}
+else {
+	echo "<p>HELLO IM A CART</p>";
 }
 ?>
 <!DOCTYPE html>

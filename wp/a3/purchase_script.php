@@ -43,8 +43,8 @@ if ($normalPrice === null && $salePrice === null) {
 switch($_GET['productID']) {
 	case 'videoTransfer':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('videoTransferService', 'quantityText', true)\">";
+		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('videoTransferService', 'quantityText', 
+false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"videoTransferService\" type=\"hidden\" name=\"id\" value=\"videoTransfer\">";
@@ -77,15 +77,14 @@ switch($_GET['productID']) {
 		echo "<script src=\"js/quantity.js\"></script>";
 		break;
 	case 'videoProduction':
-		echo "<form action=\"contact_us.php\"><input";
+		echo "<form action=\"contact_us.php\"><input>";
 		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
 		echo "\t\tvalue=\"Contact Us\">";
 		echo "</form>";
 		break;
 	case 'simplyTarotSetDVD':
 		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
+		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\" onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
 		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetDVD\">";
