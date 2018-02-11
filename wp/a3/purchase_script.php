@@ -32,9 +32,10 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
 if ($normalPrice === null && $salePrice === null) {
 	echo "<p>Please contact us for a detailed quote.</p>";
 } elseif ($salePrice === '0.00') {
-	printf("<p>The product's current price is <b>$%1.2f</b></p>\n", $normalPrice);
+	printf("<p>The product's current price is $<span id=\"price\">%1.2f</span></p>\n", $normalPrice);
 } elseif ($salePrice !== '0.00') {
-	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!</p>\n", $normalPrice,
+	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$<span id=\"price\">%1.2f</span></b>!</p>\n",
+		$normalPrice,
 		$salePrice);
 }
 
@@ -63,8 +64,9 @@ switch($_GET['productID']) {
 		echo "\t\t\t<option id=\"dvdTransfer\" value=\"dvd\">DVD</option>";
 		echo "\t\t\t<option id=\"usbTransfer\" value=\"usb\">USB</option>";
 		echo "\t\t\t<option id=\"sdTransfer\" value=\"sd\">SD Card</option>";
-		echo "\t\t</select></label><br><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t</select></label>";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -91,7 +93,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -112,7 +115,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -133,7 +137,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -154,7 +159,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -175,7 +181,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -196,7 +203,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";
@@ -217,7 +225,8 @@ switch($_GET['productID']) {
 		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
 		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
 		echo "\t\t\t\t\t</span><br>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Buy Now\">";
+		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
+		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
 		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input";

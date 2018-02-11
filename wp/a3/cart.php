@@ -19,7 +19,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h1>Main Content</h1>
+				<h1>Your Shopping Cart</h1>
 
 
 			</main>

@@ -17,11 +17,8 @@ echo "\t\t</nav>\n";
 echo "\t\t<!--The idea of using a fieldset was sourced from course textbook, chapter 7.-->\n";
 echo "\t\t<fieldset id=\"membersArea\">\n";
 echo "\t\t\t<legend>Members Area</legend>\n";
-echo "\t\t\t<form action=\"login.php\" class=\"memberButtons\">\n";
-echo "\t\t\t\t<input id=\"buttonLogin\" type=\"submit\" name=\"login\" value=\"Login\">\n";
-echo "\t\t\t</form>\n";
-echo "\t\t\t<form action=\"signup.php\" class=\"memberButtons\">\n";
-echo "\t\t\t\t<input id=\"buttonSignUp\" type=\"submit\" name=\"signUp\" value=\"Sign Up\">\n";
+echo "\t\t\t<form action=\"cart.php\" class=\"memberButtons\">\n";
+echo "\t\t\t\t<input id=\"buttonCart\" type=\"submit\" name=\"cart\" value=\"Shopping Cart\">\n";
 echo "\t\t\t</form>\n";
 echo "\t\t</fieldset>\n";
 /* Using this to set the breadcrumbs dynamically for each page*/

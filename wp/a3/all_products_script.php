@@ -32,8 +32,8 @@ $productsTree = array (
 			,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => null
-			,'internationalPrice' => null
+				'domesticPostagePrice' => null
+			,'internationalPostagePrice' => null
 			)
 		)
 	,'Testimonials' => array (
@@ -76,8 +76,8 @@ $productsTree = array (
 			,'salePrice' => null
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => null
-			,'internationalPrice' => null
+				'domesticPostagePrice' => null
+			,'internationalPostagePrice' => null
 			)
 		)
 	,'Testimonials' => array (
@@ -120,8 +120,8 @@ Our book is mirror of the DVD and this makes it easy to reference when performin
 			,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+			,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -165,8 +165,8 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 			,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+			,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -193,8 +193,8 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 				,'salePrice' => '48.99'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -230,8 +230,8 @@ Simply Tarot X Large Candle Natural Eco Soy Candle to set your intent- directio
 				,'salePrice' => '36.95'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -283,8 +283,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 				,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -312,8 +312,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 				,'salePrice' => '48.99'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-				,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -344,8 +344,8 @@ Our new book is easy to work with and makes it easy to reference when performing
 				,'salePrice' => '36.95'
 			)
 		,'postagePrice' => array (
-				'domesticPrice' => '0.00'
-			,'internationalPrice' => '45.00'
+				'domesticPostagePrice' => '0.00'
+			,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
