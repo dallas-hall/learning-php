@@ -169,7 +169,8 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 					echo "$errorMessage";
 				}
 				else {
-					echo "<fieldset>$message";
+					echo "<fieldset>";
+					echo $message;
 					echo getProductPriceString($_POST['id'], $productsTree);
 					printf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
 						($saleQuantity * $productPrice));
