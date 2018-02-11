@@ -8,8 +8,16 @@ require_once("all_products_script.php");
 require_once("price_script_string.php");
 require_once("price_script_integer.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
-
-
+$addProduct = null;
+$productID = null;
+$productTitle = null;
+$saleQuantity = null;
+$productPrice = null;
+$videoSourceType = null;
+$videoTargetType = null;
+$errorMessage = null;
+$errorFound = false;
+$message = null;
 
 // Do something if the customer has cart options
 if(isset($_POST['add'], $_POST['id'], $_POST['quantity'], $_POST['sourceType'], $_POST['targetType'])) {
@@ -115,7 +123,7 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 	$_SESSION['cart'][$_POST['id']]['quantity'] = $_POST['quantity'];
 	//header("Location: cart.php");
 } else {
-	$message = "<p>Your shopping cart is empty, please visit our shop to purchase items.</p>";
+	$message = "<p>Your shopping cart is empty, please <a href=\"products.php\">visit our shop</a> to purchase items.</p>";
 }
 
 
