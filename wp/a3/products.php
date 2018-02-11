@@ -34,8 +34,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						<li>Transfer VHS or Super 8 to SD Card.</li>
 					</ul>
 					<?php
-					require_once("price_script.php");
-					getElement("videoTransfer", $productsTree);
+					require_once("price_script_string.php");
+					echo "<p>" . getElementPriceString("videoTransfer", $productsTree) . "</p>";
 					?>
 					<form action="product.php" method="GET">
 						<input type="submit" value="Details & Buy Now ">
@@ -82,8 +82,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script.php");
-						getElement("simplyTarotSetDVD", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("simplyTarotSetDVD", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -100,8 +100,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script.php");
-						getElement("simplyTarotSetNoDVD", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("simplyTarotSetNoDVD", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -118,8 +118,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script.php");
-						getElement("simplyTarotCandleLarge", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("simplyTarotCandleLarge", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -137,8 +137,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script.php");
-						getElement("simplyTarotCandlesSmall", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("simplyTarotCandlesSmall", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -158,8 +158,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script.php");
-						getElement("secretsOfTarotSet", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("secretsOfTarotSet", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -177,8 +177,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script.php");
-						getElement("secretsOfTarotCandleLarge", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("secretsOfTarotCandleLarge", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">
@@ -195,8 +195,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script.php");
-						getElement("secretsOfTarotCandlesSmall", $productsTree);
+						require_once("price_script_string.php");
+						echo "<p>" . getElementPriceString("secretsOfTarotCandlesSmall", $productsTree) . "</p>";
 						?>
 						<form action="product.php">
 							<input type="submit" value="Details & Buy Now ">

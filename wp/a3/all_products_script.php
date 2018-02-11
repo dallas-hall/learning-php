@@ -8,11 +8,11 @@ $allProducts = ['videoTransfer', 'videoProduction'
 $productsTree = array (
 	'videoTransfer' => array (
 		'productTitle' => 'Video Transfer'
-	,'productImage' => 'img/products/video/vcr.jpg'
-	,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
-	,'productImageWidth' => '480'
-	,'productImageHeight' => '272'
-	,'productDescription' => "
+		,'productImage' => 'img/products/video/vcr.jpg'
+		,'productImageText' => 'A picture of a VHS player, some remotes, and various types of tapes.'
+		,'productImageWidth' => '480'
+		,'productImageHeight' => '272'
+		,'productDescription' => "
 \t\t\t\t<p>In today’s fast moving world our lives move so fast and memories fade just as quick.
 \t\t\t\tWe all have some old tapes locked in a cupboard that we are going to do something with. Well today is the day.
 \t\t\t\tGet them out sort through them. What is special and you want to keep for future generations.
@@ -29,11 +29,11 @@ $productsTree = array (
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '30.00'
-			,'salePrice' => '0.00'
+				,'salePrice' => '0.00'
 			)
 		,'postagePrice' => array (
 				'domesticPostagePrice' => null
-			,'internationalPostagePrice' => null
+				,'internationalPostagePrice' => null
 			)
 		)
 	,'Testimonials' => array (
