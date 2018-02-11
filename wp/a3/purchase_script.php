@@ -46,6 +46,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('videoTransferService', 'quantityText', true)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"videoTransferService\" type=\"hidden\" name=\"id\" value=\"videoTransfer\">";
 		echo "\t\t\t\t\t<label>Amount Of Videos I Have:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -86,6 +87,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetDVD\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -108,6 +110,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetNoDVD\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -130,6 +133,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandleLarge\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -152,6 +156,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandlesSmall\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -174,6 +179,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotSet\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -196,6 +202,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandleLarge\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
@@ -218,6 +225,7 @@ switch($_GET['productID']) {
 		echo "<form action=\"https://titan.csit.rmit.edu.au/~e54061/wp/processing.php\" method=\"post\"";
 		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
 		echo "\t\t\t\t\t<span id=\"quantityButton\">";
+		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
 		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandlesSmall\">";
 		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
 		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";

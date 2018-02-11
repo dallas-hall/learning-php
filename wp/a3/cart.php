@@ -5,6 +5,21 @@ if(!isset($_SESSION)){
 }
 require_once("functions_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
+
+// Do something if the customer has cart options
+if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
+	echo "<p>HELLO IM A CART</p>";
+	echo "<p>$_POST[add]</p>";
+	echo "<p>$_POST[id]</p>";
+	echo "<p>$_POST[quantity]</p>";
+	// server side code is required here to check if
+	// - qty is a positive integer (ie 1 or more)
+	// - product/service id is valid
+	// - product/service option is valid
+	//$_SESSION['cart'][$_POST['id']]['qty'] = $_POST['qty'];
+	// repeat to add the valid option
+	header("Location: cart.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
