@@ -27,15 +27,15 @@ $productsTree = array (
 \t\t\t\t</ul>
 \t\t\t\t<p>Please contact us to arrange the service.</p>\n"
 	,'price' => array (
-			'hasPrice' => true
+		'hasPrice' => true
 		,'shopPrice' => array (
-				'normalPrice' => '30.00'
-				,'salePrice' => '0.00'
-			)
+			'normalPrice' => '30.00'
+			,'salePrice' => '0.00'
+		)
 		,'postagePrice' => array (
-				'domesticPostagePrice' => null
-				,'internationalPostagePrice' => null
-			)
+			'domesticPostagePrice' => null
+			,'internationalPostagePrice' => null
+		)
 		)
 	,'Testimonials' => array (
 			'Quotes' => array (
