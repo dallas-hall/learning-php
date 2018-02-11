@@ -58,12 +58,12 @@ header nav ul, header nav li {
 	padding-right: 16px;
 }
 
-header #membersArea {
+header #shoppingArea {
 	width: 160px;
 	padding: 16px 16px;
 }
 
-header .memberButtons {
+header .shoppingButtons {
 	width: 80px;
 	float: left;
 }

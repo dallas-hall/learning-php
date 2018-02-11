@@ -119,28 +119,25 @@ header nav ul, header nav li {
 Set a width and padding for the box
 
  */
-header #membersArea {
+header #shoppingArea {
 	width: 160px;
 	padding: 16px 16px;
+	text-align: center;
 }
 
 /* Style the members area buttons
 
-Set width and alignment
-Align text, set background colour, update text colour, and width.
-Change background colour for active and hover
+centre buttons
 
  */
-header .memberButtons {
-	width: 80px;
-	float: left;
+header .shoppingButton {
+	text-align: center;
 }
 
-header #buttonLogin, #buttonSignUp  {
+header #buttonCart  {
 	text-align: center;
 	background-color: #ffffb2;
 	color: black;
-	width: 72px;
 }
 
 #buttonLogin:active, #buttonLogin:hover, #buttonSignUp:active, #buttonSignUp:hover   {
