@@ -28,7 +28,7 @@ function createCartItem(elementID, elementClass, isVideoTransfer) {
 		cartItem.target = target.options[target.selectedIndex].text;
 	}
 
-	console.log(cartItem.add.toString());
+	console.log(cartItem.addItem.toString());
 	console.log(cartItem.id.toString());
 	console.log(cartItem.quantity.toString());
 	if(isVideoTransfer === true) {
