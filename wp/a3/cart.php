@@ -5,23 +5,11 @@ if(!isset($_SESSION)){
 }
 require_once("functions_script.php");
 require_once("all_products_script.php");
+require_once("price_script_string.php");
+require_once("price_script_integer.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 
-// Page variables
-$addProduct = null;
-$productID = null;
-$productTitle = null;
-$saleQuantity = null;
-$productPrice = null;
-$postagePrice =  null;
-// Video only
-$videoSourceType = null;
-$videoTargetType = null;
 
-// Script variables
-$message = null;
-$errorMessage =  null;
-$errorFound = false;
 
 // Do something if the customer has cart options
 if(isset($_POST['add'], $_POST['id'], $_POST['quantity'], $_POST['sourceType'], $_POST['targetType'])) {
@@ -29,7 +17,7 @@ if(isset($_POST['add'], $_POST['id'], $_POST['quantity'], $_POST['sourceType'], 
 	$productID = $_POST['id'];
 	$productTitle = $productsTree[$_POST['id']]['productTitle'];
 	$saleQuantity = $_POST['quantity'];
-	//$productPrice = getElementPriceInt("videoTransfer", $productsTree);
+	$productPrice = getProductPriceInt($_POST['id'], $productsTree);
 	$videoSourceType =  $_POST['sourceType'];
 	$videoTargetType = $_POST['targetType'];
 
@@ -82,12 +70,11 @@ if(isset($_POST['add'], $_POST['id'], $_POST['quantity'], $_POST['sourceType'], 
 			break;
 	}
 
+	$message = "<legend><b>$productTitle Order</b></legend>You have chosen to buy <b>$saleQuantity x $productTitle";
 	if($saleQuantity > 1) {
-		$message = "<h2>$productTitle</h2>You have chosen to buy <b>$saleQuantity $productTitle</b>'s.<br>" .
-			"The video source is <b>$videoSourceType</b> and it will be transferred to <b>$videoTargetType</b>.<br>";
+		$message .= "'s.</b><br>The video sources are <b>$videoSourceType</b> and they will be transferred to <b>$videoTargetType</b>.<br>";
 	} else {
-		$message = "<h2>$productTitle</h2>You have chosen to buy <b>$saleQuantity $productTitle.</b><br>" .
-			"The video source is <b>$videoSourceType</b> and it will be transferred to <b>$videoTargetType</b>.<br>";
+		$message .= ".</b><br>The video source is <b>$videoSourceType</b> and it will be transferred to <b>$videoTargetType</b>.<br>";
 	}
 
 	// Add to cart
@@ -99,7 +86,7 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 	$productID = $_POST['id'];
 	$productTitle = $productsTree[$_POST['id']]['productTitle'];
 	$saleQuantity = $_POST['quantity'];
-	//$productPrice = getElementPriceInt("videoTransfer", $productsTree);
+	$productPrice = getProductPriceInt($_POST['id'], $productsTree);
 
 /*	$message = "<p>HELLO IM A CART</p><p>$_POST[add] is $addProduct</p><p>$_POST[id] is $productID</p>
 			<p>$_POST[quantity] is $saleQuantity</p>";*/
@@ -117,10 +104,11 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 		$errorFound = true;
 	}
 
+	$message = "<legend><b>$productTitle Order</b></legend>You have chosen to buy <b>$saleQuantity x $productTitle";
 	if($saleQuantity > 1) {
-		$message = "<h1>$productTitle</h1>You have chosen to buy <b>$saleQuantity $productTitle's</b>.";
+		$message .= "'s.</b><br>";
 	} else {
-		$message = "<h1>$productTitle</h1>You have chosen to buy <b>$saleQuantity $productTitle</b>.";
+		$message .= ".</b><br>";
 	}
 
 	// Add to cart
@@ -155,9 +143,9 @@ else if (isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 				}
 				else {
 					echo "<fieldset>$message";
-					require_once("price_script_string.php");
-					echo getElementPriceString($_POST['id'], $productsTree);
-					echo "<br>Because of this order's quantity, you will need to pay <b>($saleQuantity * $price)</b>.";
+					echo getProductPriceString($_POST['id'], $productsTree);
+					printf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
+						($saleQuantity * $productPrice));
 					echo "</fieldset>";
 				}
 				?>
