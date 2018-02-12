@@ -8,7 +8,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 
 //Functions
 function createForm() {
-	$form .= "<fieldset>";
+	$form = "<fieldset>";
 	$form .= "<legend><b>Order Checkout Form</b></legend>";
 	$form .= "\t<form>";
 	$form .= "\t\t<label>Name:<input id=\"checkoutName\" type=\"text\" name=\"name\" placeholder=\"Enter your name...\"	required size=\"32\"></label><br>";

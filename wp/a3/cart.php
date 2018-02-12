@@ -219,7 +219,7 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 
 		// Cycle through current cart
 		if(isset($_SESSION['cart'])) {
-			$message .= "<h2>Current Cart Items</h2>";
+			$message = "<h2>Current Cart Items</h2>";
 			$message .= getCartItems($productsTree);
 
 		}
