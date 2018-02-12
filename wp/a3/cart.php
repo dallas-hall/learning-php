@@ -17,8 +17,8 @@ $productTitle = null;
 $saleQuantity = null;
 $productPrice = null;
 $postageType = null;
-$postagePrice = null;
-$message = null;*/
+$postagePrice = null;*/
+$message = null;
 $errorMessage = null;
 $errorFound = false;
 $firstVisit = true;
@@ -151,38 +151,46 @@ function calculateOrderTotal() {
 	}
 }
 
-function createCartButtons() {
+function createFinalOrder() {
+	if(isset($_SESSION['finalOrderText'])) {
+		unset($_SESSION['finalOrderText']);
+	}
 	$postagePrice = getPostagePrice();
 	calculateOrderTotal();
-/*	echo "order total is $_SESSION[orderTotal]<br>";
-	echo "postage is $postagePrice";*/
+	/*	echo "order total is $_SESSION[orderTotal]<br>";
+		echo "postage is $postagePrice";*/
 	//$postagePrice = 0;
 	$postagePriceFormatted = sprintf("<b>$%1.2f AUD</b>", $postagePrice);
 	$totalCostFormatted  = sprintf("<b>$%1.2f AUD</b>", $_SESSION['orderTotal']);
 	$totalCostWithPostageFormatted  = sprintf("<b>$%1.2f AUD</b>", ($_SESSION['orderTotal'] + $postagePrice));
-	$text = "<h2>Final Order Information</h2>";
-	$text .= "<fieldset><legend><b>Complete Order Information</b></legend>";
-	$text .= "<p>This is the information for all of your orders listed above.<br>The total cost of this order is $totalCostFormatted.</p>";
+	$finalOrder = "<h2>Final Order Information</h2>";
+	$finalOrder .= "<fieldset><legend><b>Complete Order Information</b></legend>";
+	$finalOrder .= "<p>The total cost of all of your items in this order is $totalCostFormatted.</p>";
 	if($postagePrice > 0) {
-		$text .= "<p>International postage was selected, this will cost an additional $postagePriceFormatted<br>";
-		$text .= "The total cost of your order is now $totalCostWithPostageFormatted.<br>Press Checkout to continue or Clear Cart to cancel your order.</p>";
+		$finalOrder .= "<p>International postage was selected, this will cost an additional $postagePriceFormatted<br>";
+		$finalOrder .= "The total cost of your order is now $totalCostWithPostageFormatted.";
 	} else {
-		$text .= "<p>Domestic postage was selected, this is <b>free!</b><br>Press Checkout to continue or Clear Cart to cancel your order.</p>";
+		$finalOrder .= "<p>Domestic postage was selected, this is <b>free</b>!";
 	}
-
-	$text .= "<form action=\"checkout.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Checkout\">";
-	$text .= "</form>";
-	$text .= "<form action=\"clear_cart.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Clear Cart\">";
-	$text .= "</form>";
-	$text .= "<form action=\"products.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Shop More\">";
-	$text .= "</form></fieldset>";
-	return $text;
+	$_SESSION['finalOrderText'] = $finalOrder . "<br>Press <b>Buy Now</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
+products.</p></fieldset>";
+	$finalOrder .= "<br>Press <b>Checkout<b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more products.</p>";
+	return $finalOrder;
 }
 
-
+function createCartButtons() {
+	$cartButtons = createFinalOrder();
+	$cartButtons .= "<form action=\"checkout.php\">";
+	$cartButtons .= "<input class=\"cartButtons\" type=\"submit\" value=\"Checkout\">";
+	$cartButtons .= "</form>";
+	$cartButtons .= "<form action=\"clear_cart.php\">";
+	$cartButtons .= "<input class=\"cartButtons\" type=\"submit\" value=\"Clear Cart\">";
+	$cartButtons .= "</form>";
+	$cartButtons .= "<form action=\"products.php\">";
+	$cartButtons .= "<input class=\"cartButtons\" type=\"submit\" value=\"Shop More\">";
+	$cartButtons .= "</form></fieldset>";
+	return $cartButtons;
+}
 
 // Check if first time visiting or not
 if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
@@ -216,26 +224,17 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 
 		// Add to cart
 		createCartItem($productID, $productTitle, $saleQuantity, $productPrice, $postageType);
+	}
 
-		// Cycle through current cart
-		if(isset($_SESSION['cart'])) {
-			$message = "<h2>Current Cart Items</h2>";
-			$message .= getCartItems($productsTree);
+	// Cycle through current cart
+	if(isset($_SESSION['cart'])) {
+		$message = "<h2>Current Cart Items</h2>";
+		$message .= getCartItems($productsTree);
 
-		}
 	}
 
 	// Add the processing buttons
 	$message .= createCartButtons();
-
-	//header("Location: cart.php");
-
-/*	foreach ($_SESSION['cart'] as $aKey => $aValuePair) {
-		$message .= "$aKey and ";
-		foreach ($aValuePair as $anotherKey => $anotherValuePair) {
-			$message .= "$anotherValuePair<br>";
-		}
-	}*/
 } else {
 	$firstVisit = true;
 	$message = "Welcome to Golden Tree Production.<br>";
