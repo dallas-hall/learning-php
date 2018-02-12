@@ -165,16 +165,16 @@ function createFinalOrder() {
 	$totalCostWithPostageFormatted  = sprintf("<b>$%1.2f AUD</b>", ($_SESSION['orderTotal'] + $postagePrice));
 	$finalOrder = "<h2>Final Order Information</h2>";
 	$finalOrder .= "<fieldset><legend><b>Complete Order Information</b></legend>";
-	$finalOrder .= "<p>The total cost of all of your items in this order is $totalCostFormatted.</p>";
+	$finalOrder .= "<p>The total cost of all of your items in this order is $totalCostFormatted.";
 	if($postagePrice > 0) {
-		$finalOrder .= "<p>International postage was selected, this will cost an additional $postagePriceFormatted<br>";
+		$finalOrder .= "<br>International postage was selected, this will cost an additional $postagePriceFormatted</p>";
 		$finalOrder .= "The total cost of your order is now $totalCostWithPostageFormatted.";
 	} else {
-		$finalOrder .= "<p>Domestic postage was selected, this is <b>free</b>!";
+		$finalOrder .= "<br>Domestic postage was selected, this is <b>free</b>!</p>";
 	}
-	$_SESSION['finalOrderText'] = $finalOrder . "<br>Press <b>Buy Now</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
-products.</p></fieldset>";
-	$finalOrder .= "<br>Press <b>Checkout<b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more products.</p>";
+	$_SESSION['finalOrderText'] = $finalOrder . "</fieldset>";
+	$finalOrder .= "<br>Press <b>Checkout</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
+products.<br><br>";
 	return $finalOrder;
 }
 

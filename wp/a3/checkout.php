@@ -30,6 +30,8 @@ function createForm() {
 
 function createCheckoutButtons() {
 	$buttons = "<fieldset><legend><b>Order Checkout Buttons</b></legend>";
+	$buttons .= "<p>Press <b>Buy Now</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> 
+to browse more products.<br></p>";
 	$buttons .= "<form action=\"receipt.php\">";
 	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Buy Now\">";
 	$buttons .= "</form>";
