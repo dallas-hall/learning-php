@@ -3,6 +3,14 @@
 if(!isset($_SESSION)){
 	session_start();
 }
+
+// Check that a shopping cart actually exists
+if(!isset($_SESSION['cart'])) {
+	header("Location: products.php");
+}
+
+header("Location: cart.php");
+
 require_once("functions_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 
@@ -22,6 +30,24 @@ function createForm() {
 	return $form;
 }
 
+function createCheckoutButtons() {
+	$buttons = "<fieldset><legend><b>Order Checkout Buttons</b></legend>";
+	$buttons .= "<form action=\"receipt.php\">";
+	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Buy Now\">";
+	$buttons .= "</form>";
+	$buttons .= "<form action=\"cart.php\">";
+	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Shopping Cart\">";
+	$buttons .= "</form>";
+	$buttons .= "</form>";
+	$buttons .= "<form action=\"clear_cart.php\">";
+	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Clear Cart\">";
+	$buttons .= "</form>";
+	$buttons .= "<form action=\"products.php\">";
+	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Shop More\">";
+	$buttons .= "</form></fieldset>";
+	return $buttons;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +62,11 @@ function createForm() {
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
-				<h1>Golden Tree Productions Checkout</h1>
+				<h1>Checkout Information</h1>
 				<?php
-				echo createForm();
+				echo $_SESSION['finalOrderText'] . "<br>";
+				echo createForm() . "<br>";
+				echo createCheckoutButtons();
 				?>
 
 			</main>
