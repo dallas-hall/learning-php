@@ -23,9 +23,10 @@ function getProductPriceString($elementName, $productsTree) {
 	if ($normalPrice === null && $salePrice === null) {
 		$returnString =  "<p>Please contact us for a detailed quote.</p>";
 	} elseif ($salePrice === '0.00') {
-		$returnString = sprintf("The product's current price is <b>$%1.2f</b>\n", $normalPrice);
+		$returnString = sprintf("The product's current price is <b>$%1.2f AUD</b>\n", $normalPrice);
 	} elseif ($salePrice !== '0.00') {
-		$returnString = sprintf("The product's original price was <b>$%1.2f</b> but is now only <b>$%1.2f</b>!\n", $normalPrice,
+		$returnString = sprintf("The product's original price was <b>$%1.2f AUD</b> but is now only <b>$%1.2f</b>!\n",
+			$normalPrice,
 			$salePrice);
 	}
 	return $returnString;

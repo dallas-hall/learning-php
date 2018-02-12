@@ -4,6 +4,12 @@ $allProducts = ['videoTransfer', 'videoProduction'
 	,'simplyTarotSetDVD', 'simplyTarotSetNoDVD', 'simplyTarotCandleLarge',	'simplyTarotCandlesSmall'
 	,'secretsOfTarotSet', 'secretsOfTarotCandleLarge', 'secretsOfTarotCandlesSmall'];
 
+// Postage prices in AUD
+$postagePrices = array (
+	'domestic' => '0.00'
+	,'international' => '45.00'
+);
+
 /* Valid product data */
 $productsTree = array (
 	'videoTransfer' => array (
@@ -26,29 +32,25 @@ $productsTree = array (
 \t\t\t\t\t<li>Transfer VHS or Super 8 to SD Card.</li>
 \t\t\t\t</ul>
 \t\t\t\t<p>Please contact us to arrange the service.</p>\n"
-	,'price' => array (
-		'hasPrice' => true
+		,'price' => array (
+			'hasPrice' => true
 		,'shopPrice' => array (
 			'normalPrice' => '30.00'
 			,'salePrice' => '0.00'
 		)
-		,'postagePrice' => array (
-			'domesticPostagePrice' => null
-			,'internationalPostagePrice' => null
-		)
-		)
-	,'Testimonials' => array (
+	)
+		,'Testimonials' => array (
 			'Quotes' => array (
 				'<i>"Jack you are awesome. The music clips are just so awesome.– Love them all big fella."</i><br>Roger Pearson - Musician &amp; song writer.'
 			)
-		,'Samples' => array (
+			,'Samples' => array (
 				'<iframe width="320" height="240" src="https://www.youtube.com/embed/N9BhV2Pt4aI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-			,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+				,'<iframe width="320" height="240" src="https://www.youtube.com/embed/U0ifHJfq5RI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
 			)
 		)
 	)
 
-,'videoProduction' => array (
+	,'videoProduction' => array (
 		'productTitle' => 'Video Production'
 	,'productImage' => 'img/people/jack_and_client.jpg'
 	,'productImageText' => 'A picture of a Jack Egerton and a country band in the Australian outback.'
@@ -75,10 +77,6 @@ $productsTree = array (
 		,'shopPrice' => array (
 				'normalPrice' => null
 			,'salePrice' => null
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => null
-			,'internationalPostagePrice' => null
 			)
 		)
 	,'Testimonials' => array (
@@ -118,11 +116,7 @@ Our book is mirror of the DVD and this makes it easy to reference when performin
 			'hasPrice' => true
 		,'shopPrice' => array (
 				'normalPrice' => '103.00'
-			,'salePrice' => '0.00'
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-			,'internationalPostagePrice' => '45.00'
+				,'salePrice' => '0.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -165,10 +159,6 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 				'normalPrice' => '83.00'
 			,'salePrice' => '0.00'
 			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-			,'internationalPostagePrice' => '45.00'
-			)
 		)
 	,'Testimonials' => array (
 			'Quotes' => array (
@@ -192,10 +182,6 @@ Our book is simple and easy to follow in full colour makes it easy to reference 
 		,'shopPrice' => array (
 				'normalPrice' => '57.95'
 				,'salePrice' => '48.99'
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -229,10 +215,6 @@ Simply Tarot X Large Candle Natural Eco Soy Candle to set your intent- directio
 		,'shopPrice' => array (
 				'normalPrice' => '45.95'
 				,'salePrice' => '36.95'
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -283,10 +265,6 @@ Our new book is easy to work with and makes it easy to reference when performing
 				'normalPrice' => '49.95'
 				,'salePrice' => '0.00'
 			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-				,'internationalPostagePrice' => '45.00'
-			)
 		)
 	,'Testimonials' => array (
 			'Quotes' => array (
@@ -311,10 +289,6 @@ Our new book is easy to work with and makes it easy to reference when performing
 		,'shopPrice' => array (
 				'normalPrice' => '57.95'
 				,'salePrice' => '48.99'
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-				,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (
@@ -343,10 +317,6 @@ Our new book is easy to work with and makes it easy to reference when performing
 		,'shopPrice' => array (
 				'normalPrice' => '49.95'
 				,'salePrice' => '36.95'
-			)
-		,'postagePrice' => array (
-				'domesticPostagePrice' => '0.00'
-			,'internationalPostagePrice' => '45.00'
 			)
 		)
 	,'Testimonials' => array (

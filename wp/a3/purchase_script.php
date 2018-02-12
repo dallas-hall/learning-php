@@ -7,6 +7,39 @@
 5) add to cart button
  */
 
+function getContactText() {
+	$text ="<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
+	$text .= "\t\tvalue=\"Contact Us\">";
+	$text .=  "</form>";
+	return $text;
+}
+
+function getBuyText($serviceID, $productID, $isVideo) {
+	$text = "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+	$text.= "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem($serviceID, 'quantityText', $isVideo)\">";
+	$text.= "\t\t\t\t\t<span id=\"quantityButton\">";
+	$text.= "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
+	$text.= "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"radio\" name=\"postageType\" value=\"Australia\" checked=\"true\"> Australia (free)<br>";
+	$text.= "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"radio\" name=\"postageType\" value=\"International\"> International ($45.00 AUD)<br>";
+	$text.= "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=$productID><br>";
+	$text.= "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
+	$text.= "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
+	$text.= "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
+	$text.= "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
+	$text.= "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
+	$text.= "\t\t\t\t\t</span><br>";
+	$text.= "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span> AUD</p>";
+	$text.= "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
+	$text.= "</form>";
+	$text.= "<br>";
+	$text.= "<form action=\"contact_us.php\"><input";
+	$text.= "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
+	$text.= "\t\tvalue=\"Contact Us\">";
+	$text.= "</form>";
+	$text.= "<script src=\"js/quantity.js\"></script>";
+	return $text;
+}
+
 if ($productsTree[PRODUCT_ID]['price']['hasPrice'] === true) {
 	$normalPrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['normalPrice'];
 	$salePrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['salePrice'];
@@ -32,9 +65,9 @@ if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
 if ($normalPrice === null && $salePrice === null) {
 	echo "<p>Please contact us for a detailed quote.</p>";
 } elseif ($salePrice === '0.00') {
-	printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span></b></p>\n", $normalPrice);
+	printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span> AUD</b></p>\n", $normalPrice);
 } elseif ($salePrice !== '0.00') {
-	printf("<p>The product's original price was <b>$%1.2f</b> but is now only <b>$<span id=\"price\">%1.2f</span></b>!</p>\n",
+	printf("<p>The product's original price was <b>$%1.2f AUD</b> but is now only <b>$<span id=\"price\">%1.2f</span>AUD</b>!</p>\n",
 		$normalPrice,
 		$salePrice);
 }
@@ -74,176 +107,36 @@ servers
 		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
 		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
 		echo "</form>";
-		echo "<br>";*/
+		echo "<br>";
 		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
 		echo "\t\tvalue=\"Contact Us\">";
 		echo "</form>";
-		//echo "<script src=\"js/quantity.js\"></script>";
+		echo "<script src=\"js/quantity.js\"></script>";*/
+		echo getContactText();
 		break;
 	case 'videoProduction':
-		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
+		echo getContactText();
 		break;
 	case 'simplyTarotSetDVD':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetDVD\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('simplyTarotSetDVD', 'simplyTarotSetDVD', false);
 		break;
 	case 'simplyTarotSetNoDVD':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotSetNoDVD\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('simplyTarotService', 'simplyTarotSetNoDVD', false);
 		break;
 	case 'simplyTarotCandleLarge':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandleLarge\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('simplyTarotService', 'simplyTarotCandleLarge', false);
 		break;
 	case 'simplyTarotCandlesSmall':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('simplyTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"simplyTarotService\" type=\"hidden\" name=\"id\" value=\"simplyTarotCandlesSmall\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('simplyTarotService', 'simplyTarotCandlesSmall', false);
 		break;
 	case 'secretsOfTarotSet':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotSet\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('secretsOfTarotService', 'secretsOfTarotSet', false);
 		break;
 	case 'secretsOfTarotCandleLarge':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandleLarge\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandleLarge', false);
 		break;
 	case 'secretsOfTarotCandlesSmall':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-		echo "<form action=\"cart.php\" method=\"post\"";
-		echo "\t  onsubmit=\"return createCartItem('secretsOfTarotService', 'quantityText', false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"secretsOfTarotService\" type=\"hidden\" name=\"id\" value=\"secretsOfTarotCandlesSmall\">";
-		echo "\t\t\t\t\t<label>Amount To Buy:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span><br>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input";
-		echo "\t\tclass=\"purchaseButtons\" type=\"submit\" name=\"contactSimplyTarot\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";
+		echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandlesSmall', false);
 		break;
 }
 ?>
