@@ -171,16 +171,18 @@ function createCartButtons() {
 	}
 
 	$text .= "<form action=\"contact_us.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"checkoutOrder\" value=\"Checkout\">";
+	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Checkout\">";
 	$text .= "</form>";
-	$text .= "<form action=\"contact_us.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"cancelOrder\" value=\"Clear Cart\">";
+	$text .= "<form action=\"clear_cart.php\">";
+	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Clear Cart\">";
 	$text .= "</form>";
 	$text .= "<form action=\"products.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"shopMore\" value=\"Shop More\">";
+	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Shop More\">";
 	$text .= "</form></fieldset>";
 	return $text;
 }
+
+
 
 // Check if first time visiting or not
 if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
