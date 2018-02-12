@@ -6,7 +6,7 @@ if(!isset($_SESSION)){
 
 // Check that a shopping cart actually exists
 if(!isset($_SESSION['cart'])) {
-	header("Location: products.php");
+	header("Location: cart.php");
 }
 
 require_once("functions_script.php");
