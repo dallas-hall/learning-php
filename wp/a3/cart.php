@@ -24,10 +24,13 @@ $errorFound = false;
 $firstVisit = true;
 
 // Create a cumulative total
-if(!isset($_SESSION['orderTotal'])){
-	$_SESSION['orderTotal'] = 0;
-}
+$_SESSION['orderTotal'] = 0;
 
+
+// Check for international order
+/*if(!isset($_SESSION['internationalOrder'])){
+	$_SESSION['internationalOrder'] = false;
+}*/
 
 // Functions
 function createCartItem($productID, $productTitle, $saleQuantity, $productPrice, $postageType) {
@@ -35,8 +38,7 @@ function createCartItem($productID, $productTitle, $saleQuantity, $productPrice,
 	$_SESSION['cart'][$_POST['id']]['saleQuantity'] = $saleQuantity;
 	$_SESSION['cart'][$_POST['id']]['productPrice'] = $productPrice;
 	$_SESSION['cart'][$_POST['id']]['postageType'] = $postageType;
-	$_SESSION['orderTotal'] += ($productPrice * $saleQuantity);
-	echo "productPrice is $productPrice and orderTotal is $_SESSION[orderTotal]";
+	//echo "productPrice is $productPrice and orderTotal is $_SESSION[orderTotal]";
 }
 
 function getCartItems($productsTree) {
@@ -50,7 +52,6 @@ function getCartItems($productsTree) {
 		$cartSaleQuantity = null;
 		$cartProductPrice = null;
 		$cartPostageType = null;
-		$cartPostagePrice = null;
 		//echo "id is $aKey<br>";
 		foreach ($aValuePair as $anotherKey => $anotherValuePair) {
 			//echo "$anotherKey is $anotherValuePair<br>";
@@ -66,9 +67,6 @@ function getCartItems($productsTree) {
 					break;
 				case 'postageType':
 					$cartPostageType = $anotherValuePair;
-					break;
-				case 'postagePrice':
-					$cartPostagePrice = $anotherValuePair;
 					break;
 			}
 		}
@@ -92,33 +90,73 @@ $cartProductTitle";
 	return $cartItems;
 }
 
-function getPostagePrice($postagePriceArray, $postageTypes) {
+function getPostagePrice() {
 	// Local Variables
 	$postagePrice = null;
-	$internationalFound = false;
+	$isInternationalOrder = false;
+	// Global Variables
+	global $postagePrices;
 
-	// Check for a single international postage selection
-	foreach($postageTypes as $aKey => $aValue) {
-		echo "$aKey is $aValue";
-		if($aKey === 'international') {
-			$internationalFound = true;
-			$postagePrice = $aValue;
-			// Get the current postage price
-			foreach($postagePriceArray as $anotherKey => $anotherValue) {
-				echo "Type is $anotherKey and that price is $anotherValue";
-				if($anotherKey === 'international') {
-					$postagePrice = $anotherValue;
-				}
+	// Outer loop gets the productID array
+	foreach($_SESSION['cart'] as $productID => $productArray) {
+		// Inner loop gets all the elements from that array
+		foreach ($productArray as $arrayKey => $arrayValue) {
+			//echo "$arrayKey and $arrayValue<br>";
+			if ($arrayKey === 'postageType' && $arrayValue === 'International') {
+				$isInternationalOrder = true;
+				break;
 			}
-			break;
+		}
+	}
+
+	if($isInternationalOrder) {
+		foreach($postagePrices as $aKey => $aValue) {
+
+			if($aKey === 'international') {
+				$postagePrice = $aValue;
+				//echo "Type is $aKey and that price is $aValue<br>";
+				break;
+			}
+		}
+	} else {
+		foreach($postagePrices as $aKey => $aValue) {
+
+			if($aKey === 'domestic') {
+				$postagePrice = $aValue;
+				//echo "Type is $aKey and that price is $aValue<br>";
+				break;
+			}
 		}
 	}
 	return $postagePrice;
 }
 
+function calculateOrderTotal() {
+	// Outer loop gets the productID array
+	foreach($_SESSION['cart'] as $productID => $productArray) {
+		//echo "$productID and $productArray<br>";
+		$saleQuantity = null;
+		$productPrice = null;
+
+		// Inner loop gets all the elements from that array
+		foreach($productArray as $arrayKey => $arrayValue) {
+			//echo "$arrayKey and $arrayValue<br>";
+			if($arrayKey === 'saleQuantity') {
+				$saleQuantity = $arrayValue;
+			} else if ($arrayKey === 'productPrice') {
+				$productPrice = $arrayValue;
+			}
+		}
+		$_SESSION['orderTotal'] += ($saleQuantity * $productPrice);
+	}
+}
+
 function createCartButtons() {
-	//$postagePrice = getPostagePrice();
-	$postagePrice = 0;
+	$postagePrice = getPostagePrice();
+	calculateOrderTotal();
+	echo "order total is $_SESSION[orderTotal]<br>";
+	echo "postage is $postagePrice";
+	//$postagePrice = 0;
 	$postagePriceFormatted = sprintf("<b>$%1.2f AUD</b>", $postagePrice);
 	$totalCostFormatted  = sprintf("<b>$%1.2f AUD</b>", $_SESSION['orderTotal']);
 	$totalCostWithPostageFormatted  = sprintf("<b>$%1.2f AUD</b>", ($_SESSION['orderTotal'] + $postagePrice));
@@ -133,8 +171,13 @@ function createCartButtons() {
 	}
 
 	$text .= "<form action=\"contact_us.php\">";
-	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"checkoutOrder\" value=\"Checkout\"><br><br>";
+	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"checkoutOrder\" value=\"Checkout\">";
+	$text .= "</form>";
+	$text .= "<form action=\"contact_us.php\">";
 	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"cancelOrder\" value=\"Clear Cart\">";
+	$text .= "</form>";
+	$text .= "<form action=\"products.php\">";
+	$text .= "<input class=\"cartButtons\" type=\"submit\" name=\"shopMore\" value=\"Shop More\">";
 	$text .= "</form></fieldset>";
 	return $text;
 }
@@ -143,13 +186,6 @@ function createCartButtons() {
 if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
 	// Setup variables
 	$firstVisit = false;
-
-	// Cycle through current current
-	if(isset($_SESSION['cart'])) {
-		$message .= "<h2>Previous Cart Items</h2>";
-		$message .= getCartItems($productsTree);
-
-	}
 
 	// Add new item to cart
 	if(isset($_POST['add'], $_POST['id'], $_POST['quantity'])) {
@@ -176,25 +212,19 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 			$errorFound = true;
 		}
 
-		// Create order tab
-		$message .= "<h2>Current Cart Items</h2>";
-		$message .= "<fieldset><legend><b>$productTitle Order</b></legend>You have chosen to buy <b>$saleQuantity x $productTitle";
-		if ($saleQuantity > 1) {
-			$message .= "s.</b><br>";
-		} else {
-			$message .= ".</b><br>";
-		}
-
-		// Get product price and order total
-		$message .= getProductPriceString($_POST['id'], $productsTree);
-		$message .= $orderTotal . "</fieldset>";
-
 		// Add to cart
 		createCartItem($productID, $productTitle, $saleQuantity, $productPrice, $postageType);
+
+		// Cycle through current cart
+		if(isset($_SESSION['cart'])) {
+			$message .= "<h2>Current Cart Items</h2>";
+			$message .= getCartItems($productsTree);
+
+		}
 	}
 
 	// Add the processing buttons
-	$message .= createCartButtons();
+	$message .= createCartButtons($_SESSION['internationalOrder'], $postagePrices);
 
 	//header("Location: cart.php");
 
