@@ -154,8 +154,8 @@ function calculateOrderTotal() {
 function createCartButtons() {
 	$postagePrice = getPostagePrice();
 	calculateOrderTotal();
-	echo "order total is $_SESSION[orderTotal]<br>";
-	echo "postage is $postagePrice";
+/*	echo "order total is $_SESSION[orderTotal]<br>";
+	echo "postage is $postagePrice";*/
 	//$postagePrice = 0;
 	$postagePriceFormatted = sprintf("<b>$%1.2f AUD</b>", $postagePrice);
 	$totalCostFormatted  = sprintf("<b>$%1.2f AUD</b>", $_SESSION['orderTotal']);
@@ -170,7 +170,7 @@ function createCartButtons() {
 		$text .= "<p>Domestic postage was selected, this is <b>free!</b><br>Press Checkout to continue or Clear Cart to cancel your order.</p>";
 	}
 
-	$text .= "<form action=\"contact_us.php\">";
+	$text .= "<form action=\"checkout.php\">";
 	$text .= "<input class=\"cartButtons\" type=\"submit\" value=\"Checkout\">";
 	$text .= "</form>";
 	$text .= "<form action=\"clear_cart.php\">";
@@ -226,7 +226,7 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 	}
 
 	// Add the processing buttons
-	$message .= createCartButtons($_SESSION['internationalOrder'], $postagePrices);
+	$message .= createCartButtons();
 
 	//header("Location: cart.php");
 
