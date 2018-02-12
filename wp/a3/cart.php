@@ -173,8 +173,8 @@ function createFinalOrder() {
 		$finalOrder .= "<br>Domestic postage was selected, this is <b>free</b>!</p>";
 	}
 	$_SESSION['finalOrderText'] = $finalOrder . "</fieldset>";
-	$finalOrder .= "<br>Press <b>Checkout</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
-products.<br><br>";
+	$finalOrder .= "<p>Press <b>Checkout</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
+products.</p>";
 	return $finalOrder;
 }
 
