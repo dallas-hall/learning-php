@@ -22,4 +22,5 @@ echo "\t\t<!-- Using JavaScript to add the current year into the page dynamicall
 echo "\t\tweek 5 (?) lecture.-->\n";
 echo "\t\t<script type=\"text/javascript\" src=\"js/getDate.js\"></script>\n";
 echo "\t</footer>\n";
+require_once("download_links.php");
 ?>
