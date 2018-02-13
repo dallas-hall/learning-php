@@ -14,30 +14,28 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 
 //Functions
 function createForm() {
-	$form = "<fieldset>";
-	$form .= "<legend><b>Order Checkout Form</b></legend>";
-	$form .= "\t<form>";
-	$form .= "\t\t<label>Name:<input id=\"checkoutName\" type=\"text\" name=\"name\" placeholder=\"Enter your name...\"	required size=\"32\"></label><br>";
-	$form .= "\t\t<label>Email:<input id=\"checkoutEmail\" type=\"email\" name=\"email\" placeholder=\"Enter your email...\" required size=\"32\"></label><br>";
-	$form .= "\t\t<label>Address:<textarea id=\"checkoutAddress\" name=\"address\" placeholder=\"Enter your address\"></textarea></label><br>";
-	$form .= "\t\t<label>Mobile:<input id=\"checkoutPhone\" type=\"text\" name=\"phone\" placeholder=\"Enter your mobile number...\" required size=\"32\"></label><br>";
-	$form .= "\t\t<label>Credit Card:<input id=\"checkoutCreditCard\" type=\"text\" name=\"creditCard\" placeholder=\"Enter your credit card...\" required size=\"32\"></label><br>";
-	$form .= "\t\t<label>Expiry Date:<input id=\"checkoutCreditCardExpiry\"type=\"date\" name=\"creditCardExpiryDate\" required size=\"32\"></label><br>";
-	$form .= "\t</form>";
-	$form .= "</fieldset>";
+	$form = "<script src='js/checkCheckoutForm.js' type='text/javascript'></script>";
+	$form .= "<fieldset>\n";
+	$form .= "<legend><b>Finalise Order</b></legend>\n";
+	$form .= "\t<form action='receipt.php' onsubmit='return checkCheckoutForm()' method='post'>\n";
+	$form .= "\t\t<label>Name:<input id=\"checkoutName\" type=\"text\" name=\"name\" placeholder=\"Enter your name...\"	required size=\"32\"></label><span id='nameError'></span><br>\n";
+	$form .= "\t\t<label>Email:<input id=\"checkoutEmail\" type=\"email\" name=\"email\" placeholder=\"Enter your email...\" required size=\"32\"></label><span id='emailError'></span><br><br>\n";
+	$form .= "\t\t<label>Address:<textarea id=\"checkoutAddress\" name=\"address\" placeholder=\"Enter your address\"></textarea></label><span id='addressError'></span><br><br>\n";
+	$form .= "\t\t<label>Mobile:<input id=\"checkoutPhone\" type=\"text\" name=\"phone\" placeholder=\"Enter your mobile number...\" required size=\"32\"></label><span id='phoneError'></span><br><br>\n";
+	$form .= "\t\t<label>Credit Card:<input id=\"checkoutCreditCard\" type=\"text\" name=\"creditCard\" placeholder=\"Enter your credit card...\" required size=\"32\"></label><span id='creditCardError'></span><br><br>\n";
+	$form .= "\t\t<label>Expiry Date:<input id=\"checkoutCreditCardExpiry\" type=\"date\" name=\"creditCardExpiryDate\" required size=\"32\"></label><span id='creditCardExpiryError'></span><br><br>\n";
+	$form .= "\t\t<input class=\"checkoutButtons\" type=\"submit\" value=\"Buy Now\">\n";
+	$form .= "\t</form>\n";
+	$form .= "</fieldset>\n";
 	return $form;
 }
 
 function createCheckoutButtons() {
-	$buttons = "<fieldset><legend><b>Order Checkout Buttons</b></legend>";
+	$buttons = "<fieldset><legend><b>Other Order Options</b></legend>";
 	$buttons .= "<p>Press <b>Buy Now</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> 
 to browse more products.<br></p>";
-	$buttons .= "<form action=\"receipt.php\">";
-	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Buy Now\">";
-	$buttons .= "</form>";
 	$buttons .= "<form action=\"cart.php\">";
 	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Shopping Cart\">";
-	$buttons .= "</form>";
 	$buttons .= "</form>";
 	$buttons .= "<form action=\"clear_cart.php\">";
 	$buttons .= "<input class=\"checkoutButtons\" type=\"submit\" value=\"Clear Cart\">";
