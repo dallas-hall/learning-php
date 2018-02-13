@@ -7,7 +7,6 @@ require_once("functions_script.php");
 require_once("product_id_script.php");
 require_once("purchase_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
-echo $_SESSION['productID'];
 
 /*showFormattedArray($allProducts);*/
 /*showFormattedArray($productsTree);*/

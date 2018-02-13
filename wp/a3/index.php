@@ -85,6 +85,7 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	</section>
 	<?php require_once("footer_script.php"); ?>
 </div>
+
 <?php include_once("/home/eh1/e54061/public_html/wp/debug.php"); ?>
 <?php include_once("debug.php"); ?>
 </body>
