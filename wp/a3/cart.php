@@ -71,8 +71,7 @@ function getCartItems($allProducts) {
 		}
 
 		// Create the cart item
-		$cartItems .= "<fieldset><legend><b>$cartProductTitle Order</b></legend><br>You have chosen to buy <b>$cartSaleQuantity x 
-$cartProductTitle";
+		$cartItems .= "<fieldset><legend><b>$cartProductTitle Order</b></legend><br>You have chosen to buy <b>$cartSaleQuantity x $cartProductTitle";
 		if ($cartSaleQuantity > 1) {
 			$cartItems .= "s.</b><br>";
 		} else {
@@ -82,7 +81,7 @@ $cartProductTitle";
 		// Get product price and order total !!!REMEMBER TO ADD POSTAGE PRICE HERE!!!
 		$cartOrderTotal = sprintf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
 			($cartSaleQuantity * $cartProductPrice));
-		$cartItems .= getProductPrice($cartProductID, $allProducts, false);
+		$cartItems .= getProductPrice($allProducts, $cartProductID, false);
 		$cartItems .= $cartOrderTotal . "</fieldset><br>";
 	}
 	//print($cartItem);
@@ -201,22 +200,22 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 		// Local Variables
 		$addProduct = $_POST['add'];
 		$productID = $_POST['id'];
-		$productTitle = $productsTree[$_POST['id']]['productTitle'];
+		$productTitle = $allProducts[$_POST['id']]['productTitle'];
 		$saleQuantity = $_POST['quantity'];
-		$productPrice = getProductPriceInt($_POST['id'], $productsTree);
+		$productPrice = getProductPrice($allProducts, $_POST['id'], true);
 		$postageType = $_POST['postageType'];
 		$orderTotal = sprintf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
 			($saleQuantity * $productPrice));
 
 		// Debugging
-		/*	$message = "<p>HELLO IM A CART</p><p>$_POST[add] is $addProduct</p><p>$_POST[id] is $productID</p>
+		/*$debugMessage = "<p>HELLO IM A CART</p><p>$_POST[add] is $addProduct</p><p>$_POST[id] is $productID</p>
 					<p>$_POST[quantity] is $saleQuantity</p>";*/
 
 		// Server side checks
 		if ($saleQuantity < 1) {
 			$errorMessage = "<p>The sale quantity must be greater than or equal to 1.</p>";
 			$errorFound = true;
-		} else if (!in_array($productID, $allProducts, true)) {
+		} else if (!in_array($productID, $allProductIDs, true)) {
 			$errorMessage = "<p>That product is not for sale, please choose one from the shop's page.</p>";
 			$errorFound = true;
 		}
@@ -228,7 +227,7 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 	// Cycle through current cart
 	if(isset($_SESSION['cart'])) {
 		$message = "<h2>Current Cart Items</h2>";
-		$message .= getCartItems($productsTree);
+		$message .= getCartItems($allProducts);
 
 	}
 
@@ -263,7 +262,7 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 /*				else {
 					echo "<fieldset>";
 					echo $message;
-					echo getProductPriceString($_POST['id'], $productsTree);
+					echo getProductPriceString($_POST['id'], $allProducts);
 					printf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
 						($saleQuantity * $productPrice));
 					echo "</fieldset>";
