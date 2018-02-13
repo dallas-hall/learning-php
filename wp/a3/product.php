@@ -5,7 +5,9 @@ if (!isset($_SESSION)) {
 }
 require_once("functions_script.php");
 require_once("product_id_script.php");
+require_once("purchase_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
+echo $_SESSION['productID'];
 
 /*showFormattedArray($allProducts);*/
 /*showFormattedArray($productsTree);*/
@@ -23,32 +25,36 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 	<section class="pageBodyDualPage">
 		<article class="column1">
 			<main>
-				<h1><?php echo $productsTree[PRODUCT_ID]['productTitle'] ?></h1>
-				<img src="<?php echo $productsTree[PRODUCT_ID]['productImage'] ?>"
-					 width="<?php echo $productsTree[PRODUCT_ID]['productImageWidth'] ?>"
-					 height="<?php echo $productsTree[PRODUCT_ID]['productImageHeight'] ?>"
-					 alt="<?php echo $productsTree[PRODUCT_ID]['productImageText'] ?>">
-				<?php echo $productsTree[PRODUCT_ID]['productDescription'] ?>
+				<h1><?php echo $allProducts[PRODUCT_ID]['productTitle'] ?></h1>
+				<img src="<?php echo $allProducts[PRODUCT_ID]['productImage']; ?>"
+					 width="<?php echo $allProducts[PRODUCT_ID]['productImageWidth']; ?>"
+					 height="<?php echo $allProducts[PRODUCT_ID]['productImageHeight']; ?>"
+					 alt="<?php echo $allProducts[PRODUCT_ID]['productImageText']; ?>">
+				<?php echo $allProducts[PRODUCT_ID]['productDescription']; ?>
 			</main>
 		</article>
 		<aside class="column2">
 			<article>
 				<h1>Feedback &amp; Samples</h1>
 				<?php
-				foreach ($productsTree[PRODUCT_ID]['Testimonials']['Quotes'] as $aKey => $aValuePair) {
+				// NEED TO EXPLORE STRING HERE INTO ARRAY
+				/*foreach ($allProducts[PRODUCT_ID]['Testimonials']['customerQuotes'] as $aKey => $aValuePair) {
 					echo "\t\t\t\t<p>$aValuePair</p>\n";
 				}
 				?>
 				<?php
-				foreach ($productsTree[PRODUCT_ID]['Testimonials']['Samples'] as $aKey => $aValuePair) {
+				foreach ($allProducts[PRODUCT_ID]['Testimonials']['workSamples'] as $aKey => $aValuePair) {
 					echo "\t\t\t\t<p>$aValuePair</p>\n";
 				}
-				?>
+				*/?>
 			</article>
 		</aside>
 	</section>
 	<section id="purchaseSection">
-		<?php require_once("purchase_script.php"); ?>
+		<?php
+		//echo $_GET['productID'];
+		setProductPagePricing($allProducts, $_GET['productID']);
+		?>
 	</section>
 	<?php require_once("footer_script.php"); ?>
 </div>

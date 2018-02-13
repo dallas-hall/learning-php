@@ -5,9 +5,8 @@ if(!isset($_SESSION)){
 }
 // Load the required scripts
 require_once("functions_script.php");
-require_once("all_products_script.php");
-require_once("price_script_string.php");
-require_once("price_script_integer.php");
+require_once("load_product_data.php");
+require_once("purchase_script.php");
 
 // Setup the required variables
 $currentFilename = getFilenameWithoutExtension(__FILE__);
@@ -41,7 +40,7 @@ function createCartItem($productID, $productTitle, $saleQuantity, $productPrice,
 	//echo "productPrice is $productPrice and orderTotal is $_SESSION[orderTotal]";
 }
 
-function getCartItems($productsTree) {
+function getCartItems($allProducts) {
 	// Local variables
 	$cartItems = null;
 
@@ -83,7 +82,7 @@ $cartProductTitle";
 		// Get product price and order total !!!REMEMBER TO ADD POSTAGE PRICE HERE!!!
 		$cartOrderTotal = sprintf("<br>Your total cost for this order is <b>$%1.2f</b>\n",
 			($cartSaleQuantity * $cartProductPrice));
-		$cartItems .= getProductPriceString($cartProductID, $productsTree);
+		$cartItems .= getProductPrice($cartProductID, $allProducts, false);
 		$cartItems .= $cartOrderTotal . "</fieldset><br>";
 	}
 	//print($cartItem);

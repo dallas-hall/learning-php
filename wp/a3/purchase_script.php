@@ -6,6 +6,7 @@
 4) display quantity buttons
 5) add to cart button
  */
+require_once("functions_script.php");
 
 function getContactText() {
 	$text ="<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
@@ -53,27 +54,24 @@ function setProductPagePricing($productsArray, $productID) {
 	}
 
 	// Testing Variables
-	/*
-	echo "productID: " . $_GET['productID'] . "<br>";
-	echo "has a price? " . $productsTree[PRODUCT_ID]['price']['hasPrice'] . "<br>";
-	if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
+	//showFormattedArray($productsArray);
+	//showFormattedArray($productID);
+	echo "productID: " . $productID . "<br>";
+	echo "has a price?<br>";
+	if ($normalPrice != null) {
 		echo "normal price: " . $normalPrice . "<br>";
 		echo "sale price: " . $salePrice . "<br>";
-		echo "final price: " . $finalPrice . "<br>";
-		printf("The product's current price is $%1.2f", $finalPrice);
 	} else {
 		echo "the product has no price<br>";
-	}*/
+	}
 
 	/* Using this to dynamically set the pricing options of each page. */
-	if ($normalPrice === null && $salePrice === null) {
-		echo "<p>Please contact us for a detailed quote.</p>";
-	} elseif ($salePrice === null) {
+	if ($salePrice == null && $normalPrice != null) {
 		printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span> AUD</b></p>\n", $normalPrice);
-	} elseif ($salePrice !== null) {
-		printf("<p>The product's original price was <b>$%1.2f AUD</b> but is now only <b>$<span id=\"price\">%1.2f</span>AUD</b>!</p>\n",
-			$normalPrice,
-			$salePrice);
+	} elseif ($salePrice != null && $normalPrice != null) {
+		printf("<p>The product's original price was <b>$%1.2f AUD</b> but is now only <b>$<span id=\"price\">%1.2f</span>AUD</b>!</p>\n", $normalPrice, $salePrice);
+	} else {
+		echo "<p>Please contact us for a detailed quote.</p>";
 	}
 
 	/* Using this to dynamically set the purchasing options of each page. */
@@ -91,7 +89,7 @@ function setProductPagePricing($productsArray, $productID) {
 			echo getContactText();
 			break;
 		case 'simplyTarotSetDVD':
-			echo getBuyText('simplyTarotSetDVD', 'simplyTarotSetDVD', false);
+			echo getBuyText('simplyTarotService', 'simplyTarotSetDVD', false);
 			break;
 		case 'simplyTarotSetNoDVD':
 			echo getBuyText('simplyTarotService', 'simplyTarotSetNoDVD', false);
@@ -127,24 +125,22 @@ function getProductPrice($productsArray, $productID, $asInt) {
 	}
 
 	if($asInt) {
-		if ($normalPrice === null && $salePrice === null) {
-			return null;
-		} elseif ($salePrice === '0.00') {
+		if ($salePrice == null && $normalPrice != null) {
 			return $normalPrice;
-		} elseif ($salePrice !== '0.00') {
+		} elseif ($salePrice != null && $normalPrice != null) {
 			return $salePrice;
+		} else {
+			return null;
 		}
 	} else {
-		if ($normalPrice === null && $salePrice === null) {
-			$returnString =  "<p>Please contact us for a detailed quote.</p>";
-		} elseif ($salePrice === '0.00') {
+
+		if ($salePrice == null && $normalPrice != null) {
 			$returnString = sprintf("The product's current price is <b>$%1.2f AUD</b>\n", $normalPrice);
-		} elseif ($salePrice !== '0.00') {
-			$returnString = sprintf("The product's original price was <b>$%1.2f AUD</b> but is now only <b>$%1.2f</b>!\n",
-				$normalPrice,
-				$salePrice);
+		} elseif ($salePrice != null && $normalPrice != null) {
+			$returnString = sprintf("The product's original price was <b>$%1.2f AUD</b> but is now only <b>$%1.2f</b>!\n", $normalPrice, $salePrice);
+		} else {
+			$returnString =  "<p>Please contact us for a detailed quote.</p>";
 		}
-		return $returnString;
 	}
 }
 ?>

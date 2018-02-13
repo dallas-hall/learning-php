@@ -17,7 +17,7 @@ function getImageTag($productID, $image, $isLandscape) {
 }
 
 function getBuyButtonTag($productID){
-	$buyButton = "\t\t\t\t\t\t<form action=\"product.php\">\n";
+	$buyButton = "\t\t\t\t\t\t<form action=\"product.php\" method=\"get\">\n";
 	$buyButton .= "\t\t\t\t\t\t\t<input type=\"submit\" value=\"Details\">\n";
 	$buyButton .= "\t\t\t\t\t\t\t<input type=\"hidden\" name=\"productID\" value=\"$productID\">\n";
 	$buyButton .= "\t\t\t\t\t\t</form>\n";

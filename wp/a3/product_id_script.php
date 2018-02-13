@@ -5,12 +5,12 @@ if(!isset($_SESSION)){
 }
 
 // Import all the product data
-require_once("all_products_script.php");
+require_once("load_product_data.php");
 
 // The idea of this was taken from Trevor's video that he posted onto the discussion forum
 define('PRODUCT_ID', $_GET['productID']);
 
-if(!isset($_GET['productID']) || !in_array (PRODUCT_ID, $allProducts, true)) {
+if(!isset($_GET['productID']) || !in_array (PRODUCT_ID, $allProductIDs, true)) {
 	header('Location: products.php');
 }
 //echo PRODUCT_ID;
