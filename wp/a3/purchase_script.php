@@ -40,103 +40,111 @@ function getBuyText($serviceID, $productID, $isVideo) {
 	return $text;
 }
 
-if ($productsTree[PRODUCT_ID]['price']['hasPrice'] === true) {
-	$normalPrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['normalPrice'];
-	$salePrice = $productsTree[PRODUCT_ID]['price']['shopPrice']['salePrice'];
-} else {
-	$normalPrice = null;
-	$salePrice = null;
+function setProductPagePricing($productsArray, $productID) {
+	if ($productsArray[$productID]['normalPrice'] > 0 && $productsArray[$productID]['salePrice'] > 0) {
+		$normalPrice = $productsArray[$productID]['normalPrice'];
+		$salePrice = $productsArray[$productID]['salePrice'];
+	} elseif ($productsArray[$productID]['normalPrice'] > 0) {
+		$normalPrice = $productsArray[$productID]['normalPrice'];
+		$salePrice = null;
+	} else {
+		$normalPrice = null;
+		$salePrice = null;
+	}
+
+	// Testing Variables
+	/*
+	echo "productID: " . $_GET['productID'] . "<br>";
+	echo "has a price? " . $productsTree[PRODUCT_ID]['price']['hasPrice'] . "<br>";
+	if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
+		echo "normal price: " . $normalPrice . "<br>";
+		echo "sale price: " . $salePrice . "<br>";
+		echo "final price: " . $finalPrice . "<br>";
+		printf("The product's current price is $%1.2f", $finalPrice);
+	} else {
+		echo "the product has no price<br>";
+	}*/
+
+	/* Using this to dynamically set the pricing options of each page. */
+	if ($normalPrice === null && $salePrice === null) {
+		echo "<p>Please contact us for a detailed quote.</p>";
+	} elseif ($salePrice === null) {
+		printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span> AUD</b></p>\n", $normalPrice);
+	} elseif ($salePrice !== null) {
+		printf("<p>The product's original price was <b>$%1.2f AUD</b> but is now only <b>$<span id=\"price\">%1.2f</span>AUD</b>!</p>\n",
+			$normalPrice,
+			$salePrice);
+	}
+
+	/* Using this to dynamically set the purchasing options of each page. */
+	switch($_GET['productID']) {
+		case 'videoTransfer':
+			echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
+			/* !!! WARNING !!!
+			The POST method doesn't work with cart.php in PhpStorm because of the built-in web server problem, it works fine
+			locally on httpd and remotely on RMIT's httpd
+			servers
+			*/
+			echo getContactText();
+			break;
+		case 'videoProduction':
+			echo getContactText();
+			break;
+		case 'simplyTarotSetDVD':
+			echo getBuyText('simplyTarotSetDVD', 'simplyTarotSetDVD', false);
+			break;
+		case 'simplyTarotSetNoDVD':
+			echo getBuyText('simplyTarotService', 'simplyTarotSetNoDVD', false);
+			break;
+		case 'simplyTarotCandleLarge':
+			echo getBuyText('simplyTarotService', 'simplyTarotCandleLarge', false);
+			break;
+		case 'simplyTarotCandlesSmall':
+			echo getBuyText('simplyTarotService', 'simplyTarotCandlesSmall', false);
+			break;
+		case 'secretsOfTarotSet':
+			echo getBuyText('secretsOfTarotService', 'secretsOfTarotSet', false);
+			break;
+		case 'secretsOfTarotCandleLarge':
+			echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandleLarge', false);
+			break;
+		case 'secretsOfTarotCandlesSmall':
+			echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandlesSmall', false);
+			break;
+	}
 }
 
-// Testing Variables
-/*
-echo "productID: " . $_GET['productID'] . "<br>";
-echo "has a price? " . $productsTree[PRODUCT_ID]['price']['hasPrice'] . "<br>";
-if ($productsTree[PRODUCT_ID]['price']['hasPrice']) {
-	echo "normal price: " . $normalPrice . "<br>";
-	echo "sale price: " . $salePrice . "<br>";
-	echo "final price: " . $finalPrice . "<br>";
-	printf("The product's current price is $%1.2f", $finalPrice);
-} else {
-	echo "the product has no price<br>";
-}*/
+function getProductPrice($productsArray, $productID, $asInt) {
+	if ($productsArray[$productID]['normalPrice'] > 0 && $productsArray[$productID]['salePrice'] > 0) {
+		$normalPrice = $productsArray[$productID]['normalPrice'];
+		$salePrice = $productsArray[$productID]['salePrice'];
+	} elseif ($productsArray[$productID]['normalPrice'] > 0 ) {
+		$normalPrice = $productsArray[$productID]['normalPrice'];
+		$salePrice = null;
+	} else {
+		$normalPrice = null;
+		$salePrice = null;
+	}
 
-/* Using this to dynamically set the pricing options of each page. */
-if ($normalPrice === null && $salePrice === null) {
-	echo "<p>Please contact us for a detailed quote.</p>";
-} elseif ($salePrice === '0.00') {
-	printf("<p>The product's current price is <b>$<span id=\"price\">%1.2f</span> AUD</b></p>\n", $normalPrice);
-} elseif ($salePrice !== '0.00') {
-	printf("<p>The product's original price was <b>$%1.2f AUD</b> but is now only <b>$<span id=\"price\">%1.2f</span>AUD</b>!</p>\n",
-		$normalPrice,
-		$salePrice);
-}
-
-/* Using this to dynamically set the purchasing options of each page. */
-switch($_GET['productID']) {
-	case 'videoTransfer':
-		echo "<script type=\"text/javascript\" src=\"js/createCartItem.js\"></script>";
-/* !!! WARNING !!!
-The POST method doesn't work with cart.php in PhpStorm because of the built-in web server problem, it works fine
-locally on httpd and remotely on RMIT
-servers
-*/
-/*		echo "<form action=\"cart.php\" method=\"post\" onsubmit=\"return createCartItem('videoTransferService',
-			'quantityText',false)\">";
-		echo "\t\t\t\t\t<span id=\"quantityButton\">";
-		echo "\t\t\t\t\t\t<input id=\"add\" type=\"hidden\" name=\"add\" value=\"true\">";
-		echo "\t\t\t\t\t\t<input id=\"videoTransferService\" type=\"hidden\" name=\"id\" value=\"videoTransfer\">";
-		echo "\t\t\t\t\t<label>Amount Of Videos I Have:</label><input type=\"button\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  name=\"quantityMinus\" value=\"-\"";
-		echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  id=\"quantityMinus\"";
-		echo "\t\t\t\t\t\t><input type=\"text\" name=\"quantity\" value=\"0\" id=\"quantityText\"";
-		echo "\t\t\t\t\t\t><input type=\"button\" name=\"quantityAdd\" value=\"+\" id=\"quantityAdd\">";
-		echo "\t\t\t\t\t</span>";
-		echo "\t<br><label>Video Storage Media I Have:";
-		echo "\t\t<select id=\"transferSource\" name=\"sourceType\">";
-		echo "\t\t\t<option id=\"vhsTransfer\" value=\"vhs\" selected>VHS</option>";
-		echo "\t\t\t<option id=\"super8Transfer\" value=\"super8\">Super8</option>";
-		echo "\t\t</select></label";
-		echo "\t><br><label>Video Storage Media I Want:";
-		echo "\t\t<select id=\"transferTarget\" name=\"targetType\">";
-		echo "\t\t\t<option id=\"cdTransfer\" value=\"cd\" selected>CD</option>";
-		echo "\t\t\t<option id=\"dvdTransfer\" value=\"dvd\">DVD</option>";
-		echo "\t\t\t<option id=\"usbTransfer\" value=\"usb\">USB</option>";
-		echo "\t\t\t<option id=\"sdTransfer\" value=\"sd\">SD Card</option>";
-		echo "\t\t</select></label>";
-		echo "\t\t<p>Your current total is $<span id=\"subTotal\">0.00</span></p>";
-		echo "\t<input id=\"productBuyButton\" class=\"purchaseButtons\" type=\"submit\" value=\"Add To Cart\">";
-		echo "</form>";
-		echo "<br>";
-		echo "<form action=\"contact_us.php\"><input class=\"purchaseButtons\" type=\"submit\" name=\"contactProduction\"";
-		echo "\t\tvalue=\"Contact Us\">";
-		echo "</form>";
-		echo "<script src=\"js/quantity.js\"></script>";*/
-		echo getContactText();
-		break;
-	case 'videoProduction':
-		echo getContactText();
-		break;
-	case 'simplyTarotSetDVD':
-		echo getBuyText('simplyTarotSetDVD', 'simplyTarotSetDVD', false);
-		break;
-	case 'simplyTarotSetNoDVD':
-		echo getBuyText('simplyTarotService', 'simplyTarotSetNoDVD', false);
-		break;
-	case 'simplyTarotCandleLarge':
-		echo getBuyText('simplyTarotService', 'simplyTarotCandleLarge', false);
-		break;
-	case 'simplyTarotCandlesSmall':
-		echo getBuyText('simplyTarotService', 'simplyTarotCandlesSmall', false);
-		break;
-	case 'secretsOfTarotSet':
-		echo getBuyText('secretsOfTarotService', 'secretsOfTarotSet', false);
-		break;
-	case 'secretsOfTarotCandleLarge':
-		echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandleLarge', false);
-		break;
-	case 'secretsOfTarotCandlesSmall':
-		echo getBuyText('secretsOfTarotService', 'secretsOfTarotCandlesSmall', false);
-		break;
+	if($asInt) {
+		if ($normalPrice === null && $salePrice === null) {
+			return null;
+		} elseif ($salePrice === '0.00') {
+			return $normalPrice;
+		} elseif ($salePrice !== '0.00') {
+			return $salePrice;
+		}
+	} else {
+		if ($normalPrice === null && $salePrice === null) {
+			$returnString =  "<p>Please contact us for a detailed quote.</p>";
+		} elseif ($salePrice === '0.00') {
+			$returnString = sprintf("The product's current price is <b>$%1.2f AUD</b>\n", $normalPrice);
+		} elseif ($salePrice !== '0.00') {
+			$returnString = sprintf("The product's original price was <b>$%1.2f AUD</b> but is now only <b>$%1.2f</b>!\n",
+				$normalPrice,
+				$salePrice);
+		}
+		return $returnString;
+	}
 }
 ?>
