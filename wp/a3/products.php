@@ -4,8 +4,36 @@ if(!isset($_SESSION)){
 	session_start();
 }
 require_once("functions_script.php");
-require_once("all_products_script.php");
+require_once("load_product_data.php");
+require_once("purchase_script.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
+
+function getImageTag($productID, $image, $isLandscape) {
+	if ($isLandscape) {
+		return "\t\t\t\t\t<a href='product.php?productID=$productID'><img src='$image' width='210px' height='244px'></a>\n";
+	} else {
+		return "\t\t\t\t\t<a href='product.php?productID=$productID'><img src='$image' width='256px' height='170px'></a>\n";
+	}
+}
+
+function getBuyButtonTag($productID){
+	$buyButton = "\t\t\t\t\t\t<form action=\"product.php\">\n";
+	$buyButton .= "\t\t\t\t\t\t\t<input type=\"submit\" value=\"Details\">\n";
+	$buyButton .= "\t\t\t\t\t\t\t<input type=\"hidden\" name=\"productID\" value=\"$productID\">\n";
+	$buyButton .= "\t\t\t\t\t\t</form>\n";
+	return $buyButton;
+}
+
+function getContactButtonTag($productID) {
+	$contactButton = "\t\t\t\t\t\t<form action=\"contact_us.php\" method='post'>\n";
+	$contactButton .= "\t\t\t\t\t\t\t<input type=\"submit\" value=\"Contact Us\">\n";
+	$contactButton .= "\t\t\t\t\t\t\t<input type=\"hidden\" name=\"productID\" value=\"$productID\">\n";
+	$contactButton .= "\t\t\t\t\t\t</form>\n";
+	return $contactButton;
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +51,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			<h2>Video Products &amp; Services</h2>
 			<section id="videoServices">
 				<article id="videoTransfer" class="allProducts">
-					<h3>Video Transfer</h3>
-					<a href="product.php?productID=videoTransfer"><img src="img/people/jack_and_equipment.jpg"
-						 width="256px" height="170px"></a>
+					<h3><?php echo $allProducts['videoTransfer']["productTitle"]?></h3>
+					<?php echo getImageTag('videoTransfer', 'img/people/jack_and_equipment.jpg', false); ?>
 					<p>The video transfer services we provide are:</p>
 					<ul>
 						<li>Transfer VHS or Super 8 to CD.</li>
@@ -34,19 +61,13 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 						<li>Transfer VHS or Super 8 to SD Card.</li>
 					</ul>
 					<?php
-					require_once("price_script_string.php");
-					echo "<p>" . getProductPriceString("videoTransfer", $productsTree) . "</p>";
+					echo "<p>" . setProductPagePricing($allProducts, "videoTransfer") . "</p>";
+					echo getBuyButtonTag('videoTransfer');
 					?>
-					<form action="product.php" method="GET">
-						<input type="submit" value="Details & Buy Now ">
-						<input type="hidden" name="productID" value="videoTransfer">
-					</form>
 				</article>
 				<article id="videoProduction" class="allProducts">
-					<h3>Video Production</h3>
-					<!--<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_client.jpg" width="256px" height="170px"></a>-->
-					<a href="product.php?productID=videoProduction"><img src="img/people/jack_and_band_no_border.jpg"
-																		 width="256px" height="170px"></a>
+					<h3><?php echo $allProducts['videoProduction']["productTitle"]?></h3>
+					<?php echo getImageTag('videoProduction', 'img/people/jack_and_band_no_border.jpg', false); ?>
 					<p>The video productions services we provide are:</p>
 					<ul>
 						<li>Filming &amp; editing</li>
@@ -55,13 +76,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 					</ul>
 					<p>Please contact us with your job's details so we can arrange a free and obligation free quote.
 						Sorry, but we do not do weddings due to high insurance costs.</p>
-					<form class="videoProductionButtons" action="product.php">
-						<input class="videoProductionButtons" type="submit" value="Details">
-						<input type="hidden" name="productID" value="videoProduction">
-					</form>
-					<form class="videoProductionButtons" action="contact_us.php">
-						<input class="videoProductionButtons" type="submit" value="Contact Us">
-					</form>
+					<?php echo getBuyButtonTag('videoProduction');?>
+					<?php echo getContactButtonTag('videoProduction');?>
 				</article>
 			</section>
 			<section id="psychicServices">
@@ -71,10 +87,8 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 				<section id="simplyTarot">
 					<h3>Simply Tarot</h3>
 					<article id="simplyTarotSetDVD" class="allProducts">
-						<h5>Simply Tarot Set With DVD</h5>
-						<a href="product.php?productID=simplyTarotSetDVD"><img
-									src="img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg"
-												   width="256px" height="170px"></a>
+						<h4><?php echo $allProducts['simplyTarotSetDVD']["productTitle"]?></h4>
+						<?php echo getImageTag( 'simplyTarotSetDVD', 'img/products/psychic/tarot/simply/simply_dvd_book_and_card.jpg', false); ?>
 						<p>This Simply Tarot Set includes:</p>
 						<ul>
 							<li>Simply Tarot Training DVD.</li>
@@ -82,126 +96,91 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("simplyTarotSetDVD", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "simplyTarotSetDVD") . "</p>";
+						echo getBuyButtonTag('simplyTarotSetDVD');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotSetDVD">
-						</form>
 					</article>
 					<article id="simplyTarotSetNoDVD" class="allProducts">
-						<h4>Simply Tarot Set Without DVD</h4>
-						<a href="product.php?productID=simplyTarotSetNoDVD"><img src="img/products/psychic/tarot/simply/simply_book_and_card.jpg"
-												   width="256px" height="170px"></a>
+						<h4><?php echo $allProducts['simplyTarotSetNoDVD']["productTitle"]?></h4>
+						<?php echo getImageTag( 'simplyTarotSetNoDVD', 'img/products/psychic/tarot/simply/simply_book_and_card.jpg', false); ?>
 						<p>This Simply Tarot Set includes:</p>
 						<ul>
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("simplyTarotSetNoDVD", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "simplyTarotSetNoDVD") . "</p>";
+						echo getBuyButtonTag('simplyTarotSetNoDVD');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotSetNoDVD">
-						</form>
 					</article>
 					<article id="simplyTarotCandleLarge" class="allProducts">
-						<h4>Simply Tarot 1 Large Candle</h4>
-						<a href="product.php?productID=simplyTarotCandleLarge"><img src="img/products/psychic/candles/simply/large_simply_candle.jpg"
-							width="210px" height="244"></a>
+						<h4><?php echo $allProducts['simplyTarotCandleLarge']["productTitle"]?></h4>
+						<?php echo getImageTag( 'simplyTarotCandleLarge', 'img/products/psychic/candles/simply/large_simply_candle.jpg', true); ?>
 						<p>There are 2 types of Simply Tarot Candles.</p>
 						<ol>
 							<li>One Large Simply Tarot Candle</li>
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("simplyTarotCandleLarge", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "simplyTarotCandleLarge") . "</p>";
+						getBuyButtonTag('simplyTarotCandleLarge');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotCandleLarge">
-						</form>
 					</article>
 					<article id="simplyTarotCandlesSmall" class="allProducts">
-						<h4>Simply Tarot 3 Small Candles </h4>
-						<a href="product.php?productID=simplyTarotCandlesSmall"><img
-									src="img/products/psychic/candles/simply/3_small_simply_candle.jpg"
-																				width="256px" height="170px"></a>
+						<h4><?php echo $allProducts['simplyTarotCandlesSmall']["productTitle"]?></h4>
+						<?php echo getImageTag( 'simplyTarotCandlesSmall', 'img/products/psychic/candles/simply/3_small_simply_candle.jpg', false); ?>
 						<p>There are 2 types of Simply Tarot Candles.</p>
 						<ol>
 							<li>One Large Simply Tarot Candle</li>
 							<li>Three Small Simply Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("simplyTarotCandlesSmall", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "simplyTarotCandlesSmall") . "</p>";
+						getBuyButtonTag('simplyTarotCandlesSmall');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="simplyTarotCandlesSmall">
-						</form>
 					</article>
 				</section>
 				<section id="secretsOfTarot">
 					<h3>Secrets Of Tarot</h3>
 					<article id="secretsOfTarotSet" class="allProducts">
-						<h4>Simply Tarot Set</h4>
-						<a href="product.php?productID=secretsOfTarotSet"><img src="img/products/psychic/tarot/secrets/secrets_book_and_card.jpg"
-												   width="210px" height="244"></a>
+						<h4><?php echo $allProducts['secretsOfTarotSet']["productTitle"]?></h4>
+						<?php echo getImageTag( 'secretsOfTarotSet', 'img/products/psychic/tarot/secrets/secrets_book_and_card.jpg', true); ?>
 						<p>This Secrets Of Tarot Set includes:</p>
 						<ul>
 							<li>Simply Tarot Training Book.</li>
 							<li>Simply Tarot Card Set.</li>
 						</ul>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("secretsOfTarotSet", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "secretsOfTarotSet") . "</p>";
+						getBuyButtonTag('secretsOfTarotSet');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="secretsOfTarotSet">
-						</form>
 						<br>
 					</article>
 					<article id="secretsOfTarotCandleLarge" class="allProducts">
-						<h4>Secrets Of Tarot 1 Large Candle</h4>
-						<a href="product.php?productID=secretsOfTarotCandleLarge"><img src="img/products/psychic/candles/secrets/large_secrets_candle.jpg"
-												   width="210px" height="244"></a>
+						<h4><?php echo $allProducts['secretsOfTarotCandleLarge']["productTitle"]?></h4>
+						<?php echo getImageTag( 'secretsOfTarotCandleLarge', 'img/products/psychic/candles/secrets/large_secrets_candle.jpg', true); ?>
 						<p>There are 2 types of Secrets Of Tarot Candles</p>
 						<ol>
 							<li>One Large Secrets Of Tarot Candle</li>
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("secretsOfTarotCandleLarge", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "secretsOfTarotCandleLarge") . "</p>";
+						getBuyButtonTag('secretsOfTarotCandleLarge');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="secretsOfTarotCandleLarge">
-						</form>
 					</article>
 					<article id="secretsOfTarotCandlesSmall" class="allProducts">
-						<h4>Secrets Of Tarot 3 Small Candles</h4>
-						<a href="product.php?productID=secretsOfTarotCandlesSmall"><img src="img/products/psychic/candles/secrets/3_small_secrets_candle.jpg"
-																						width="256px" height="170px"></a>
+						<h4><?php echo $allProducts['secretsOfTarotCandlesSmall']["productTitle"]?></h4>
+						<?php echo getImageTag( 'secretsOfTarotCandlesSmall', 'img/products/psychic/candles/secrets/3_small_secrets_candle.jpg', false); ?>
 						<p>There are 2 types of Secrets Of Tarot Candles</p>
 						<ol>
 							<li>One Large Secrets Of Tarot Candle</li>
 							<li>Three Small Secrets Of Tarot Candles.</li>
 						</ol>
 						<?php
-						require_once("price_script_string.php");
-						echo "<p>" . getProductPriceString("secretsOfTarotCandlesSmall", $productsTree) . "</p>";
+						echo "<p>" . setProductPagePricing($allProducts, "secretsOfTarotCandlesSmall") . "</p>";
+						getBuyButtonTag('secretsOfTarotCandlesSmall');
 						?>
-						<form action="product.php">
-							<input type="submit" value="Details & Buy Now ">
-							<input type="hidden" name="productID" value="secretsOfTarotCandlesSmall">
-						</form>
 					</article>
 				</section>
 			</section>
