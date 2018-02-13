@@ -1,2 +1,10 @@
-"productID","productTitle","productImage","productImageText","productImageWidth","productImageHeight",
-"productDescription","hasPrice","normalPrice","salePrice","domesticPostagePrice","internationalPostagePrice"
+"Product ID","Product Title","Normal Price","Sale Price"
+"videoTransfer","Video Transfer",30,
+"videoProduction","Video Production",,
+"simplyTarotSetDVD","Simply Tarot Set With DVD",103,
+"simplyTarotSetNoDVD","Simply Tarot Set Without DVD",83,
+"simplyTarotCandleLarge","1 Large Simply Tarot Candle",57.95,48.99
+"simplyTarotCandlesSmall","3 Small Simply Tarot Candles",45.95,36.95
+"secretsOfTarotSet","Secrets Of Tarot Set",49.95,
+"secretsOfTarotCandleLarge","1 Large Secrets Of Tarot Candle",57.95,48.99
+"secretsOfTarotCandlesSmall","3 Small Secrets Of Tarot Candles",45.95,36.95
