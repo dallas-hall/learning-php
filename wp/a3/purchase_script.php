@@ -56,14 +56,14 @@ function setProductPagePricing($productsArray, $productID) {
 	// Testing Variables
 	//showFormattedArray($productsArray);
 	//showFormattedArray($productID);
-	echo "productID: " . $productID . "<br>";
+/*	echo "productID: " . $productID . "<br>";
 	echo "has a price?<br>";
 	if ($normalPrice != null) {
 		echo "normal price: " . $normalPrice . "<br>";
 		echo "sale price: " . $salePrice . "<br>";
 	} else {
 		echo "the product has no price<br>";
-	}
+	}*/
 
 	/* Using this to dynamically set the pricing options of each page. */
 	if ($salePrice == null && $normalPrice != null) {
