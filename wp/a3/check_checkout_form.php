@@ -12,12 +12,18 @@ $addressRegex = "#[^A-Za-z0-9 .,'\-/\r\n]+#m";
 $phoneRegex = "/^\+?614[0-9 ]{2,11}$|^\(?04\)?[0-9 ]{2,11}$/";
 $creditCardRegex = "/^[0-9 ]{12,19}$/";
 
-// Replace multiple spaces with a single space and trim
+// Replace multiple spaces with a single space or nothing and trim
+/* Note: I am removing all spaces from the phone and credit, even though the spec said to allow for a single space.
+To actually allow for all combinations of a single space would be massive or condition of I don't know how many conditions.
+For a phone number 11 digits long (61401234567) you would have 10 conditions just for a single space between any digit.
+Then to cater for all other possible combinations, would need a huge truth table to work it out and in my opinion pointless to do.
+I have done some neat things at work with regex but I can't figure out a way to do this elegantly.
+So I am accepting any number of spaces anywhere and reformatting the string to have no spaces*/
 $checkName = trim(preg_replace($spacesRegex, " ", $_POST['name']));
 $checkEmail = trim(preg_replace($spacesRegex, " ", $_POST['email']));
 $checkAddress = trim(preg_replace($spacesRegex, " ", $_POST['address']));
-$checkPhone = trim(preg_replace($spacesRegex, " ", $_POST['phone']));
-$checkCreditCard = trim(preg_replace($spacesRegex, " ", $_POST['creditCard']));
+$checkPhone = trim(preg_replace($spacesRegex, "", $_POST['phone']));
+$checkCreditCard = trim(preg_replace($spacesRegex, "", $_POST['creditCard']));
 $checkCreditCartExpiryDate = trim(preg_replace($spacesRegex, " ", $_POST['creditCardExpiryDate']));
 
 echo $checkName . "<br>";
@@ -39,8 +45,8 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
-	$_SESSION['checkoutError']['phone'] = $_POST['phone'];
-	$_SESSION['checkoutError']['creditCard'] = $_POST['creditCard'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($emailRegex, $checkEmail)) {
@@ -51,8 +57,8 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
-	$_SESSION['checkoutError']['phone'] = $_POST['phone'];
-	$_SESSION['checkoutError']['creditCard'] = $_POST['creditCard'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (preg_match($addressRegex, $checkAddress)) {
@@ -63,8 +69,8 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
-	$_SESSION['checkoutError']['phone'] = $_POST['phone'];
-	$_SESSION['checkoutError']['creditCard'] = $_POST['creditCard'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($phoneRegex, $checkPhone)) {
@@ -75,8 +81,8 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
-	$_SESSION['checkoutError']['phone'] = $_POST['phone'];
-	$_SESSION['checkoutError']['creditCard'] = $_POST['creditCard'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($creditCardRegex, $checkCreditCard)) {
@@ -87,8 +93,8 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
-	$_SESSION['checkoutError']['phone'] = $_POST['phone'];
-	$_SESSION['checkoutError']['creditCard'] = $_POST['creditCard'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } else {

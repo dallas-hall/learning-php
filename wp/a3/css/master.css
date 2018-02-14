@@ -7,4 +7,6 @@
 @import url(all_products.css);
 @import url(product.css);
 @import url(login_and_signup.css);
+@import url(cart.css);
+@import url(checkout.css);
 @import url(dev.css);

@@ -247,7 +247,7 @@ if(isset($_SESSION['cart']) || isset($_POST['add'], $_POST['id'], $_POST['quanti
 	<?php require_once("head_script.php") ?>
 </head>
 <body>
-<div class="pageWrapper" id="singleTemplate">
+<div class="pageWrapper" id="cartPage">
 	<?php require_once("header_script.php"); ?>
 	<section class="pageBody">
 		<article class="singlePage">

@@ -1,0 +1,11 @@
+#checkoutPage input[type="submit"], #checkoutPage select{
+	background-color: #ffffb2;
+}
+
+#checkoutPage input[type="submit"]:hover, #checkoutPage select:hover{
+	background-color: #bea053;
+}
+
+#checkoutPage input[type="submit"] {
+	width: 128px;
+}
