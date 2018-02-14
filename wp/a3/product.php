@@ -36,16 +36,27 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 			<article>
 				<h1>Feedback &amp; Samples</h1>
 				<?php
-				// NEED TO EXPLORE STRING HERE INTO ARRAY
-				/*foreach ($allProducts[PRODUCT_ID]['Testimonials']['customerQuotes'] as $aKey => $aValuePair) {
-					echo "\t\t\t\t<p>$aValuePair</p>\n";
+				// Split the string into an array
+/*				echo $allProducts[PRODUCT_ID]['customerQuotes'];
+				echo $allProducts[PRODUCT_ID]['workSamples'];*/
+				$quotes = explode("|", $allProducts[PRODUCT_ID]['customerQuotes']);
+				$samples = explode("|", $allProducts[PRODUCT_ID]['workSamples']);
+
+				// Loop through and display the array
+/*				showFormattedArray($quotes);
+				showFormattedArray($samples);*/
+				if (count($quotes) > 0 ) {
+					foreach($quotes as $aQuote) {
+						echo "<p>$aQuote</p>";
+					}
+				}
+
+				if (count($samples) > 0 ) {
+					foreach($samples as $aSample) {
+						echo "<p>$aSample</p>";
+					}
 				}
 				?>
-				<?php
-				foreach ($allProducts[PRODUCT_ID]['Testimonials']['workSamples'] as $aKey => $aValuePair) {
-					echo "\t\t\t\t<p>$aValuePair</p>\n";
-				}
-				*/?>
 			</article>
 		</aside>
 	</section>
