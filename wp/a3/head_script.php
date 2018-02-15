@@ -15,6 +15,16 @@ switch($currentFilename) {
 		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
 		echo "\t\t<title>GTP - Blog</title>\n";
 		break;
+	case 'cart':
+		echo "\t\t<meta name=\"description\" content=\"This is the shopping cart page for Golden Tree Productions, which sells 
+		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
+		echo "\t\t<title>GTP - Shopping Cart</title>\n";
+		break;
+	case 'checkout':
+		echo "\t\t<meta name=\"description\" content=\"This is the shopping cart checkout page for Golden Tree Productions, which sells 
+		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
+		echo "\t\t<title>GTP - Checkout</title>\n";
+		break;
 	case 'contact_us':
 		echo "\t\t<meta name=\"description\" content=\"This is the contact us page for Golden Tree Productions, which sells 
 		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
