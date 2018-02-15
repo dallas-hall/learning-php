@@ -1,0 +1,7 @@
+#receiptPage input[type="submit"], #receiptPage select{
+	background-color: #ffffb2;
+}
+
+#receiptPage input[type="submit"]:hover, #receiptPage select:hover{
+	background-color: #bea053;
+}
