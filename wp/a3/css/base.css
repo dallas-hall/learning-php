@@ -37,7 +37,7 @@ h6 { font-size: .75em; }
 Add some padding all around it - top/bottom and right/left
  */
 header {
-	padding: 2% 2%;
+	padding: 2% 2% 0 2%;
 }
 
 /* Style the header & footer logo image links

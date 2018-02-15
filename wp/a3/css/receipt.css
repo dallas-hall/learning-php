@@ -5,3 +5,48 @@
 #receiptPage input[type="submit"]:hover, #receiptPage select:hover{
 	background-color: #bea053;
 }
+
+
+/* This table styling concept was sourced from the textbook */
+/* Style all tables
+
+Set width
+*/
+#receiptPage table {
+	width: 99%;
+}
+
+/* Style table heading and table data
+
+Set the padding for the top, right, bottom, left.
+ */
+#receiptPage th, #receiptPage td {
+	padding: 7px 10px 10px 10px ;
+}
+
+
+/* Style the table heading further
+
+Set text to uppercase
+Set letter spacing
+Set font size to 90% of current size (default is 16)
+Set bottom border size, style, and colour
+Set top border size, style, and colour
+Align the text
+ */
+#receiptPage th {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 90%;
+	border-bottom: 2px solid #111111;
+	border-top: 1px solid #999999;
+	text-align: left;
+}
+
+/* Style all rows
+
+Change the background colour when the mouse hovers
+ */
+#receiptPage tr:hover {
+	background-color: #bea053;
+}
