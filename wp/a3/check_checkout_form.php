@@ -99,6 +99,15 @@ if (!preg_match($nameRegex, $checkName)) {
 	header("Location: checkout.php");
 } else {
 	header("Location: receipt.php");
+	$_SESSION['checkoutError']['checkoutErrorFound'] = false;
+	$_SESSION['checkoutError']['checkoutErrorID'] = null;
+	$_SESSION['checkoutError']['checkoutErrorMessage'] = null;
+	$_SESSION['checkoutError']['name'] = $checkName;
+	$_SESSION['checkoutError']['email'] = $checkEmail;
+	$_SESSION['checkoutError']['address'] = $checkAddress;
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
+	$_SESSION['checkoutError']['creditCardExpiryDate'] = $checkCreditCartExpiryDate;
 }
 
 include_once("/home/eh1/e54061/public_html/wp/debug.php");
