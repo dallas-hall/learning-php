@@ -5,6 +5,7 @@ if(!isset($_SESSION)){
 
 unset($_SESSION['cart']);
 unset($_SESSION['orderTotal']);
-unset($_SESSION['internationalOrder']);
+unset($_SESSION['checkoutError']);
+unset($_SESSION['finalOrderText']);
 header("Location: cart.php");
 ?>

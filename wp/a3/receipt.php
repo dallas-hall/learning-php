@@ -32,7 +32,8 @@ function getOrderID() {
 
 function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate) {
 
-	echo "<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order ID</th>\n\t\t\t<td>$orderID</td>\n\t\t</tr>\n\t</tbody>";
+	echo "<fieldset><legend><b>Order Details</b></legend>";
+	echo "<table id='receiptTable'>\n\t<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order ID</th>\n\t\t\t<td>$orderID</td>\n\t\t</tr>\n\t</tbody>";
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order Date</th>\n\t\t\t<td>$date</td>\n\t\t</tr>\n\t</tbody>";
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Name</th>\n\t\t\t<td>$name</td>\n\t\t</tr>\n\t</tbody>";
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Address</th>\n\t\t\t<td>$address</td>\n\t\t</tr>\n\t</tbody>";
@@ -40,40 +41,82 @@ function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCar
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Email</th>\n\t\t\t<td>$email</td>\n\t\t</tr>\n\t</tbody>";
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Credit Card</th>\n\t\t\t<td>$creditCard</td>\n\t\t</tr>\n\t</tbody>";
 	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Expiry Date</th>\n\t\t\t<td>$expiryDate</td>\n\t\t</tr>\n\t</tbody>\n</table>";
+	echo "</fieldset>";
 }
 
 function saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage) {
-	echo "SAVE TO FILE STARTING...<br><br>";
-	$customerDetails = "\"$orderID\", \"$date\", \"$name\", \"$address\", \"$phone\", \"$email\", ";
-	$subTotal = 0;
+	// @@ File Handling @@@
+	// File path
+	$savingRelativePath = "files/orders.csv";
+	if(!file_exists($savingRelativePath)) {
+		echo "Can't find $savingRelativePath<br>";
+	} else {
+		echo "Found " . basename($savingRelativePath) . " and it is " . filesize($savingRelativePath) . " bytes<br>";
+		// Open the file in read only text mode.
+		$savingFileHandle = fopen($savingRelativePath, "a");
 
-	foreach($_SESSION['cart'] as $aProduct => $productArray) {
-		$orderDetails = null;
-		$lineToWrite = null;
-		//echo "$_SESSION[cart] -> $aProduct -> $productArray -> ";
-		//$lineToWrite = "@@@ START @@@\"$orderID\", \"$date\", \"$name\", \"$address\", \"$phone\", \"$email\", ";
-		$counter = 0;
-		foreach($productArray as $productDetail) {
-			if ($counter == 2) {
-				//echo $productDetail;
-				$orderDetails .= "\"$productDetail\", ";
-				$subTotal += $productDetail;
-			} elseif($productDetail === 'Australia') {
-				$orderDetails .= "\"0\", ";
-			} elseif ($productDetail === 'International') {
-				$orderDetails .= "\"$internationalPostage\", ";
-			} else {
-			$orderDetails .= "\"$productDetail\", ";
-			}
-			$counter++;
-			//echo $productDetail . " -> ";
+		// Check if we opened the file
+		if (!$savingFileHandle) {
+			echo "We couldn't open $savingFileHandle<br>";
+		} else {
+			echo "We opened $savingFileHandle<br>";
 		}
-		//echo $subTotal;
-		$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"" ."<br>";
-		echo $lineToWrite;
-		//echo $customerDetails;
+
+		echo "SAVE TO FILE STARTING...<br><br>";
+		$customerDetails = "\"$orderID\",\"$date\",\"$name\",\"$address\",\"$phone\",\"$email\",";
+		$subTotal = 0;
+
+		foreach ($_SESSION['cart'] as $aProduct => $productArray) {
+			$orderDetails = null;
+			$lineToWrite = null;
+			//echo "$_SESSION[cart] -> $aProduct -> $productArray -> ";
+			//$lineToWrite = "@@@ START @@@\"$orderID\", \"$date\", \"$name\", \"$address\", \"$phone\", \"$email\", ";
+			$counter = 0;
+			foreach ($productArray as $productDetail) {
+				if ($counter == 2) {
+					//echo $productDetail;
+					$orderDetails .= "\"$productDetail\",";
+					$subTotal += $productDetail;
+				} elseif ($productDetail === 'Australia') {
+					$orderDetails .= "\"0\",";
+				} elseif ($productDetail === 'International') {
+					$orderDetails .= "\"$internationalPostage\",";
+				} else {
+					$orderDetails .= "\"$productDetail\",";
+				}
+				$counter++;
+				//echo $productDetail . " -> ";
+			}
+			//echo $subTotal;
+			$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"" . "\n";
+			fwrite($savingFileHandle, $lineToWrite);
+			echo "WRITING " . $lineToWrite . "<br>";
+			//echo $customerDetails;
+		}
+		echo "<br><br>SAVE TO FILE FINISHED.";
+
+		// Try to close the file
+		fclose($savingFileHandle);
 	}
-	echo "<br><br>SAVE TO FILE FINISHED.";
+}
+
+function getNavigationButtons() {
+	echo "<fieldset><legend><b>Navigation Options</b></legend>";
+	echo "<p>Press <b>Print Receipt</b> to view a printable version of this receipt or <b>Shop More</b> 
+to browse more products.<br></p>";
+	echo"<form action='' >";
+	echo "<input class='receiptButtons' type='submit' value='Print Receipt'>";
+	echo "</form>";
+	echo "<form action='products.php'>";
+	echo"<input class='receiptButtons' type='submit' value='Shop More'>";
+	echo"</form></fieldset>";
+}
+
+function clearSession() {
+	unset($_SESSION['cart']);
+	unset($_SESSION['orderTotal']);
+	unset($_SESSION['checkoutError']);
+	unset($_SESSION['finalOrderText']);
 }
 ?>
 <!DOCTYPE html>
@@ -84,15 +127,17 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 	<?php require_once("head_script.php") ?>
 </head>
 <body>
-<div class="pageWrapper" id="singleTemplate">
+<div class="pageWrapper" id="receiptPage">
 	<?php require_once("header_script.php"); ?>
 	<section class="pageBody">
 		<article class="singlePage">
 			<main>
 				<h1>Order Receipt</h1>
 				<?php
-				echo getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate);
+				getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate);
 				saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage);
+				//clearSession();
+				getNavigationButtons();
 				?>
 			</main>
 		</article>

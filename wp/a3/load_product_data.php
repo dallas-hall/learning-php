@@ -1,24 +1,24 @@
 <?php
 require_once("functions_script.php");
-// The majority of this code was sourced from the textbook
+// The file handling code was sourced from the textbook
 
 // @@ File Handling @@@
 // File path
-$relativePath = "files/products.csv";
+$loadingRelativePath = "files/products.csv";
 // See if the file actually exists
-if(!file_exists($relativePath)) {
-	echo "Can't find $relativePath<br>";
+if(!file_exists($loadingRelativePath)) {
+	echo "Can't find $loadingRelativePath<br>";
 } else {
-	echo "Found " . basename($relativePath) . " and it is " . filesize($relativePath) . " bytes<br>";
+	echo "Found " . basename($loadingRelativePath) . " and it is " . filesize($loadingRelativePath) . " bytes<br>";
 
 	// Open the file in read only text mode.
-	$fileHandle = fopen($relativePath, "rt");
+	$loadingFileHandle = fopen($loadingRelativePath, "rt");
 
 	// Check if we opened the file
-	if (!$fileHandle) {
-		echo "We couldn't open $relativePath<br>";
+	if (!$loadingFileHandle) {
+		echo "We couldn't open $loadingRelativePath<br>";
 	} else {
-		echo "We opened $relativePath<br>";
+		echo "We opened $loadingRelativePath<br>";
 	}
 
 	// Print the file contents of the open file
@@ -55,7 +55,7 @@ if(!file_exists($relativePath)) {
 
 	// Read a the csv file - Got the first line idea from https://stackoverflow.com/a/14372764
 	$firstLine = true;
-	while ($line = fgetcsv($fileHandle)) {
+	while ($line = fgetcsv($loadingFileHandle)) {
 		if($firstLine) {
 			//echo "[{$line[0]}, {$line[1]}, {$line[2]}, {$line[3]}, {$line[4]}, {$line[5]}, {$line[6]}, {$line[7]}, {$line[8]}, {$line[9]} {$line[10]}]<br>";
 			$firstLine = false;
@@ -179,6 +179,6 @@ if(!file_exists($relativePath)) {
 	//showFormattedArray($allProducts);
 
 	// Try to close the file
-	fclose($fileHandle);
+	fclose($loadingFileHandle);
 }
 ?>
