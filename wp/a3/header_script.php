@@ -29,6 +29,12 @@ switch($currentFilename) {
 	case 'blog':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Blog</span>\n";
 		break;
+	case 'cart':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\">Shop</a></span><span class=\"breadcrumbs\"> Shopping Cart</span>\n";
+		break;
+	case 'checkout':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\">Shop</a></span><span class=\"breadcrumbs\"><a href=\"cart.php\"> Shopping Cart</a></span><span class=\"breadcrumbs\"> Checkout</span>\n";
+		break;
 	case 'contact_us':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Contact Us</span>\n";
 		break;
@@ -43,6 +49,9 @@ switch($currentFilename) {
 		break;
 	case 'products':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
+		break;
+	case 'receipt':
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\">Shop</a></span><span class=\"breadcrumbs\"><a href=\"cart.php\"> Shopping Cart</a></span><span class=\"breadcrumbs\"><a href=\"checkout.php\"> Checkout</a></span><span class=\"breadcrumbs\"> Receipt</span>\n";
 		break;
 	case 'returns_and_refunds':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
