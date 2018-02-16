@@ -119,7 +119,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } else {
-	header("Location: receipt.php");
+	header("Location: save_order.php");
 	unset($_SESSION['checkoutError']);
 	$_SESSION['orderDetails']['name'] = $checkName;
 	$_SESSION['orderDetails']['email'] = $checkEmail;

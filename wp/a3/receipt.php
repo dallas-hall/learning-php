@@ -12,8 +12,8 @@ if(!isset($_SESSION['cart'])) {
 require_once("functions_script.php");
 require_once("load_product_data.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
-$orderID = getOrderID();
-$_SESSION['orderDetails']['orderID'] = $orderID;
+
+$orderID = $_SESSION['orderDetails']['orderID'];
 $date = date("Y-m-d");
 $name = $_SESSION['orderDetails']['name'];
 $address = $_SESSION['orderDetails']['address'];
@@ -23,14 +23,6 @@ $creditCard = "**** **** **** " . substr($_SESSION['orderDetails']['creditCard']
 $expiryDate = $_SESSION['orderDetails']['creditCardExpiryDate'];
 $internationalPostage = $postagePrices['international'];
 $orderTotal = $_SESSION['orderDetails']['orderTotal'] + $_SESSION['orderDetails']['postagePrice'];
-
-// Create a unique order ID using the customer's name and the time of order
-function getOrderID() {
-	$orderID = preg_replace("/\s+/", "_", $_SESSION['orderDetails']['name']);
-	$currentTime = time();
-	//echo "$orderID . \"@\" . $currentTime";
-	return $orderID . "@" . $currentTime;
-}
 
 function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal) {
 
@@ -47,70 +39,6 @@ function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCar
 	echo "</fieldset>";
 }
 
-function saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage, $orderTotal) {
-	// @@ File Handling @@@
-	// File path
-	$savingRelativePath = "files/orders.csv";
-	$saveDebugMessage = null;
-	if(!file_exists($savingRelativePath)) {
-		$saveDebugMessage .= "Can't find $savingRelativePath<br>";
-	} else {
-		$saveDebugMessage .= "Found " . basename($savingRelativePath) . " and it is " . filesize($savingRelativePath) . " bytes<br>";
-		// Open the file in read only text mode.
-		$savingFileHandle = fopen($savingRelativePath, "a");
-
-		// Check if we opened the file
-		if (!$savingFileHandle) {
-			$saveDebugMessage .= "We couldn't open $savingFileHandle<br>";
-		} else {
-			$saveDebugMessage .= "We opened $savingFileHandle<br>";
-		}
-		//echo $saveDebugMessage;
-
-		$saveDebugMessage =  "SAVE TO FILE STARTING...<br><br>";
-		$customerDetails = "\"$orderID\",\"$date\",\"$name\",\"$address\",\"$phone\",\"$email\",";
-		$subTotal = 0;
-
-		foreach ($_SESSION['cart'] as $aProduct => $productArray) {
-			$orderDetails = null;
-			$lineToWrite = null;
-			//echo "$_SESSION[cart] -> $aProduct -> $productArray -> ";
-			//$lineToWrite = "@@@ START @@@\"$orderID\", \"$date\", \"$name\", \"$address\", \"$phone\", \"$email\", ";
-			$counter = 0;
-			$saleQuantity = 0;
-			foreach ($productArray as $productDetail) {
-				if ($counter == 1 ) {
-					$saleQuantity = $productDetail;
-					$orderDetails .= "\"$productDetail\",";
-				} else if ($counter == 2) {
-					//echo $productDetail;
-					$orderDetails .= "\"$productDetail\",";
-					// BUG HERE - NEEDS TO UTILISE QUANTITY
-					$subTotal += ($productDetail * $saleQuantity);
-				} elseif ($productDetail === 'Australia') {
-					$orderDetails .= "\"0\",";
-				} elseif ($productDetail === 'International') {
-					$orderDetails .= "\"$internationalPostage\",";
-				} else {
-					$orderDetails .= "\"$productDetail\",";
-				}
-				$counter++;
-				//echo $productDetail . " -> ";
-			}
-			//echo $subTotal;
-			$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"," . "\"$orderTotal\"\n";
-			fwrite($savingFileHandle, $lineToWrite);
-			$saveDebugMessage .= "WRITING " . $lineToWrite . "<br>";
-			//echo $saveDebugMessage;
-			//echo $customerDetails;
-
-		}
-		echo "<br><br>SAVE TO FILE FINISHED.";
-
-		// Try to close the file
-		fclose($savingFileHandle);
-	}
-}
 
 function getNavigationButtons() {
 	echo "<fieldset><legend><b>Navigation Options</b></legend>";
@@ -141,8 +69,11 @@ to return to the shopping cart page. Your order has been finalised and pressing 
 				<h1>Order Receipt</h1>
 				<?php
 				getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal);
-				saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage, $orderTotal);
 				getNavigationButtons();
+
+				unset($_SESSION['cart']);
+				unset($_SESSION['orderDetails']);
+				unset($_SESSION['checkoutError']);
 				?>
 			</main>
 		</article>
