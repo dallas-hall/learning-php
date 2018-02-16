@@ -35,6 +35,11 @@ switch($currentFilename) {
 		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
 		echo "\t\t<title>Golden Tree Productions</title>\n";
 		break;
+	case 'print':
+		echo "\t\t<meta name=\"description\" content=\"This is the receipt printing page for Golden Tree Productions, which sells 
+		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";
+		echo "\t\t<title>GTP - Print Receipt</title>\n";
+		break;
 	case 'privacy':
 		echo "\t\t<meta name=\"description\" content=\"This is the privacy policy page for Golden Tree Productions, which sells 
 		video production services and tarot products and services, such as Simply Tarot and Secrets of Tarot.\">\n";

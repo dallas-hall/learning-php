@@ -22,8 +22,9 @@ $errorMessage = null;
 $errorFound = false;
 $firstVisit = true;
 
-// Create a cumulative total
-$_SESSION['orderTotal'] = 0;
+// Create a cumulative total & postage price
+$_SESSION['orderDetails']['orderTotal'] = 0;
+$_SESSION['orderDetails']['postagePrice'] = 0;
 
 
 // Check for international order
@@ -111,6 +112,7 @@ function getPostagePrice() {
 		foreach($postagePrices as $aKey => $aValue) {
 
 			if($aKey === 'international') {
+				$_SESSION['orderDetails']['postagePrice'] = $aValue;
 				$postagePrice = $aValue;
 				//echo "Type is $aKey and that price is $aValue<br>";
 				break;
@@ -120,6 +122,7 @@ function getPostagePrice() {
 		foreach($postagePrices as $aKey => $aValue) {
 
 			if($aKey === 'domestic') {
+				$_SESSION['orderDetails']['postagePrice'] = $aValue;
 				$postagePrice = $aValue;
 				//echo "Type is $aKey and that price is $aValue<br>";
 				break;
@@ -145,13 +148,13 @@ function calculateOrderTotal() {
 				$productPrice = $arrayValue;
 			}
 		}
-		$_SESSION['orderTotal'] += ($saleQuantity * $productPrice);
+		$_SESSION['orderDetails']['orderTotal'] += ($saleQuantity * $productPrice);
 	}
 }
 
 function createFinalOrder() {
-	if(isset($_SESSION['finalOrderText'])) {
-		unset($_SESSION['finalOrderText']);
+	if(isset($_SESSION['orderDetails']['finalOrderText'])) {
+		unset($_SESSION['orderDetails']['finalOrderText']);
 	}
 	$postagePrice = getPostagePrice();
 	calculateOrderTotal();
@@ -159,8 +162,8 @@ function createFinalOrder() {
 		echo "postage is $postagePrice";*/
 	//$postagePrice = 0;
 	$postagePriceFormatted = sprintf("<b>$%1.2f AUD</b>", $postagePrice);
-	$totalCostFormatted  = sprintf("<b>$%1.2f AUD</b>", $_SESSION['orderTotal']);
-	$totalCostWithPostageFormatted  = sprintf("<b>$%1.2f AUD</b>", ($_SESSION['orderTotal'] + $postagePrice));
+	$totalCostFormatted  = sprintf("<b>$%1.2f AUD</b>", $_SESSION['orderDetails']['orderTotal']);
+	$totalCostWithPostageFormatted  = sprintf("<b>$%1.2f AUD</b>", ($_SESSION['orderDetails']['orderTotal'] + $postagePrice));
 	$finalOrder = "<h2>Final Order Information</h2>";
 	$finalOrder .= "<fieldset><legend><b>Complete Order Information</b></legend>";
 	$finalOrder .= "<p>The total cost of all of your items in this order is $totalCostFormatted.";
@@ -170,7 +173,7 @@ function createFinalOrder() {
 	} else {
 		$finalOrder .= "<br>Domestic postage was selected, this is <b>free</b>!</p>";
 	}
-	$_SESSION['finalOrderText'] = $finalOrder . "</fieldset>";
+	$_SESSION['orderDetails']['finalOrderText'] = $finalOrder . "</fieldset>";
 	$finalOrder .= "<p>Press <b>Checkout</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> to browse more 
 products.</p>";
 	return $finalOrder;

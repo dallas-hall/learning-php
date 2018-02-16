@@ -1,0 +1,41 @@
+body#printPage {
+	/* http://www.papersizes.org/a-sizes-in-pixels.htm */
+	width: 595px;
+	background-color: #ffffff;
+}
+
+#printPage table {
+	width: 99%;
+}
+
+/* Style table heading and table data
+
+Set the padding for the top, right, bottom, left.
+ */
+#printPage th, #printPage td {
+	padding: 7px 10px 10px 10px ;
+}
+
+
+/* Style the table heading further
+
+Set text to uppercase
+Set letter spacing
+Set font size to 90% of current size (default is 16)
+Set bottom border size, style, and colour
+Set top border size, style, and colour
+Align the text
+ */
+#printPage th {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 90%;
+	border-bottom: 1px solid #000;
+	text-align: left;
+	width: 128px;
+}
+
+#letterHead {
+	vertical-align: middle;
+	width: 575px;
+}

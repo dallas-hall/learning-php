@@ -13,38 +13,41 @@ require_once("functions_script.php");
 require_once("load_product_data.php");
 $currentFilename = getFilenameWithoutExtension(__FILE__);
 $orderID = getOrderID();
+$_SESSION['orderDetails']['orderID'] = $orderID;
 $date = date("Y-m-d");
-$name = $_SESSION['checkoutError']['name'];
-$address = $_SESSION['checkoutError']['address'];
-$phone = $_SESSION['checkoutError']['phone'];
-$email = $_SESSION['checkoutError']['email'];
-$creditCard = "**** **** **** " . substr($_SESSION['checkoutError']['creditCard'], -4);
-$expiryDate = $_SESSION['checkoutError']['creditCardExpiryDate'];
+$name = $_SESSION['orderDetails']['name'];
+$address = $_SESSION['orderDetails']['address'];
+$phone = $_SESSION['orderDetails']['phone'];
+$email = $_SESSION['orderDetails']['email'];
+$creditCard = "**** **** **** " . substr($_SESSION['orderDetails']['creditCard'], -4);
+$expiryDate = $_SESSION['orderDetails']['creditCardExpiryDate'];
 $internationalPostage = $postagePrices['international'];
+$orderTotal = $_SESSION['orderDetails']['orderTotal'] + $_SESSION['orderDetails']['postagePrice'];
 
 // Create a unique order ID using the customer's name and the time of order
 function getOrderID() {
-	$orderID = preg_replace("/\s+/", "_", $_SESSION['checkoutError']['name']);
+	$orderID = preg_replace("/\s+/", "_", $_SESSION['orderDetails']['name']);
 	$currentTime = time();
 	//echo "$orderID . \"@\" . $currentTime";
 	return $orderID . "@" . $currentTime;
 }
 
-function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate) {
+function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal) {
 
 	echo "<fieldset><legend><b>Order Details</b></legend>";
-	echo "<table id='receiptTable'>\n\t<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order ID</th>\n\t\t\t<td>$orderID</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order Date</th>\n\t\t\t<td>$date</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Name</th>\n\t\t\t<td>$name</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Address</th>\n\t\t\t<td>$address</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Phone</th>\n\t\t\t<td>$phone</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Email</th>\n\t\t\t<td>$email</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Credit Card</th>\n\t\t\t<td>$creditCard</td>\n\t\t</tr>\n\t</tbody>";
-	echo "<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Expiry Date</th>\n\t\t\t<td>$expiryDate</td>\n\t\t</tr>\n\t</tbody>\n</table>";
+	echo "<table id='receiptTable'>\n\t<tbody>\n\t\t<tr>\n\t\t\t<th scope='row'>Order ID</th>\n\t\t\t<td>$orderID</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Order Date</th>\n\t\t\t<td>$date</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Name</th>\n\t\t\t<td>$name</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Address</th>\n\t\t\t<td>$address</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Phone</th>\n\t\t\t<td>$phone</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Email</th>\n\t\t\t<td>$email</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Credit Card</th>\n\t\t\t<td>$creditCard</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Expiry Date</th>\n\t\t\t<td>$expiryDate</td>\n\t\t</tr>\n\t";
+	echo "\n\t\t<tr>\n\t\t\t<th scope='row'>Order Total</th>\n\t\t\t<td>$$orderTotal</td>\n\t\t</tr>\n\t</tbody>\n</table>";
 	echo "</fieldset>";
 }
 
-function saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage) {
+function saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage, $orderTotal) {
 	// @@ File Handling @@@
 	// File path
 	$savingRelativePath = "files/orders.csv";
@@ -88,7 +91,7 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 				//echo $productDetail . " -> ";
 			}
 			//echo $subTotal;
-			$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"" . "\n";
+			$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"," . "\"$orderTotal\"\n";
 			fwrite($savingFileHandle, $lineToWrite);
 			echo "WRITING " . $lineToWrite . "<br>";
 			//echo $customerDetails;
@@ -102,22 +105,16 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 
 function getNavigationButtons() {
 	echo "<fieldset><legend><b>Navigation Options</b></legend>";
-	echo "<p>Press <b>Print Receipt</b> to view a printable version of this receipt or <b>Shop More</b> 
-to browse more products.<br></p>";
-	echo"<form action='' >";
+	echo "<p>Press <b>Print Receipt</b> to view a printable version of this receipt or <b>Close</b> 
+to return to the shopping cart page. Your order has been finalised and pressing close will remove the items from your cart.<br></p>";
+	echo"<form action='print.php'>";
 	echo "<input class='receiptButtons' type='submit' value='Print Receipt'>";
 	echo "</form>";
-	echo "<form action='products.php'>";
-	echo"<input class='receiptButtons' type='submit' value='Shop More'>";
-	echo"</form></fieldset>";
+	echo "<form action='clear_cart.php'>";
+	echo "<input class='receiptButtons' type='submit' value='Close'>";
+	echo "</form></fieldset>";
 }
 
-function clearSession() {
-	unset($_SESSION['cart']);
-	unset($_SESSION['orderTotal']);
-	unset($_SESSION['checkoutError']);
-	unset($_SESSION['finalOrderText']);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,9 +131,8 @@ function clearSession() {
 			<main>
 				<h1>Order Receipt</h1>
 				<?php
-				getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate);
-				saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage);
-				//clearSession();
+				getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal);
+				saveOrder($orderID, $date, $name, $address, $phone, $email, $internationalPostage, $orderTotal);
 				getNavigationButtons();
 				?>
 			</main>
