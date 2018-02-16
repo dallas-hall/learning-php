@@ -71,9 +71,9 @@ to return to the shopping cart page. Your order has been finalised and pressing 
 				getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal);
 				getNavigationButtons();
 
-				unset($_SESSION['cart']);
+/*				unset($_SESSION['cart']);
 				unset($_SESSION['orderDetails']);
-				unset($_SESSION['checkoutError']);
+				unset($_SESSION['checkoutError']);*/
 				?>
 			</main>
 		</article>
