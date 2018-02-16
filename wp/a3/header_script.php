@@ -51,7 +51,7 @@ switch($currentFilename) {
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
 		break;
 	case 'receipt':
-		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\">Shop</a></span><span class=\"breadcrumbs\"><a href=\"cart.php\"> Shopping Cart</a></span><span class=\"breadcrumbs\"><a href=\"checkout.php\"> Checkout</a></span><span class=\"breadcrumbs\"> Receipt</span>\n";
+		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"><a href=\"products.php\"> Shop</a></span><span class=\"breadcrumbs\"><a href=\"cart.php\"> Shopping Cart</a></span><span class=\"breadcrumbs\"><a href=\"checkout.php\"> Checkout</a></span><span class=\"breadcrumbs\"> Receipt</span>\n";
 		break;
 	case 'returns_and_refunds':
 		echo "\t\t<span class=\"breadcrumbs\"><a href=\"index.php\">Home</a></span><span class=\"breadcrumbs\"> Shop</span>\n";
