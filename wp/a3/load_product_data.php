@@ -6,20 +6,23 @@ require_once("functions_script.php");
 // File path
 $loadingRelativePath = "files/products.csv";
 // See if the file actually exists
+$loadDebugMessage = null;
 if(!file_exists($loadingRelativePath)) {
-	echo "Can't find $loadingRelativePath<br>";
+	$loadDebugMessage = "Can't find $loadingRelativePath<br>";
 } else {
-	echo "Found " . basename($loadingRelativePath) . " and it is " . filesize($loadingRelativePath) . " bytes<br>";
+	$loadDebugMessage .= "Found " . basename($loadingRelativePath) . " and it is " . filesize($loadingRelativePath) . " bytes<br>";
 
 	// Open the file in read only text mode.
 	$loadingFileHandle = fopen($loadingRelativePath, "rt");
 
 	// Check if we opened the file
 	if (!$loadingFileHandle) {
-		echo "We couldn't open $loadingRelativePath<br>";
+		$loadDebugMessage .= "We couldn't open $loadingRelativePath<br>";
 	} else {
-		echo "We opened $loadingRelativePath<br>";
+		$loadDebugMessage .= "We opened $loadingRelativePath<br>";
 	}
+
+	//echo $loadDebugMessage;
 
 	// Print the file contents of the open file
 	//fpassthru($fileHandle);

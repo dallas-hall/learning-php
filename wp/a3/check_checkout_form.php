@@ -5,15 +5,16 @@ if (!isset($_SESSION)) {
 }
 
 $spacesRegex = "/\s+/";
+$nonDigits = "/\D+/";
 $nameRegex = "/^[A-Za-z .,'\-]+$/";
 // Taken from https://www.regular-expressions.info/email.html
 $emailRegex = "/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/";
 $addressRegex = "#[^A-Za-z0-9 .,'\-/\r\n]+#m";
-$phoneRegex = "/^\+?614[0-9 ]{2,11}$|^\(?04\)?[0-9 ]{2,11}$/";
-$creditCardRegex = "/^[0-9 ]{12,19}$/";
+$phoneRegex = "/^\+?614[0-9]{8}$|^\(?04\)?[0-9]{8}$/";
+$creditCardRegex = "/^[0-9]{12,19}$/";
 
 // Replace multiple spaces with a single space or nothing and trim
-/* Note: I am removing all spaces from the phone and credit, even though the spec said to allow for a single space.
+/* Note: I am removing all spaces and non-digits from the phone and credit, even though the spec said to allow for a single space.
 To actually allow for all combinations of a single space would be massive or condition of I don't know how many conditions.
 For a phone number 11 digits long (61401234567) you would have 10 conditions just for a single space between any digit.
 Then to cater for all other possible combinations, would need a huge truth table to work it out and in my opinion pointless to do.
@@ -22,8 +23,8 @@ So I am accepting any number of spaces anywhere and reformatting the string to h
 $checkName = trim(preg_replace($spacesRegex, " ", $_POST['name']));
 $checkEmail = trim(preg_replace($spacesRegex, " ", $_POST['email']));
 $checkAddress = trim(preg_replace($spacesRegex, " ", $_POST['address']));
-$checkPhone = trim(preg_replace($spacesRegex, "", $_POST['phone']));
-$checkCreditCard = trim(preg_replace($spacesRegex, "", $_POST['creditCard']));
+$checkPhone = preg_replace($nonDigits, "", preg_replace($spacesRegex, "", $_POST['phone']));
+$checkCreditCard = preg_replace($nonDigits, "", preg_replace($spacesRegex, "", $_POST['creditCard']));
 $checkCreditCartExpiryDate = $_POST['creditCardExpiryDate'];
 // https://stackoverflow.com/a/35692676
 $currentDate = date("Y-m-d");
@@ -59,7 +60,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	echo 'em TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "emailError";
-	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Please enter a valid email.";
+	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Please enter a valid email - e.g. user@hostname.dns";
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
@@ -83,7 +84,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	echo 'ph TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "phoneError";
-	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Phone can only start with +614, 614, 04, or (04) and must be complete.";
+	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Phone can only start with +614, 614, 04, or (04) with 8 numbers following it.";
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
