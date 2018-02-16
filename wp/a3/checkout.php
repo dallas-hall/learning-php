@@ -125,7 +125,7 @@ function checkForm() {
 			<main>
 				<h1>Checkout Information</h1>
 				<?php
-				echo $_SESSIONp['orderDetails']['finalOrderText'] . "<br>";
+				//echo $_SESSION['orderDetails']['finalOrderText'] . "<br>";
 				if(isset($_SESSION['checkoutError']['checkoutErrorFound']) && $_SESSION['checkoutError']['checkoutErrorFound']) {
 					echo createFormWithError($_SESSION['checkoutError']['checkoutErrorID'], $_SESSION['checkoutError']['checkoutErrorMessage'], $_SESSION['checkoutError']['name'], $_SESSION['checkoutError']['email'], $_SESSION['checkoutError']['address'], $_SESSION['checkoutError']['phone'], $_SESSION['checkoutError']['creditCard'], $_SESSION['checkoutError']['creditCardExpiryDate']);
 				} else {
