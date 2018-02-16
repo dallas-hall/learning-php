@@ -38,9 +38,12 @@ Align the text
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-size: 90%;
-	border-bottom: 2px solid #111111;
-	border-top: 1px solid #999999;
+	border-bottom: 1px solid #bea053;
 	text-align: left;
+	width: 128px;
+}
+#receiptPage td {
+	border-bottom: 1px solid #bea053;
 }
 
 /* Style all rows
