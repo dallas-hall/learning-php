@@ -24,21 +24,27 @@ $checkEmail = trim(preg_replace($spacesRegex, " ", $_POST['email']));
 $checkAddress = trim(preg_replace($spacesRegex, " ", $_POST['address']));
 $checkPhone = trim(preg_replace($spacesRegex, "", $_POST['phone']));
 $checkCreditCard = trim(preg_replace($spacesRegex, "", $_POST['creditCard']));
-$checkCreditCartExpiryDate = trim(preg_replace($spacesRegex, " ", $_POST['creditCardExpiryDate']));
+$checkCreditCartExpiryDate = $_POST['creditCardExpiryDate'];
+// https://stackoverflow.com/a/35692676
+$currentDate = date("Y-m-d");
+$futureDate = strtotime($currentDate. ' + 1 month');
 
-echo $checkName . "<br>";
-echo $checkEmail . "<br>";
-echo $checkAddress . "<br>";
-echo $checkPhone . "<br>";
-echo $checkCreditCard . "<br>";
-echo $checkCreditCartExpiryDate . "<br>";
+echo 'name' . $checkName . "<br>";
+echo 'email' .$checkEmail . "<br>";
+echo 'address' .$checkAddress . "<br>";
+echo 'phone' .$checkPhone . "<br>";
+echo 'credit card # ' .$checkCreditCard . "<br>";
+echo 'credit card date ' . $checkCreditCartExpiryDate . "<br>";
+echo 'credit card date int ' . strtotime($checkCreditCartExpiryDate) . "<br>";
+echo 'current date ' . strtotime($currentDate) . "<br>";
+echo 'future date ' . $futureDate;
 
 
 //echo trim(preg_replace($spacesRegex, " ", $_POST['name'])) . "<br>";
 //echo $checkName . "<br>";
 
 if (!preg_match($nameRegex, $checkName)) {
-	//echo 'na TRIPPED';
+	echo 'na TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "nameError";
 	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Name can only have [A-Za-z .,'-]";
@@ -50,7 +56,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($emailRegex, $checkEmail)) {
-	//echo 'em TRIPPED';
+	echo 'em TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "emailError";
 	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Please enter a valid email.";
@@ -62,7 +68,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (preg_match($addressRegex, $checkAddress)) {
-	//echo 'ad TRIPPED';
+	echo 'ad TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "addressError";
 	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Address can only have [A-Za-z .,'/\\n-]";
@@ -74,7 +80,7 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($phoneRegex, $checkPhone)) {
-	//echo 'ph TRIPPED';
+	echo 'ph TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "phoneError";
 	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Phone can only start with +614, 614, 04, or (04) and must be complete.";
@@ -86,10 +92,24 @@ if (!preg_match($nameRegex, $checkName)) {
 	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
 	header("Location: checkout.php");
 } elseif (!preg_match($creditCardRegex, $checkCreditCard)) {
-	//echo 'cc TRIPPED';
+	echo 'cc TRIPPED';
 	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
 	$_SESSION['checkoutError']['checkoutErrorID'] = "creditCardError";
 	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Credit card number can only be between 12 and 19 numbers.";
+	$_SESSION['checkoutError']['name'] = $_POST['name'];
+	$_SESSION['checkoutError']['email'] = $_POST['email'];
+	$_SESSION['checkoutError']['address'] = $_POST['address'];
+	$_SESSION['checkoutError']['phone'] = $checkPhone;
+	$_SESSION['checkoutError']['creditCard'] = $checkCreditCard;
+	$_SESSION['checkoutError']['creditCardExpiryDate'] = $_POST['creditCardExpiryDate'];
+	header("Location: checkout.php");
+// https://stackoverflow.com/a/24404832
+} elseif (strtotime($checkCreditCartExpiryDate) < $futureDate) {
+	echo 'cd TRIPPED<br>';
+	echo "1: " . strtotime($checkCreditCartExpiryDate) . " 2 ".  $futureDate;
+	$_SESSION['checkoutError']['checkoutErrorFound'] = true;
+	$_SESSION['checkoutError']['checkoutErrorID'] = "creditCardDateError";
+	$_SESSION['checkoutError']['checkoutErrorMessage'] = "Credit card expiry date must be at least 1 month after today's date.";
 	$_SESSION['checkoutError']['name'] = $_POST['name'];
 	$_SESSION['checkoutError']['email'] = $_POST['email'];
 	$_SESSION['checkoutError']['address'] = $_POST['address'];
