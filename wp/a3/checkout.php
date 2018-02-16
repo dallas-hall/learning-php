@@ -16,16 +16,16 @@ $currentFilename = getFilenameWithoutExtension(__FILE__);
 function createForm() {
 	$form = "<script src='js/checkCheckoutForm.js' type='text/javascript'></script>";
 	$form .= "<script src='js/visaLogo.js' type='text/javascript'></script>";
-	$form .= "<fieldset>\n";
+	$form .= "<fieldset id='checkoutFieldset'>\n";
 	$form .= "<legend><b>Finalise Order</b></legend>\n";
 	//$form .= "\t<form action='receipt.php' onsubmit='return checkCheckoutForm()' method='post'>\n";
 	$form .= "\t<form action='check_checkout_form.php' method='post'>\n";
-	$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32'></label><span id='nameError'></span><br>\n";
-	$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32'></label><span id='emailError'></span><br><br>\n";
-	$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'></textarea></label><span id='addressError'></span><br><br>\n";
-	$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32'></label><span id='phoneError'></span><br><br>\n";
-	$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden><span id='creditCardError'></span><br><br>\n";
-	$form .= "\t\t<label>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32'></label><span id='creditCardExpiryError'></span><br><br>\n";
+	$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32'></label><br><span id='nameError'></span><br>\n";
+	$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32'></label><br><span id='emailError'></span><br>\n";
+	$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'></textarea></label><br><span id='addressError'></span><br>\n";
+	$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32'></label><br><<span id='phoneError'></span><br>\n";
+	$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden><br><span id='creditCardError'></span><br>\n";
+	$form .= "\t\t<label id='creditCardExpiryLabel'>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32'></label><br><span id='creditCardExpiryError'></span><br><br>\n";
 	$form .= "\t\t<input class='checkoutButtons' type='submit' value='Buy Now'>\n";
 	$form .= "\t</form>\n";
 	$form .= "</fieldset>\n";
@@ -35,48 +35,48 @@ function createForm() {
 function createFormWithError($errorID, $errorMessage, $name, $email, $address, $phone, $creditCard, $creditCardExpiryDate) {
 	$form = "<script src='js/checkCheckoutForm.js' type='text/javascript'></script>";
 	$form .= "<script src='js/visaLogo.js' type='text/javascript'></script>";
-	$form .= "<fieldset>\n";
+	$form .= "<fieldset id='checkoutFieldset'>\n";
 	$form .= "<legend><b>Finalise Order</b></legend>\n";
 	//$form .= "\t<form action='receipt.php' onsubmit='return checkCheckoutForm()' method='post'>\n";
 	$form .= "\t<form action='check_checkout_form.php' method='post'>\n";
 	if($errorID == 'nameError') {
-		$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32' value='$name'></label><span id='nameError'>$errorMessage</span><br>\n";
+		$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32' value='$name'></label><br><span id='nameError'>$errorMessage</span><br>\n";
 	} else {
-		$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32' value='$name'></label><span id='nameError'></span><br>\n";
+		$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32' value='$name'></label><br><span id='nameError'></span><br>\n";
 	}
 	if($errorID == 'emailError') {
-		$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32' value=$email></label><span id='emailError'>$errorMessage</span><br><br>\n";
+		$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32' value=$email></label><br><span id='emailError'>$errorMessage</span><br>\n";
 	} else {
-		$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32' value=$email></label><span id='emailError'></span><br><br>\n";
+		$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32' value=$email></label><br><span id='emailError'></span><br>\n";
 	}
 	if($errorID == 'addressError') {
-		$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'>$address</textarea></label><span id='addressError'>$errorMessage</span><br><br>\n";
+		$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'>$address</textarea></label><br><span id='addressError'>$errorMessage</span><br>\n";
 	} else {
-		$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'>$address</textarea></label><span id='addressError'></span><br><br>\n";
+		$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'>$address</textarea></label><br><span id='addressError'></span><br>\n";
 	}
 	if($errorID == 'phoneError') {
-		$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32' value=$phone></label><span id='phoneError'>$errorMessage</span><br><br>\n";
+		$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32' value=$phone></label><br><span id='phoneError'>$errorMessage</span><br>\n";
 	} else {
-		$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32' value=$phone></label><span id='phoneError'></span><br><br>\n";
+		$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32' value=$phone></label><br><span id='phoneError'></span><br>\n";
 	}
 	if($errorID == 'creditCardError') {
-		$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' value=$creditCard oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden></label><span id='creditCardError'>$errorMessage</span><br><br>\n";
+		$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' value=$creditCard oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden></label><br><span id='creditCardError'>$errorMessage</span><br>\n";
 	} else {
-		$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' value=$creditCard oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden></label><span id='creditCardError'></span><br><br>\n";
+		$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' value=$creditCard oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden></label><br><span id='creditCardError'></span><br>\n";
 	}
 	if($errorID == 'creditCardDateError') {
-		$form .= "\t\t<label>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><span id='creditCardExpiryError'>$errorMessage</span><br><br>\n";
+		$form .= "\t\t<label id='creditCardExpiryLabel'>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><br><br>\n<span id='creditCardExpiryError'>$errorMessage</span><br><br>\n";
 	} else {
-		$form .= "\t\t<label>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><span id='creditCardExpiryError'></span><br><br>\n";
+		$form .= "\t\t<label id='creditCardExpiryLabel'>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><br><br>\n<span id='creditCardExpiryError'></span><br><br>\n";
 	}
-	$form .= "\t\t<input class='checkoutButtons' type='submit' value='Buy Now'>\n";
+	$form .= "\t\t<input id='checkoutSubmit' class='checkoutButtons' type='submit' value='Buy Now'>\n";
 	$form .= "\t</form>\n";
 	$form .= "</fieldset>\n";
 	return $form;
 }
 
 function createCheckoutButtons() {
-	$buttons = "<fieldset><legend><b>Other Order Options</b></legend>";
+	$buttons = "<fieldset ><legend><b>Other Order Options</b></legend>";
 	$buttons .= "<p>Press <b>Buy Now</b> to continue, <b>Clear Cart</b> to cancel your order, or <b>Shop More</b> 
 to browse more products.<br></p>";
 	$buttons .= "<form action='cart.php'>";

@@ -1,0 +1,51 @@
+#checkoutPage label {
+	padding: 1% 2%;
+	display: inline-block;
+	text-align: right;
+	width: 80%;
+}
+
+#checkoutPage .checkoutFieldset {
+	margin-top: 20px;
+	padding: 2%;
+	line-height: 1.6em;
+}
+
+#checkoutPage textarea {
+	height: 200px;
+	width: 82%;
+	margin-left: 2%;
+}
+
+#checkoutPage input[type="text"], #checkoutPage input[type="email"], #checkoutPage input[type="date"] {
+	width: 80%;
+	margin-left: 2%;
+}
+
+/* Align the textarea label to the top of the element - https://www.w3schools.com/csS/css_align.asp */
+#checkoutAddress {
+	vertical-align: top;
+}
+
+#checkoutPage select {
+	width: 96px;
+	margin-left: 2%;
+}
+
+#checkoutSubmit {
+	display: inline-block;
+	float: left;
+}
+
+#checkoutSubmit:active, #checkoutSubmit:hover {
+	background-color: #bea053;
+}
+
+#creditCardExpiryLabel {
+	float: left;
+}
+
+#nameError, #emailError, #addressError, #phoneError, #creditCardError, #creditCardExpiryError {
+	float: left;
+	margin-left: 16%;
+}
