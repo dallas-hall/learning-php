@@ -17,11 +17,16 @@ function getImageTag($productID, $image, $isLandscape) {
 }
 
 function getBuyButtonTag($productID){
-	$buyButton = "\t\t\t\t\t\t<form action=\"product.php\" method=\"get\">\n";
+	// This was working and now it is not, echo works but string building doesn't???? lol wut -_-
+/*	$buyButton = "\t\t\t\t\t\t<form action=\"product.php\" method=\"get\">\n";
 	$buyButton .= "\t\t\t\t\t\t\t<input type=\"submit\" value=\"Details\">\n";
 	$buyButton .= "\t\t\t\t\t\t\t<input type=\"hidden\" name=\"productID\" value=\"$productID\">\n";
 	$buyButton .= "\t\t\t\t\t\t</form>\n";
-	return $buyButton;
+	return $buyButton;*/
+	echo "\t\t\t\t\t\t<form action=\"product.php\" method=\"get\">\n";
+	echo "\t\t\t\t\t\t\t<input type=\"submit\" value=\"Details\">\n";
+	echo "\t\t\t\t\t\t\t<input type=\"hidden\" name=\"productID\" value=\"$productID\">\n";
+	echo "\t\t\t\t\t\t</form>\n";
 }
 
 function getContactButtonTag($productID) {
