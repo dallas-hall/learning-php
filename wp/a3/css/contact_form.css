@@ -34,7 +34,7 @@
 	margin-left: 2%;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+#contactUsPage input[type="text"], #contactUsPage input[type="email"], #contactUsPage input[type="password"] {
 	width: 70%;
 	margin-left: 2%;
 }
@@ -64,7 +64,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 	/* Style the email addresses when they are active / hovered */
-td a:active, td a:hover {
+#contactUsPage td a:active, #contactUsPage td a:hover {
 	background-color: #b5d3ff;
 }
 
