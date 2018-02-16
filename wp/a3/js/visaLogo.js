@@ -2,9 +2,10 @@
 function checkCreditCart() {
 	// Get the credit card value as a string and then remove all spaces.
 	var spacesRegex = /\s*/g;
+	var nonDigitsRegex = /\D*/g;
 	var visaRegex = /^4[0-9]{12,15}$/;
 	var visaLogoElement =  document.getElementById("visaLogo");
-	var creditCardNoSpace = document.getElementById("checkoutCreditCard").value.toString().trim().replace(spacesRegex, "");
+	var creditCardNoSpace = document.getElementById("checkoutCreditCard").value.toString().trim().replace(spacesRegex, "").replace(nonDigitsRegex, "");
 
 	console.log("element found " + visaLogoElement);
 	console.log("card number " + creditCardNoSpace);

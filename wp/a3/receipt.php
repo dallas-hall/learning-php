@@ -51,21 +51,23 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 	// @@ File Handling @@@
 	// File path
 	$savingRelativePath = "files/orders.csv";
+	$saveDebugMessage = null;
 	if(!file_exists($savingRelativePath)) {
-		echo "Can't find $savingRelativePath<br>";
+		$saveDebugMessage .= "Can't find $savingRelativePath<br>";
 	} else {
-		echo "Found " . basename($savingRelativePath) . " and it is " . filesize($savingRelativePath) . " bytes<br>";
+		$saveDebugMessage .= "Found " . basename($savingRelativePath) . " and it is " . filesize($savingRelativePath) . " bytes<br>";
 		// Open the file in read only text mode.
 		$savingFileHandle = fopen($savingRelativePath, "a");
 
 		// Check if we opened the file
 		if (!$savingFileHandle) {
-			echo "We couldn't open $savingFileHandle<br>";
+			$saveDebugMessage .= "We couldn't open $savingFileHandle<br>";
 		} else {
-			echo "We opened $savingFileHandle<br>";
+			$saveDebugMessage .= "We opened $savingFileHandle<br>";
 		}
+		//echo $saveDebugMessage;
 
-		echo "SAVE TO FILE STARTING...<br><br>";
+		$saveDebugMessage =  "SAVE TO FILE STARTING...<br><br>";
 		$customerDetails = "\"$orderID\",\"$date\",\"$name\",\"$address\",\"$phone\",\"$email\",";
 		$subTotal = 0;
 
@@ -75,11 +77,16 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 			//echo "$_SESSION[cart] -> $aProduct -> $productArray -> ";
 			//$lineToWrite = "@@@ START @@@\"$orderID\", \"$date\", \"$name\", \"$address\", \"$phone\", \"$email\", ";
 			$counter = 0;
+			$saleQuantity = 0;
 			foreach ($productArray as $productDetail) {
-				if ($counter == 2) {
+				if ($counter == 1 ) {
+					$saleQuantity = $productDetail;
+					$orderDetails .= "\"$productDetail\",";
+				} else if ($counter == 2) {
 					//echo $productDetail;
 					$orderDetails .= "\"$productDetail\",";
-					$subTotal += $productDetail;
+					// BUG HERE - NEEDS TO UTILISE QUANTITY
+					$subTotal += ($productDetail * $saleQuantity);
 				} elseif ($productDetail === 'Australia') {
 					$orderDetails .= "\"0\",";
 				} elseif ($productDetail === 'International') {
@@ -93,8 +100,10 @@ function saveOrder($orderID, $date, $name, $address, $phone, $email, $internatio
 			//echo $subTotal;
 			$lineToWrite .= $customerDetails . $orderDetails . "\"$subTotal\"," . "\"$orderTotal\"\n";
 			fwrite($savingFileHandle, $lineToWrite);
-			echo "WRITING " . $lineToWrite . "<br>";
+			$saveDebugMessage .= "WRITING " . $lineToWrite . "<br>";
+			//echo $saveDebugMessage;
 			//echo $customerDetails;
+
 		}
 		echo "<br><br>SAVE TO FILE FINISHED.";
 

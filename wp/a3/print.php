@@ -15,7 +15,6 @@ $phone = $_SESSION['orderDetails']['phone'];
 $email = $_SESSION['orderDetails']['email'];
 $creditCard = "**** **** **** " . substr($_SESSION['orderDetails']['creditCard'], -4);
 $expiryDate = $_SESSION['orderDetails']['creditCardExpiryDate'];
-$internationalPostage = $postagePrices['international'];
 $orderTotal = $_SESSION['orderDetails']['orderTotal'] + $_SESSION['orderDetails']['postagePrice'];
 
 function getReceipt($orderID, $date, $name, $address, $phone, $email, $creditCard, $expiryDate, $orderTotal) {
