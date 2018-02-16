@@ -64,7 +64,7 @@ function createFormWithError($errorID, $errorMessage, $name, $email, $address, $
 	} else {
 		$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' value=$creditCard oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden></label><span id='creditCardError'></span><br><br>\n";
 	}
-	if($errorID == 'creditCardError') {
+	if($errorID == 'creditCardDateError') {
 		$form .= "\t\t<label>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><span id='creditCardExpiryError'>$errorMessage</span><br><br>\n";
 	} else {
 		$form .= "\t\t<label>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32' value=$creditCardExpiryDate></label><span id='creditCardExpiryError'></span><br><br>\n";
