@@ -23,7 +23,7 @@ function createForm() {
 	$form .= "\t\t<label>Name:<input id='checkoutName' type='text' name='name' placeholder='Enter your name...'	required size='32'></label><br><span id='nameError'></span><br>\n";
 	$form .= "\t\t<label>Email:<input id='checkoutEmail' type='email' name='email' placeholder='Enter your email...' required size='32'></label><br><span id='emailError'></span><br>\n";
 	$form .= "\t\t<label>Address:<textarea id='checkoutAddress' name='address' placeholder='Enter your address'></textarea></label><br><span id='addressError'></span><br>\n";
-	$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32'></label><br><<span id='phoneError'></span><br>\n";
+	$form .= "\t\t<label>Mobile:<input id='checkoutPhone' type='text' name='phone' placeholder='Enter your mobile number...' required size='32'></label><br><span id='phoneError'></span><br>\n";
 	$form .= "\t\t<label>Credit Card:<input id='checkoutCreditCard' type='text' name='creditCard' placeholder='Enter your credit card...' required size='32' oninput='checkCreditCart()'></label><img id='visaLogo' src='img/logos/visa.jpg' width='64px' height='64px' hidden><br><span id='creditCardError'></span><br>\n";
 	$form .= "\t\t<label id='creditCardExpiryLabel'>Expiry Date:<input id='checkoutCreditCardExpiry' type='date' name='creditCardExpiryDate' required size='32'></label><br><span id='creditCardExpiryError'></span><br><br>\n";
 	$form .= "\t\t<input class='checkoutButtons' type='submit' value='Buy Now'>\n";
